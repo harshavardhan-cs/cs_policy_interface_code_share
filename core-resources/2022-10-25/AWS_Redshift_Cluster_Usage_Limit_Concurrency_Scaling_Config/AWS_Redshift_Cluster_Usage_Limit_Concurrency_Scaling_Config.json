@@ -1,0 +1,30 @@
+{
+  "status": "active",
+  "description": "This Policy identifies the AWS Redshift Clusters that are not set with Usage Limit for Concurrency Scaling.",
+  "classification": "Cost",
+  "sub_classification": "Governance",
+  "resource_type": "Redshift",
+  "service_resource": [
+    "Redshift_Clusters"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Redshift Cluster Usage Limit Concurrency Scaling Config",
+  "name": "AWS_REDSHIFT_CLUSTER_USAGE_LIMIT_CONCURRENCY_SCALING_CONFIG",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_REDSHIFT_USAGE_LIMIT_CONCURRENCY_SCALING_CONFIG\",\n  \"InputParameters\": {\n    \"FeatureType\": {\n      \"type\": \"string\",\n      \"default\": \"concurrency-scaling\",\n      \"constraints\": [\n        {\n          \"allowed_values\": [\n            \"concurrency-scaling\"\n          ]\n        }\n      ]\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_Redshift_Usage_Limit_Concurrency_Scaling_Config"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/redshift/awsredshclusglimccsconf1705",
+  "metadata": {}
+}

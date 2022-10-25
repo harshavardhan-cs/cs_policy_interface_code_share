@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Azure Storage Disk Snapshots that are not associated to any existing storage disks are considered as orphans.",
+  "classification": "Cost",
+  "sub_classification": "Orphaned",
+  "resource_type": "Storage_Disks",
+  "service_resource": [
+    "Snapshot"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure Storage Disks Snapshots Orphaned",
+  "name": "AZURE_STORAGE_DISK_SNAPSHOTS_ORPHANED",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_ORPHANED\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Fix_Storage_Disk_Snapshots_Orphaned"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/compliance/others/q6vd3",
+  "metadata": {
+  }
+}

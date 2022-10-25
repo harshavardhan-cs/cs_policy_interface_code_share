@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCPOrphanedResources",
+  "InputParameters": {
+  },
+  "ResourceProperties": [
+    "DiskType",
+    "type"
+  ]
+}

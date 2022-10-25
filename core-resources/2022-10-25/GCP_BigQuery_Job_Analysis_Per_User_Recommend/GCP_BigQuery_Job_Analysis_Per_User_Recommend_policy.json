@@ -1,0 +1,21 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCPBigQueryJobAnalysisPerUser",
+  "InputParameters": {
+    "Threshold": {
+     "type": "number",
+       "constraints": [
+        {
+          "range": {
+            "max": 100,
+            "min": 1
+          }
+        }
+      ]
+    }
+  },
+  "CostSavingsRuleName": "gcp_big_query_cost_saving_recommendations",
+  "CostSavingsRuleInputParameters": {
+    "Group_By": "User"
+  }
+}

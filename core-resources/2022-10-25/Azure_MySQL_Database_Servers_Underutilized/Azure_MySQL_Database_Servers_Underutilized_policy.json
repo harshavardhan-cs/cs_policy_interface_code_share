@@ -1,0 +1,35 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_RESOURCE_UNDERUTILISED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string"
+    },
+    "MetricName": {
+      "type": "string",
+      "optional": true,
+      "description": "Specify the appropriate Metric name like CPUUtilization",
+      "constraints": [
+        {
+          "allowed_values": [
+            "active_connections",
+            "backup_storage_used",
+            "connections_failed",
+            "cpu_percent",
+            "io_consumption_percent",
+            "memory_percent",
+            "network_bytes_egress",
+            "network_bytes_ingress",
+            "seconds_behind_master",
+            "serverlog_storage_limit",
+            "serverlog_storage_percent",
+            "serverlog_storage_usage",
+            "storage_limit",
+            "storage_percent",
+            "storage_used"
+          ]
+        }
+      ]
+    }
+  }
+}

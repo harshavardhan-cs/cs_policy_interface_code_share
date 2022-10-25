@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_Lambda_Execution_Count_Recommend",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "number",
+      "default": 14
+    }
+  },
+  "CostSavingsRuleName": "savings_by_percentage",
+  "CostSavingsRuleInputParameters": {
+    "Percentage": 5
+  }
+}

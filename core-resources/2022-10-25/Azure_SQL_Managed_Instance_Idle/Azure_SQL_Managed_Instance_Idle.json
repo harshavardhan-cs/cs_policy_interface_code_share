@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Azure SQL Managed Instances having Average Utilization of less than 5% during the given elapsed days are considered idle. Utilization is identified using the Azure Monitor metric data. The ElapsedDays input parameter can be modified at per user's convenience.",
+  "classification": "Cost",
+  "sub_classification": "Idle",
+  "resource_type": "Azure_SQL_Managed_Instance",
+  "service_resource": [
+    "SQL_Managed_Instances"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure SQL Managed Instance Idle",
+  "name": "AZURE_SQL_MANAGED_INSTANCE_IDLE",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_SQL_MANAGED_INSTANCE_IDLE\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"string\",\n      \"default\": \"30\"\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Fix_SQL_Managed_Instance_Idle"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/cost/sqlmi/azuresqlmi2208",
+  "metadata": {
+  }
+}

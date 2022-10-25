@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_CACHE_REDIS_ENTERPRISE_FLASH_TO_ENTERPRISE_RECOMMEND",
+  "InputParameters":{
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    }
+  },
+  "CostSavingsRuleName": "azure_cache_redis_enterprise_flash_to_enterprise_recommend"
+}

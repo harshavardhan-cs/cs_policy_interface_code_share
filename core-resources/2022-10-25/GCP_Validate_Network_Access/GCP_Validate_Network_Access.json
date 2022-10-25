@@ -1,0 +1,32 @@
+{
+  "status": "active",
+  "description": "This policy will validate the gcp network configuration.This will check in detail whether the vpc or organizations configured with firewall are accessible to the configured network range alone",
+  "classification": "Access",
+  "sub_classification": "Standards",
+  "resource_type": "Network_Services",
+  "service_resource": [
+    "VPC"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "GCP"
+  ],
+  "category": "service",
+  "display_name": "Validate GCP Network Configuration",
+  "name": "validate_GCP_network_configuration",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"GCP_VALIDATE_NETWORK_ACCESS\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "is_configurable": true,
+  "recommendations": [
+    "Remediate_GCP_Network_Configuration"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/gcp/compliance/others/ey9213127",
+  "metadata": {
+  }
+}

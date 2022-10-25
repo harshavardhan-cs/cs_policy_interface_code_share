@@ -1,0 +1,16 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCP_AUDIT_FREQUENT_AUTOSCALING",
+  "InputParameters": {
+    "number_of_times": {
+      "type": "number",
+      "default": 3,
+      "label": "Number of Times"
+    },
+    "time_interval_in_minutes": {
+      "type": "number",
+      "default": 15,
+      "label": "Time Interval in minutes"
+    }
+  }
+}

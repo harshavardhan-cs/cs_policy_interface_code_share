@@ -1,0 +1,25 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_Reserved_Instance_Lease_Expiration",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    },
+    "ProjectID": {
+      "type": "string"
+    },
+    "RIType": {
+      "type": "string",
+      "default" : "Amazon Elastic Compute Cloud - Compute",
+      "description": "Specify the appropriate RIType",
+      "constraints": [
+        {
+          "allowed_values": [
+            "Amazon Elastic Compute Cloud - Compute"
+          ]
+        }
+      ]
+    }
+  }
+}

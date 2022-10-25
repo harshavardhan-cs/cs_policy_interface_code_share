@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_S3_OBJECTS_AGED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "180"
+    }
+  }
+}

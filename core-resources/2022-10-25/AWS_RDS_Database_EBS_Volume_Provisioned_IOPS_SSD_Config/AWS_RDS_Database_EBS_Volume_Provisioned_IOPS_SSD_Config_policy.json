@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_RDS_STORAGE_IO2_RECOMMEND",
+  "InputParameters": {
+  }
+}

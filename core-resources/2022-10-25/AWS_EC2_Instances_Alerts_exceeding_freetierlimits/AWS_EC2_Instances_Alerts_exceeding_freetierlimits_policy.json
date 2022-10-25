@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_EC2_INSTANCES_ALERTS_EXCEEDING_FREE_TIER_LIMITS",
+  "InputParameters": {
+    "NoofTimes": {
+      "type": "string",
+      "default": 25
+    }
+  }
+}

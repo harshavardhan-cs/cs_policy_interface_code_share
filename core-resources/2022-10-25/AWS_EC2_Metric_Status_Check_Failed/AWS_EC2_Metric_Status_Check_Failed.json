@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Number of EC2 Instances with StatusCheckFailed metric values during the period of last 30 days. Note: NoofDays parameter can be modified as per user requirement.",
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "resource_type": "EC2",
+  "service_resource": [
+    "Instances"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Metric Status Check Failed",
+  "name": "AWS_EC2_METRIC_STATUS_CHECK_FAILED",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_EC2_METRIC_STATUS_CHECK_FAILED\",\n  \"InputParameters\": {\n    \"MetricPercentage\": {\n      \"type\": \"string\"\n    },\n    \"NoofDays\": {\n      \"type\": \"number\",\n      \"default\": 30,\n      \"description\": \"No of Days from the Current Date we wanted to see the data\"\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_EC2_Metric_Status_Check_Failed"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/operations/instances/4szfx",
+  "metadata": {
+  }
+}

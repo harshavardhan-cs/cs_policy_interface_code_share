@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Network Security Group that are not assigned to any Azure Resource are considered as orphans.",
+  "classification": "Operations",
+  "sub_classification": "Standards",
+  "resource_type": "Virtual_Networks",
+  "service_resource": [
+    "Network_Security_Group"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure Network Security Group Orphaned",
+  "name": "AZURE_NETWORK_SECURITY_GROUP_ORPHANED",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_ORPHANED\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Fix_Network_Security_Groups_Orphaned"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/operation/networksecuritygroup/6zyo5",
+  "metadata": {
+  }
+}

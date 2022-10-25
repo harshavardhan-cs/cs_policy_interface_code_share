@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether Network in the project for unrestricted access for the service.If the network allows unrestricted access, then it is violataion.",
+  "classification": "Security",
+  "sub_classification": "Network",
+  "resource_type": "VPC",
+  "service_resource": [
+    "Firewall"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "GCP"
+  ],
+  "category": "service",
+  "display_name": "GCP Audit For Unrestricted Service Access",
+  "name": "GCP_AUDIT_FOR_UNRESTRICTED_SERVICE_ACCESS",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"GCP_AUDIT_FOR_UNRESTRICTED_SERVICE_ACCESS\",\n  \"InputParameters\": {\n    \"service\": {\n      \"type\": \"string\",\n      \"label\": \"List of services available.\",\n      \"description\": \"Service available to check unrestricted acceess.\",\n      \"constraints\": [\n        {\n          \"allowed_values\": [\n            \"FTP\",\n            \"SMTP\",\n            \"Redis\",\n            \"PostgreSQL\",\n            \"SSH\",\n            \"DNS\",\n            \"RDP\",\n            \"HTTP\",\n            \"OracleDB\",\n            \"mySQL\",\n            \"Cassandra\",\n            \"Ciscosecure_websm\",\n            \"Directory_services\",\n            \"Elasticsearch\",\n            \"LDAP\",\n            \"Memcached\",\n            \"MongoDB\",\n            \"Netbios\",\n            \"POP3\",\n            \"Telnet\"\n          ]\n        }\n      ],\n      \"default\": \"SSH\"\n    }\n    }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations":[
+    "GCP_Fix_Unrestricted_Service_Access"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/gcp/security/networking/04san",
+  "metadata": {
+  }
+}

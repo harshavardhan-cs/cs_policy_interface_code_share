@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_LOGIC_APPS_STANDARD_WORKFLOWS_IDLE",
+  "InputParameters": {
+      "ElapsedDays": {
+        "type": "string",
+        "default": "30"
+      }
+  }
+}

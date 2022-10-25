@@ -1,0 +1,32 @@
+{
+  "status": "active",
+  "description": "AWS S3 Buckets having Objects in the same name, type & size are considered as duplicates.",
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "resource_type": "S3",
+  "service_resource": [
+    "Objects"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS S3 Objects Duplicate",
+  "name": "AWS_S3_OBJECTS_DUPLICATE",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_S3_OBJECTS_DUPLICATE\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_S3_Objects_Duplicate"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/compliance/others/cnq32",
+  "metadata": {
+  }
+}
+

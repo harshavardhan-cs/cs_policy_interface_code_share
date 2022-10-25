@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_Dynamo_Db_Table_Backup_Recommend",
+  "InputParameters": {
+  },
+  "CostSavingsRuleName": "savings_by_percentage",
+  "CostSavingsRuleInputParameters": {
+    "Percentage": 50
+  }
+}

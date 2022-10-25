@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_EMR_INSTANCES_FLEETS_ALLOCATION_STRATEGY_RECOMMEND",
+  "InputParameters": {
+  }
+}

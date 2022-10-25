@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_DYNAMODB_TABLE_CAPACITY_MODE_RECOMMEND",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "180"
+    }
+  },
+  "CostSavingsRuleName": "savings_by_percentage",
+  "CostSavingsRuleInputParameters": {
+    "Percentage": 25
+  }
+}

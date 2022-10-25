@@ -1,0 +1,26 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_ALERT_TRACKING",
+  "InputParameters": {
+    "NoofHour": {
+      "type": "number",
+      "label": "Number of Hours",
+      "description": "Number of hours for which the Alerts are open.",
+      "default": 24
+    },
+    "Priority": {
+      "type": "string",
+      "description": "Priority of the open Alerts.",
+      "constraints": [
+        {
+          "allowed_values": [
+            "high",
+            "medium",
+            "low"
+          ]
+        }
+      ],
+      "default": "high"
+    }
+  }
+}

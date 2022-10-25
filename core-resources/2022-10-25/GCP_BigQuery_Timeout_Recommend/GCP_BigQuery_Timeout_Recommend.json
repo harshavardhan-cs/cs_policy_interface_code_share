@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy checks the number of BigQuery error timeouts and sum of the total billed bytes for those queries. GCP charges for the Scanned Bytes for the all the queries including the ones that timed out.",
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "resource_type": "Big_Query",
+  "service_resource": [
+    "Datasets"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "GCP"
+  ],
+  "category": "service",
+  "display_name": "GCP BigQuery Monitor Aborted Queries",
+  "name": "GCP_BigQuery_Monitor_Aborted_Queries",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"GCPBigQueryTimeoutRecommend\",\n  \"InputParameters\": {\n    \"Threshold\": {\n      \"type\": \"number\",\n      \"constraints\": [\n        {\n          \"range\": {\n            \"max\": 100,\n            \"min\": 1\n          }\n        }\n      ]\n    }\n  },\n  \"CostSavingsRuleName\": \"gcp_big_query_cost_saving_recommendations\",\n  \"CostSavingsRuleInputParameters\": {\n    \"Group_By\": \"Project\"\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "GCP_Fix_BigQuery_Error_Timeouts"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/gcp/cost/bqry/dsa823n51t8",
+  "metadata": {
+  }
+}

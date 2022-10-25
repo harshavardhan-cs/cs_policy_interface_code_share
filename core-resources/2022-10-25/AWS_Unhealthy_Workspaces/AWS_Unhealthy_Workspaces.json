@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether Unhealthy Workspaces based on its state - UNHEALTHY and recommends the ideal option for each of the Workspaces. This will help reduce unnecessary charges and save cost.",
+  "classification": "Operation",
+  "sub_classification": "Monitoring",
+  "resource_type": "Workspaces",
+  "service_resource": [
+    "Workspaces"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Unhealthy Workspaces",
+  "name": "AWS_UNHEALTHY_WORKSPACES",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_UNHEALTHY_WORKSPACES\",\n  \"InputParameters\": {}\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_Unhealthy_Workspaces"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/workspaces/w1rk33",
+  "metadata": {
+  }
+}

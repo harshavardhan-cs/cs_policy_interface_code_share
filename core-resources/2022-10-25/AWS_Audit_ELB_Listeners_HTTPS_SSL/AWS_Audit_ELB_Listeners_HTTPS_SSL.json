@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether AWS ELBs Listerners which are not using a secure protocol (HTTPS or SSL).",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "resource_type": "Load_Balancers",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit ELB Listeners HTTPS SSL",
+  "name": "AWS_Audit_ELB_Listeners_HTTPS_SSL",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_AUDIT_ELB_LISTENERS_HTTPS_SSL\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_ELB_Listeners_HTTPS_SSL"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/security/load_balancers/69dy0",
+  "metadata": {
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_RI_UNDERUTILISED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    },
+    "UnusedPercentage": {
+      "type": "string",
+      "default": "90"
+    },
+    "RIType": {
+      "type": "string",
+      "default": "Amazon Elastic Compute Cloud - Compute",
+      "description": "Specify the appropriate RIType",
+      "constraints": [
+        {
+          "allowed_values": [
+            "Amazon Elastic Compute Cloud - Compute"
+          ]
+        }
+      ]
+    }
+  }
+}

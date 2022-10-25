@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "WAF_AWS_AUDIT_TAG_POLICY_CONFIGURED_AT_OU_LEVEL",
+  "InputParameters": {
+  }
+}

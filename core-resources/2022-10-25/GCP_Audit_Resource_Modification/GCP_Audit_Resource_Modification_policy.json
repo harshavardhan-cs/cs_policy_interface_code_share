@@ -1,0 +1,16 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCP_AUDIT_RESOURCE_MODIFICATION",
+  "InputParameters": {
+    "number_of_resources": {
+      "type": "number",
+      "default": 3,
+      "label": "Number of Resources"
+    },
+    "time_interval_in_minutes": {
+      "type": "number",
+      "default": 15,
+      "label": "Time Interval in minutes"
+    }
+  }
+}

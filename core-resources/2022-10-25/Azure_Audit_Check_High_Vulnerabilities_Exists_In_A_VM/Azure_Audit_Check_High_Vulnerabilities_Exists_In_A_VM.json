@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy checks if any high vulnerabilities exists in a virtual machine",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "resource_type": "Virtual_Machines",
+  "service_resource": [
+    "Virtual_Machines"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure Aduit Check High Vulnerability Exists In A Virtual Machine",
+  "name": "Azure_Audit_Check_High_Vulnerabilities_Exists_In_A_VM",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_HIGH_VULNERABILITY_CHECK_IN_VM\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Audit_Check_High_Vulnerabilities_Exists_In_A_VM"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/operation/networksecuritygroup/x1ybo",
+  "metadata": {
+  }
+}

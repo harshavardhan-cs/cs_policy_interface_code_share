@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCP_AUDIT_COMPUTE_PROJECT_WIDE_SSH_KEYS_ALLOWED",
+  "InputParameters": {
+  }
+}

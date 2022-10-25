@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether IAM SSH public keys are rotated on a periodic basis of user specific days to adhere to AWS security best practices",
+  "classification": "Access",
+  "sub_classification": "Identity",
+  "resource_type": "IAM",
+  "service_resource": [
+    "IAM_Users"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit SSH Public Keys Rotated",
+  "name": "AWS_Audit_SSH_Public_Keys_Rotated",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_AUDIT_SSH_PUBLIC_KEYS_ROTATED\",\n  \"InputParameters\": {\n    \"days_limit\": {\n      \"type\": \"number\",\n      \"description\": \"The number of days SSH public key has to be rotated\",\n      \"default\": 90\n    }\n  }\n}\n",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_SSH_Public_Keys_Rotated"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/access/iam_users/xyz0410",
+  "metadata": {
+  }
+}

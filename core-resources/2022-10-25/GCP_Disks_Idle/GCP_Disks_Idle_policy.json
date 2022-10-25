@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCPDiskIdle",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "number",
+      "default": "30"
+    }
+  }
+}

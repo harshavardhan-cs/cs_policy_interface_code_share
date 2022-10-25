@@ -1,0 +1,16 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCP_BUCKET_DATA_INGESTION",
+  "InputParameters": {
+    "data_size_in_GB": {
+      "type": "number",
+      "default": 500,
+      "label": "DataSize in GB"
+    },
+    "time_interval_in_minutes": {
+      "type": "number",
+      "default": 60,
+      "label": "Time Interval in minutes"
+    }
+  }
+}

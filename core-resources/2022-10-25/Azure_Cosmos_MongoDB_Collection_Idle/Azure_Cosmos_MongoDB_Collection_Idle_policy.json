@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_COSMOS_MONGODB_COLLECTION_IDLE",
+  "InputParameters": {
+      "ElapsedDays": {
+        "type": "string",
+        "default": "30"
+      }
+  },
+  "CostSavingsRuleName": "azure_cosmos_cost_saving_recommend"
+}

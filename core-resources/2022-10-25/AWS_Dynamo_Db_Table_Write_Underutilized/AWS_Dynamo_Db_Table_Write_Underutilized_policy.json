@@ -1,0 +1,24 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_DYNAMODB_TABLE_READS_UNDERUTILIZED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "180"
+    },
+    "MetricName": {
+      "type": "string",
+      "optional": true,
+      "default": "R",
+      "description": "Specify the appropriate Metric name",
+      "constraints": [
+        {
+          "allowed_values": [
+            "R",
+            "W"
+          ]
+        }
+      ]
+    }
+  }
+}

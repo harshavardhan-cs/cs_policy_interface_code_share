@@ -1,0 +1,5 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_AUDIT_NSG_CUSTOM_RULES",
+  "InputParameters": {}
+}

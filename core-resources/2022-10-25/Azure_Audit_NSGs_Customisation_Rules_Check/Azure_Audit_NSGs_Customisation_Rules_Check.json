@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits across all the onboarded accounts for the existing Network Security Groups, and if there is any customization involved other than the default rules on NSGs, this audit policy will call out that respective NSG rule resource name as a violation.",
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Security_Rule"
+  ],
+  "resource_type": "Virtual_Networks",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure_Audit_NSGs_Customisation_Rules_Check",
+  "name": "Azure_Audit_NSGs_Customisation_Rules_Check",
+  "parameters": {},
+  "uri": "policy/corestack_policy/account/azure/compliance/others/zabde7",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_AUDIT_NSG_CUSTOM_RULES\",\n  \"InputParameters\": {}\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Audit_NSGs_Customisation_Rules_Check"
+  ],
+  "scope": "account",
+  "engine_type": "corestack_policy",
+  "metadata": {
+    "file": "Azure_Audit_NSGs_Customisation_Rules_Check.json"
+  }
+}

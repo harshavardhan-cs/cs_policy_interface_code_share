@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Gets the list of Budgets defined in an AWS account and checks whether the budgets have notifications configured to promote cost awareness culture.",
+  "classification": "Cost",
+  "sub_classification": "Governance",
+  "resource_type": "Cost",
+  "service_resource": [
+    "Budget"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit Budget Notifications",
+  "name": "AWS_AUDIT_BUDGET_NOTIFICATIONS",
+  "content":"{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"WAF_AWS_AUDIT_BUDGET_NOTIFICATIONS\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_Budget_Notifications"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/governance/audbudgetnotify007",
+  "metadata": {
+  }
+}

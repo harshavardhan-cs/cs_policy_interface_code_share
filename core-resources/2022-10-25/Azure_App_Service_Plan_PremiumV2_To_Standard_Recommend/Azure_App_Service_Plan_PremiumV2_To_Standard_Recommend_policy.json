@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_APP_SERVICE_PLAN_PREMIUMV2_TO_STANDARD_RECOMMEND",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    }
+  },
+  "CostSavingsRuleName": "azure_app_service_plan_pricing_tier_recommend"
+}

@@ -1,0 +1,25 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_VM_RESERVATION_EXPIRY",
+  "InputParameters": {
+    "No_of_days": {
+      "type": "number",
+      "label": "Number of days",
+      "default": 30
+    },
+    "ProjectID": {
+      "type": "string"
+    },
+    "RIType": {
+      "type": "string",
+      "description": "Specify the appropriate RIType",
+      "constraints": [
+        {
+          "allowed_values": [
+            "VirtualMachines"
+          ]
+        }
+      ]
+    }
+  }
+}

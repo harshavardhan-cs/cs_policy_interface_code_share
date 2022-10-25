@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_ALARM_THRESHOLD_INCONSISTENCY_FOR_EC2_INSTANCES",
+  "InputParameters": {
+  }
+}

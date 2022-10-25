@@ -1,0 +1,30 @@
+{
+  "status": "active",
+  "description": "This Policy identifies the AWS Redshift Clusters that are not set with Usage Limit for Cross-region Data sharing",
+  "classification": "Cost",
+  "sub_classification": "Governance",
+  "resource_type": "Redshift",
+  "service_resource": [
+    "Redshift_Clusters"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Redshift Cluster Usage Limit Cross Region Data Sharing Config",
+  "name": "AWS_REDSHIFT_CLUSTER_USAGE_LIMIT_CROSS_REGION_DATA_SHARING_CONFIG",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_REDSHIFT_USAGE_LIMIT_CROSS_REGION_DATA_SHARING_CONFIG\",\n  \"InputParameters\": {\n    \"FeatureType\": {\n      \"type\": \"string\",\n      \"default\": \"cross-region-datasharing\",\n      \"constraints\": [\n        {\n          \"allowed_values\": [\n            \"cross-region-datasharing\"\n          ]\n        }\n      ]\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_Redshift_Usage_Limit_Cross_Region_Data_Sharing_Config"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/redshift/awsredshclusglimcrdsconf1805",
+  "metadata": {}
+}

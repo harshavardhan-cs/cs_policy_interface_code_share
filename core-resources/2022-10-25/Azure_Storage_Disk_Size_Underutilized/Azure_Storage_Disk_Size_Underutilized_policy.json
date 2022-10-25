@@ -1,0 +1,26 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_RESOURCE_UNDERUTILISED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    },
+    "MetricName": {
+      "type": "string",
+      "optional": true,
+      "description": "Specify the appropriate Metric name",
+      "constraints": [
+        {
+          "allowed_values": [
+    "Composite Disk Read Bytes/sec",
+    "Composite Disk Read Operations/sec",
+    "Composite Disk Write Bytes/sec",
+    "Composite Disk Write Operations/sec"
+]
+
+        }
+      ]
+    }
+  }
+}

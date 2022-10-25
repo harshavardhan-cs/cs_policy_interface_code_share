@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_Lambda_Error_Execution",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "number",
+      "default": "14"
+    }
+  },
+  "CostSavingsRuleName": "aws_lambda_cost_savings_recommendation",
+  "CostSavingsRuleInputParameters": {
+    "cond": "error"
+  }
+}

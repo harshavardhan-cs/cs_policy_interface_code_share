@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_STORAGE_DISK_ORPHANED",
+  "InputParameters": {
+  }
+}

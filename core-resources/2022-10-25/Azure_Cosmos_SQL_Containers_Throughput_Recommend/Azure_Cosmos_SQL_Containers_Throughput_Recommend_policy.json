@@ -1,0 +1,11 @@
+{
+    "Version": "1.0",
+    "RuleName": "AZURE_COSMOS_SQL_CONTAINERS_THROUGHPUT_RECOMMEND",
+    "InputParameters": {
+        "ElapsedDays": {
+            "type": "string",
+            "default": "30"
+        }
+    },
+    "CostSavingsRuleName": "azure_cosmos_cost_saving_recommend"
+}

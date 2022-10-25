@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_RDS_DB_WITHOUT_BACKUP_LAST_24_HOURS",
+  "InputParameters": {
+  }
+}

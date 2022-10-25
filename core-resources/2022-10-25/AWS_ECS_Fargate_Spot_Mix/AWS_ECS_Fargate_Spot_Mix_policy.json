@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_ECS_FARGATE_SPOT_MIX_RECOMMEND",
+  "InputParameters": {},
+  "CostSavingsRuleName": "aws_ecs_fargate_spot_cost_saving_recommend"
+}

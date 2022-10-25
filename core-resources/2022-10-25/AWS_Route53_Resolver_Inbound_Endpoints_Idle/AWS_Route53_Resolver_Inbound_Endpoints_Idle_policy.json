@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_ROUTE53_RESOLVER_INBOUND_ENDPOINTS_IDLE",
+  "InputParameters": {
+      "ElapsedDays": {
+          "type": "string",
+          "default": "30"
+      }
+  },
+  "CostSavingsRuleName": "aws_route53_resolver_endpoints"
+}

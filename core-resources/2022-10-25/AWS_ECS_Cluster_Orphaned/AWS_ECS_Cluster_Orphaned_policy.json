@@ -1,0 +1,7 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_ORPHANED",
+  "InputParameters": {
+  },
+  "CostSavingsRuleName": "aws_ecs_idle_orphan_cost_saving_recommendations"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether search cluster is underutilized.",
+  "classification": "Cost",
+  "sub_classification": "Underutilized",
+  "resource_type": "Elasticsearch_Service",
+  "service_resource": [
+    "Domain"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ELASTIC SEARCH CLUSTER UNDERUTILIZED",
+  "name": "AWS_ELASTIC_SEARCH_CLUSTER_UNDERUTILIZED",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_RESOURCE_UNDERUTILISED\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"string\",\n      \"default\": \"14\"\n    },\n    \"MetricName\": {\n      \"type\": \"string\",\n      \"optional\": true,\n      \"default\": \"CPUUtilization\",\n      \"description\": \"Specify the appropriate Metric name like CPUUtilization\",\n      \"constraints\": [\n        {\n          \"allowed_values\": [\n            \"CPUUtilization\",\n            \"ClusterStatus.green\",\n            \"ClusterStatus.red\",\n            \"ClusterStatus.yellow\",\n            \"ClusterUsedSpace\",\n            \"DiskQueueDepth\",\n            \"FreeStorageSpace\",\n            \"Nodes\",\n            \"ReadIOPS\",\n            \"ReadLatency\",\n            \"ReadThroughput\",\n            \"WriteIOPS\",\n            \"WriteLatency\",\n            \"WriteThroughput\"\n          ]\n        }\n      ]\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_ElasticSearch_Cluster_Underutilized"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/domain/28bn2e",
+  "metadata": {
+  }
+}

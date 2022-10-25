@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether actual cost exceeded the budgeted cost by more than 30% in previous month.",
+  "classification": "Cost",
+  "sub_classification": "Budget",
+  "resource_type": "Cost",
+  "service_resource": [
+    "Budget"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Actual Cost exceeded budgeted cost in the last month by more than 30%",
+  "name": "AWS_ACTUAL_AMOUNT_EXCEEDS_BUDGET_AMOUNT",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"ACTUAL_AMOUNT_EXCEEDED_BUDGET_AMOUNT\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_Actual_Amount_Exceeds_Budget_Amount"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/compliance/others/ym4gy",
+  "metadata": {
+  }
+}

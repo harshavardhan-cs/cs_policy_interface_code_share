@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "WAF_AWS_AUDIT_COST_CATEGORY",
+  "InputParameters": {
+    "start_day": {
+      "type": "number",
+      "default": 1,
+      "description": "Please enter any day between 1 and the current day. Only numbers allowed."
+    }
+  }
+}

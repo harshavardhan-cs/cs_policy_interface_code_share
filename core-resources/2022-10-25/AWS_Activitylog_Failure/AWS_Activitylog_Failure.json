@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether Same activity in CLoudTrail logs in failed or error status for more than 5 times in the period of last 30 days. Note: The user can change the No ofTimes and No ofDays parameter as per requirement.",
+  "classification": "Operation",
+  "sub_classification": "Monitoring",
+  "resource_type": "Accounts",
+  "service_resource": [
+    "Accounts"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS_Activitylog_Failure",
+  "name": "AWS_Activitylog_Failure",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_Activitylog_Failure\",\n  \"InputParameters\": {\n    \"NoofTimes\": {\n      \"type\": \"number\",\n      \"default\": 5\n    },\n    \"NoofDays\": {\n      \"type\": \"number\",\n      \"default\": 30\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_Activitylog_Failure"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/operations/others/4szfz",
+  "metadata": {
+  }
+}

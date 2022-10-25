@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_RDS_EBS_MAGNETIC_HDD_RECOMMEND",
+  "InputParameters": {
+  },
+  "CostSavingsRuleName": "savings_by_percentage",
+  "CostSavingsRuleInputParameters": {
+    "Percentage": 10
+  }
+}

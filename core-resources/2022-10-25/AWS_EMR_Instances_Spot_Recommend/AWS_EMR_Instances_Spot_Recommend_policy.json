@@ -1,0 +1,7 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_EMR_INSTANCES_SPOT_RECOMMEND",
+  "InputParameters": {
+  },
+  "CostSavingsRuleName": "aws_emr_instances_spot_cost_saving_recommend"
+}

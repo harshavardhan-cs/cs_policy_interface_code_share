@@ -1,0 +1,9 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_ORPHANED",
+  "InputParameters": {
+  },
+  "ResourceProperties": [
+    "Size"
+  ]
+}

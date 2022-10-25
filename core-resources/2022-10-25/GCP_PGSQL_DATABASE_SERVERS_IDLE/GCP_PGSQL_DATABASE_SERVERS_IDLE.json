@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "GCP PGSQL Database Servers having Average Utilization less than 5% of the Max Utilization during the last 30 days are considered as idle. Utilization is identified using the Google Cloud metric data. Elapsed Days input parameter can be modified as per user convenience.",
+  "classification": "Cost",
+  "sub_classification": "Idle",
+  "resource_type": "SQL",
+  "service_resource": [
+    "SQL_Instances"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "GCP"
+  ],
+  "category": "service",
+  "display_name": "GCP PGSQL DATABASE SERVERS IDLE",
+  "name": "GCP_PGSQL_DATABASE_SERVERS_IDLE",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"GCP_SQL_Instances_Idle\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"number\",\n      \"default\": \"30\"\n    },\n    \"Value\": {\n      \"type\": \"string\",\n      \"constraints\": [\n        {\n          \"allowed_values\": [\n            \"POSTGRES\"\n          ]\n        }\n      ]\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "GCP_Fix_PGSQL_Database_Servers_Idle"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/gcp/cost/sql/sql8677vhbdnqe",
+  "metadata": {
+  }
+}

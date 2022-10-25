@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_RDS_DB_CLUSTER_WITHOUT_BACKUP",
+  "InputParameters": {
+    "NoofDays": {
+      "type": "number",
+      "default": 30
+    }
+  }
+}

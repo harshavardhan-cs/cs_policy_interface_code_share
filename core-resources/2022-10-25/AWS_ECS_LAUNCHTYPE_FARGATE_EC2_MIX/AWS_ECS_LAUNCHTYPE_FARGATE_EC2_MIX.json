@@ -1,0 +1,31 @@
+ {
+  "status": "active",
+  "description": "This policy checks for the usage of Fargate Launch type compare to the EC2 in the ECS. This will help reduce unnecessary charges to save cost and maintenance overheads.",
+  "classification": "Cost",
+  "sub_classification": "Governance",
+  "resource_type": "ECS",
+  "service_resource": [
+    "Cluster"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ECS Launch Type Fargate EC2 Mix",
+  "name": "AWS_ECS_LAUNCHTYPE_FARGATE_EC2_MIX",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_ECS_LAUNCHTYPE_FARGATE_EC2_MIX\",\n  \"InputParameters\": {},\n  \"CostSavingsRuleName\": \"savings_by_percentage\",\n  \"CostSavingsRuleInputParameters\": {\n    \"Percentage\": 10,\n    \"split_required\": \"true\"\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_ECS_EC2_to_FARGATE_RECOMMEND"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/governance/sretsulc",
+  "metadata": {
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "Version": "1.0",
+  "RuleName": "WAF_AWS_AUDIT_CUR_CONFIGURED",
+  "InputParameters": {
+    "TimeUnit": {
+      "type": "string",
+      "default": "HOURLY",
+       "constraints": [
+        {
+          "allowed_values": [
+            "HOURLY",
+            "DAILY"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits Number of Cloudwatch alerts exceeding the free tier limit for a billing cycle.",
+  "classification": "Operation",
+  "sub_classification": "Monitoring",
+  "resource_type": "Cloudwatch",
+  "service_resource": [
+    "Alarm"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Instances Alerts exceeding Free Tier Limits",
+  "name": "AWS_EC2_Instances_Alerts_exceeding_Free_Tier_Limits",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_EC2_INSTANCES_ALERTS_EXCEEDING_FREE_TIER_LIMITS\",\n  \"InputParameters\": {\n    \"NoofTimes\": {\n      \"type\": \"string\",\n      \"default\": 25\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_EC2_Instances_Alerts_Exceeding_Free_Tier_Limits"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/operations/alarm/7ojcz",
+  "metadata": {
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "LIST_AWS_ACCOUNT_WITH_MORE_THAN_ONE_CLOUDTRAILS",
+  "InputParameters": {
+  }
+}

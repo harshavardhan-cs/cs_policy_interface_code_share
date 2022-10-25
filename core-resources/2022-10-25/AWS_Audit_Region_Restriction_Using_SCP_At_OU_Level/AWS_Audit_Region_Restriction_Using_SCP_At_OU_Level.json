@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Checks if there are region restrictions in at least one of the SCPs at OU level to ensure that costs are only incurred as defined by organization requirements.",
+  "classification": "Cost",
+  "sub_classification": "Governance",
+  "resource_type": "AWS_Organizations",
+  "service_resource": [
+    "Organization_unit"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit Region Restriction Using SCP At OU Level",
+  "name": "AWS_AUDIT_REGION_RESTRICTION_USING_SCP_AT_OU_LEVEL",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"WAF_AWS_AUDIT_REGION_RESTRICTION_USING_SCP\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_Region_Restriction_Using_SCP_At_OU_Level"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/governance/awsaduncfixdcostmasd2",
+  "metadata": {
+  }
+}

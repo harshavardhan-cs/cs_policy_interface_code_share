@@ -1,0 +1,38 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCP_AUDIT_FOR_UNRESTRICTED_SERVICE_ACCESS",
+  "InputParameters": {
+    "service": {
+      "type": "string",
+      "label": "List of services available.",
+      "description": "Service available to check unrestricted acceess.",
+      "constraints": [
+        {
+          "allowed_values": [
+            "FTP",
+            "SMTP",
+            "Redis",
+            "PostgreSQL",
+            "SSH",
+            "DNS",
+            "RDP",
+            "HTTP",
+            "OracleDB",
+            "mySQL",
+            "Cassandra",
+            "Ciscosecure_websm",
+            "Directory_services",
+            "Elasticsearch",
+            "LDAP",
+            "Memcached",
+            "MongoDB",
+            "Netbios",
+            "POP3",
+            "Telnet"
+          ]
+        }
+      ],
+      "default": "SSH"
+    }
+    }
+}

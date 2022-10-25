@@ -1,0 +1,5 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_TAG_LEVEL_BUDGET",
+  "InputParameters": {}
+}

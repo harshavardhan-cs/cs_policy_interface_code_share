@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "FORCASTED_AMOUNT_EXCEEDS_BUDGET_AMOUNT",
+  "InputParameters": {
+  }
+}

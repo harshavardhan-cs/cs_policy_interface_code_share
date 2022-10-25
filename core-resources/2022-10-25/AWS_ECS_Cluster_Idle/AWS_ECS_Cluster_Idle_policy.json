@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_RESOURCE_IDLE",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    }
+  },
+  "CostSavingsRuleName": "aws_ecs_idle_orphan_cost_saving_recommendations"
+}

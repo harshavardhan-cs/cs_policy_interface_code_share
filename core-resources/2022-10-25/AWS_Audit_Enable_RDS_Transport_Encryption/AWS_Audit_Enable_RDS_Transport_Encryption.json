@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Ensure whether AWS RDS Transport Encryption is enabled for the selected DB instance.",
+  "classification": "Security",
+  "sub_classification": "Databases",
+  "resource_type": "RDS",
+  "service_resource": [
+    "Databases"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit Enable RDS Transport Encryption",
+  "name": "AWS_AUDIT_RDS_TRANSPORT_ENCRYPTION_ENABLED",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_AUDIT_RDS_TRANSPORT_ENCRYPTION_ENABLED\",\n  \"InputParameters\": {\n  }\n}\n",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_RDS_Transport_Encryption_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/security/databases/mlp410",
+  "metadata": {
+  }
+}

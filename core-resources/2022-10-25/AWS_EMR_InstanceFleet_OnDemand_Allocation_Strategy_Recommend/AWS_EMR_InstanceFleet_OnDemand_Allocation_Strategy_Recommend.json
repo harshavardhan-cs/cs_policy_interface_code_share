@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "AWS EMR Clusters having OnDemand instances specifications without allocation strategy are violated.",
+  "classification": "Cost",
+  "sub_classification": "Governance",
+  "resource_type": "EMR",
+  "service_resource": [
+    "InstanceFleetConfig"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EMR InstanceFleet OnDemand Allocation Strategy Recommend",
+  "name": "AWS_EMR_INSTANCES_FLEETS_ALLOCATION_STRATEGY_RECOMMEND",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_EMR_INSTANCES_FLEETS_ALLOCATION_STRATEGY_RECOMMEND\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Aws_Fix_EMR_InstanceFleet_OnDemand_Allocation_Strategy_Recommend"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/instances/awscluststrtgrecmnd1709",
+  "metadata": {
+  }
+}

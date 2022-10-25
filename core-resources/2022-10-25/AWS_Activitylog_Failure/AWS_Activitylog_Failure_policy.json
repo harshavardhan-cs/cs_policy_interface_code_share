@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_Activitylog_Failure",
+  "InputParameters": {
+    "NoofTimes": {
+      "type": "number",
+      "default": 5
+    },
+    "NoofDays": {
+      "type": "number",
+      "default": 30
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_RI_UNDERUTILISED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    },
+    "UnusedPercentage": {
+      "type": "string",
+      "default": "90"
+    },
+    "RIType": {
+      "type": "string",
+      "description": "Specify the appropriate RIType",
+      "default": "Amazon Elasticsearch Service",
+      "constraints": [
+        {
+          "allowed_values": [
+            "Amazon Elasticsearch Service"
+          ]
+        }
+      ]
+    }
+  }
+}

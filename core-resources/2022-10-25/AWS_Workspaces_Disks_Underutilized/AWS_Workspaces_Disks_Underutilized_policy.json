@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_WORKSPACES_DISKS_UNDERUTILIZED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "number",
+      "default": "30"
+    }
+  }
+}

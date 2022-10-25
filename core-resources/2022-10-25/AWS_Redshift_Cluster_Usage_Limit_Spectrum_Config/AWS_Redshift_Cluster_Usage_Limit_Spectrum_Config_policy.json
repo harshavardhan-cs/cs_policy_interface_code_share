@@ -1,0 +1,17 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_REDSHIFT_USAGE_LIMIT_SPECTRUM_CONFIG",
+  "InputParameters": {
+    "FeatureType": {
+      "type": "string",
+      "default": "spectrum",
+      "constraints": [
+        {
+          "allowed_values": [
+            "spectrum"
+          ]
+        }
+      ]
+    }
+  }
+}

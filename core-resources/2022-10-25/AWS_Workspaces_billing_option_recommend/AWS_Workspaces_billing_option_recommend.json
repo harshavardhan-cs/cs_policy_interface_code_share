@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy checks for the billable hours of Workspaces based on the Type - Value, Standard, Performance, Power, PowerPro, Graphics and GraphicPro and recommends the ideal billing option for each of the Workspaces based on the current month's usage data. This will help reduce unnecessary charges and save cost.",
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "resource_type": "Workspaces",
+  "service_resource": [
+    "Workspaces"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Workspaces Billing Option Recommend",
+  "name": "AWS_WORKSPACES_BILLING_OPTION_RECOMMEND",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_WORKSPACES_BILLING_OPTION_RECOMMEND\",\n  \"InputParameters\": {\n    \"ValueLimit\": {\n      \"type\": \"number\",\n      \"description\": \"The number of hours a Value instance can run in a month before being converted to ALWAYS_ON\",\n      \"default\": 81,\n      \"constraints\": [\n        {\n          \"range\": {\n            \"min\": 1,\n            \"max\": 744\n          }\n        }\n      ]\n    },\n    \"StandardLimit\": {\n      \"type\": \"number\",\n      \"description\": \"The number of hours a Standard instance can run in a month before being converted to ALWAYS_ON\",\n      \"default\": 85,\n      \"constraints\": [\n        {\n          \"range\": {\n            \"min\": 1,\n            \"max\": 744\n          }\n        }\n      ]\n    },\n    \"PerformanceLimit\": {\n      \"type\": \"number\",\n      \"description\": \"The number of hours a Performance instance can run in a month before being converted to ALWAYS_ON\",\n      \"default\": 83,\n      \"constraints\": [\n        {\n          \"range\": {\n            \"min\": 1,\n            \"max\": 744\n          }\n        }\n      ]\n    },\n    \"PowerLimit\": {\n      \"type\": \"number\",\n      \"description\": \"The number of hours a Power instance can run in a month before being converted to ALWAYS_ON\",\n      \"default\": 83,\n      \"constraints\": [\n        {\n          \"range\": {\n            \"min\": 1,\n            \"max\": 744\n          }\n        }\n      ]\n    },\n    \"PowerProLimit\": {\n      \"type\": \"number\",\n      \"description\": \"The number of hours a Power Pro instance can run in a month before being converted to ALWAYS_ON\",\n      \"default\": 80,\n      \"constraints\": [\n        {\n          \"range\": {\n            \"min\": 1,\n            \"max\": 744\n          }\n        }\n      ]\n    },\n    \"GraphicsLimit\": {\n      \"type\": \"number\",\n      \"description\": \"The number of hours a Graphics instance can run in a month before being converted to ALWAYS_ON\",\n      \"default\": 217,\n      \"constraints\": [\n        {\n          \"range\": {\n            \"min\": 1,\n            \"max\": 744\n          }\n        }\n      ]\n    },\n    \"GraphicsProLimit\": {\n      \"type\": \"number\",\n      \"description\": \"The number of hours a Graphics Pro instance can run in a month before being converted to ALWAYS_ON\",\n      \"default\": 80,\n      \"constraints\": [\n        {\n          \"range\": {\n            \"min\": 1,\n            \"max\": 744\n          }\n        }\n      ]\n    }\n  },\n  \"CostSavingsRuleName\": \"aws_workspaces_billing_option_cost_recommend\"\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_Workspaces_Ideal_Billing_Option"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/Operation/workspaces/w1rk23",
+  "metadata": {
+  }
+}

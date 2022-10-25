@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_STORAGE_MANAGED_DISK_STANDARD_SSD_RECOMMEND",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    }
+  },
+  "CostSavingsRuleName": "azure_storage_managed_disk_standard_ssd_recommend"
+}

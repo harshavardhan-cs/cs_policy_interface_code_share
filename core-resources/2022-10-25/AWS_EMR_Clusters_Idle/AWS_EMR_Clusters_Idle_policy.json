@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_EMR_CLUSTERS_IDLE",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "1"
+    }
+  },
+  "CostSavingsRuleName": "aws_emr_clusters_cost_saving_recommend"
+}

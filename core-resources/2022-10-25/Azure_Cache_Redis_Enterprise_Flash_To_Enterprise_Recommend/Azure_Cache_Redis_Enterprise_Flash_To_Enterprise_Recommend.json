@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Azure Cache Redis Enterprise Flash having 1) Memory Utilization less than Azure Cache Redis Enterprise plan max Memory size 2)  The number of connected clients are almost equal to Maximum number of client connections supported by Enterprise  3)Modules(Redis on Flash) are not enabled are recommended to be switched to Enterprise to save cost ",
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "resource_type": "Azure_Cache_Redis",
+  "service_resource": [
+    "Redis_Enterprise"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure Cache Redis Enterprise Flash to Enterprise Recommend",
+  "name": "AZURE_CACHE_REDIS_ENTERPRISE_FLASH_TO_ENTERPRISE_RECOMMEND",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_CACHE_REDIS_ENTERPRISE_FLASH_TO_ENTERPRISE_RECOMMEND\",\n  \"InputParameters\":{\n    \"ElapsedDays\": {\n      \"type\": \"string\",\n      \"default\": \"30\"\n    }\n  },\n  \"CostSavingsRuleName\": \"azure_cache_redis_enterprise_flash_to_enterprise_recommend\"\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Modify_Redis_Cache"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/cost/azure_cache_redis/azurecheredisenttoentflshrec2807",
+  "metadata": {
+  }
+}

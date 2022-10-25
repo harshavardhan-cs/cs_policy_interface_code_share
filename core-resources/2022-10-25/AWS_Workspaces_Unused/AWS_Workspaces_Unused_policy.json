@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_Workspaces_Unused",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "number",
+      "default": 30
+    }
+  },
+  "CostSavingsRuleName": "aws_workspace_unused_cost_saving_recommendations"
+}

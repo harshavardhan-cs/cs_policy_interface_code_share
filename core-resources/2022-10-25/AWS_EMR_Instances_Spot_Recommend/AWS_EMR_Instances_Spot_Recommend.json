@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "AWS EMR Clusters having only on-demand Instances running are violated. A mix of spot and on-demand instances are recommended to save cost.",
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "resource_type": "EMR",
+  "service_resource": [
+    "InstanceGroupConfig"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EMR Instances Spot Recommend",
+  "name": "AWS_EMR_INSTANCES_SPOT_RECOMMEND",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_EMR_INSTANCES_SPOT_RECOMMEND\",\n  \"InputParameters\": {\n  },\n  \"CostSavingsRuleName\": \"aws_emr_instances_spot_cost_saving_recommend\"\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Aws_Fix_EMR_Instances_Spot_Recommend"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/instances/awsclustspotremnd1709",
+  "metadata": {
+  }
+}

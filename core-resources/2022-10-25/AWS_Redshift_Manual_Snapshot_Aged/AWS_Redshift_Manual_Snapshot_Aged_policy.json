@@ -1,0 +1,30 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_RESOURCE_AGED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "number",
+      "default": 30,
+      "description": "Please enter number of days",
+      "constraints": [
+        {
+          "range":{
+            "max": 365,
+            "min": 1
+          }
+        }
+      ]
+    },
+    "Attribute": {
+      "type": "string",
+      "default": "SnapshotCreateTime",
+      "constraints": [
+        {
+          "allowed_values": [
+          "SnapshotCreateTime"
+          ]
+        }
+      ]
+    }
+  }
+}

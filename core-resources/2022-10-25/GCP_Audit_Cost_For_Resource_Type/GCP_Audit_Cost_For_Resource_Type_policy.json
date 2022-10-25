@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCP_AUDIT_COST_FOR_RESOURCE_TYPE_TO_SCALE_ANOMALY",
+  "InputParameters": {
+    "percentage_to_check": {
+      "type": "string",
+      "default": "150",
+      "label": "Percentage of cost change"
+    }
+  }
+}

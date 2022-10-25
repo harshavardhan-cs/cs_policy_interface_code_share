@@ -1,0 +1,41 @@
+{
+  "name": "weekdays_congress",
+  "description": "Default policy for weekdays",
+  "category": "service",
+  "status": "active",
+  "content": "wd(r) :- corestack_rule:weekdays(day=d, start_time=s, end_time=e, action=a, is_allowed=r), equal(#action#,a), equal(#day#, d), gt(#user_time#, s), lt(#user_time#, e);",
+  "parameters": {
+    "user_time": {
+      "type": "number",
+      "description": "hour value in user's timezone",
+      "label": "user_time"
+    },
+    "day": {
+      "type": "string",
+      "description": "day of week",
+      "label": "day"
+    },
+    "action": {
+      "type": "string",
+      "description": "action name",
+      "label": "action"
+    }
+  },
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "resource_type": [],
+  "severity": "low",
+  "type": [
+    "Orchestration"
+  ],
+  "services": [
+    "Corestack"
+  ],
+  "scope": "global",
+  "metadata": {},
+  "resources": [],
+  "is_temp": true,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/corestack/compliance/others/kutrh",
+  "recommendations": []
+}

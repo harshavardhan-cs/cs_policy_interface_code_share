@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether EBS Throughput Optimized-(st1) HDD exists.",
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "resource_type": "EBS",
+  "service_resource": [
+    "Volumes"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EBS Throughput Optimized-(st1) HDD Recommend",
+  "name": "AWS_EBS_THROUGHPUT_OPTIMIZED_st1_HDD_RECOMMEND",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_EBS_THROUGHPUT_OPTIMIZED_st1_HDD_RECOMMEND\",\n  \"InputParameters\": {\n  },\n  \"CostSavingsRuleName\": \"aws_ebs_cost_saving_recommendations\"\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Change_EBS_Volume_to_Throughput-Optimized-(st1)-HDD"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/compliance/others/qspkr",
+  "metadata": {
+  }
+}

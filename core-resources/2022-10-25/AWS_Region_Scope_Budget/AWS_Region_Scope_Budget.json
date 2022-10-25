@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether Budgets are defined at the AWS region level to notify when the actual cost or forecasted cost exceeds the budgeted amount.",
+  "classification": "Cost",
+  "sub_classification": "Budget",
+  "resource_type": "Cost",
+  "service_resource": [
+    "Budget"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Region Scope Budget",
+  "name": "AWS_REGION_SCOPE_BUDGET",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_REGION_SCOPE_BUDGET\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_Region_Scope_Budget"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/compliance/others/wqjlj",
+  "metadata": {
+  }
+}

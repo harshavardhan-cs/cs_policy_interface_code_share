@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_EC2_Metric_CPU_Usage",
+  "InputParameters": {
+    "MetricPercentage": {
+      "type": "string",
+      "description": "Average CPU Utilisation.",
+      "default": 80
+    }
+  }
+}

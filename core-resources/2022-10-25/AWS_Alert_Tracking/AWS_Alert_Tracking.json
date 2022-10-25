@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether High Priority Alerts Open for more than 24 hours. The user can choose Priority and Number of hours for which alert is open.",
+  "classification": "Operation",
+  "sub_classification": "Monitoring",
+  "resource_type": "Cloudwatch",
+  "service_resource": [
+    "Alarm"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Alert Tracking",
+  "name": "AWS_ALERT_TRACKING",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_ALERT_TRACKING\",\n  \"InputParameters\": {\n    \"NoofHour\": {\n      \"type\": \"number\",\n      \"label\": \"Number of Hours\",\n      \"description\": \"Number of hours for which the Alerts are open.\",\n      \"default\": 24\n    },\n    \"Priority\": {\n      \"type\": \"string\",\n      \"description\": \"Priority of the open Alerts.\",\n      \"constraints\": [\n        {\n          \"allowed_values\": [\n            \"high\",\n            \"medium\",\n            \"low\"\n          ]\n        }\n      ],\n      \"default\": \"high\"\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_Alert_Tracking"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/operations/alarm/ym4gx",
+  "metadata": {
+  }
+}

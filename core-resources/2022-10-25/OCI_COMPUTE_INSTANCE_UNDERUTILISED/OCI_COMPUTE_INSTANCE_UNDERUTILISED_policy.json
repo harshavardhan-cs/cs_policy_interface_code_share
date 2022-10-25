@@ -1,0 +1,27 @@
+{
+  "Version": "1.0",
+  "RuleName": "OCI_RESOURCE_UNDERUTILISED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    },
+    "MetricName": {
+      "type": "string",
+      "optional": true,
+      "description": "Specify the appropriate Metric name like CPU_Utilization",
+      "constraints": [
+        {
+          "allowed_values": [
+             "CPU_Utilization",
+             "Disk_Bytes_Read",
+             "Disk_Bytes_Written",
+             "Disk_Iops_Read",
+             "Disk_Iops_Written",
+             "Memory_Utilization"
+          ]
+        }
+      ]
+    }
+  }
+}

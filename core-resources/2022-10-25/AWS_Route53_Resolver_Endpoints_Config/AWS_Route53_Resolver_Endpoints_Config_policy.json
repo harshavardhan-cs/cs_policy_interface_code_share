@@ -1,0 +1,7 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_ROUTE53_RESOLVER_ENDPOINTS_CONFIG",
+  "InputParameters": {
+  },
+  "CostSavingsRuleName": "aws_route53_resolver_endpoints"
+}

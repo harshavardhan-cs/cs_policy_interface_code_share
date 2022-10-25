@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_VIRTUAL_MACHINE_INSTANCE_AGED_STOP_STATE_RECOMMEND",
+  "InputParameters": {
+      "ElapsedDays": {
+      "type": "number",
+      "default": "30"
+    }
+  }
+}

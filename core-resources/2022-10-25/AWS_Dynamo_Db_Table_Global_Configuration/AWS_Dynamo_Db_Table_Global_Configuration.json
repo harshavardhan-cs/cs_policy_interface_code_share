@@ -1,0 +1,32 @@
+{
+  "status": "active",
+  "description": "This policy audits whether AWS DynamoDb Tables which are required to be configured with Global configuration.",
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "resource_type": "DynamoDB",
+  "service_resource": [
+    "Table"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Dynamo Db Table Global Recommend",
+  "name": "AWS_DYNAMODB_TABLE_GLOBAL_RECOMMEND",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_DYNAMODB_GLOBAL_RECOMMEND\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"string\",\n      \"default\": \"180\"\n    }\n  },\n  \"CostSavingsRuleName\": \"savings_by_percentage\",\n  \"CostSavingsRuleInputParameters\": {\n    \"Percentage\": 30\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_DynamoDb_Table_Global_Configuration"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/config/dynglbcfgl56",
+  "metadata": {
+  }
+}
+

@@ -1,0 +1,7 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_EBS_THROUGHPUT_OPTIMIZED_st1_HDD_RECOMMEND",
+  "InputParameters": {
+  },
+  "CostSavingsRuleName": "aws_ebs_cost_saving_recommendations"
+}

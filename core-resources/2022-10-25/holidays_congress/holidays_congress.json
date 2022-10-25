@@ -1,0 +1,36 @@
+{
+  "name": "holidays_congress",
+  "description": "Default policy for holidays",
+  "category": "service",
+  "status": "active",
+  "content": "hd(r) :- corestack_rule:holidays(action=a, is_allowed=r, date=d), equal(#date#, d), equal(#action#, a);",
+  "parameters": {
+    "date": {
+      "type": "string",
+      "description": "today date in dd-mm-yyyy",
+      "label": "date"
+    },
+    "action": {
+      "type": "string",
+      "description": "action name",
+      "label": "action"
+    }
+  },
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "resource_type": [],
+  "severity": "low",
+  "type": [
+    "Others"
+  ],
+  "services": [
+    "Corestack"
+  ],
+  "scope": "global",
+  "metadata": {},
+  "resources": [],
+  "is_temp": true,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/corestack/compliance/others/7gxte",
+  "recommendations": []
+}

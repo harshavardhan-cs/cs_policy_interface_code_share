@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_ECS_CLUSTER_SPOT_RECOMMEND",
+  "InputParameters": {
+  },
+  "CostSavingsRuleName": "savings_by_percentage",
+  "CostSavingsRuleInputParameters": {
+    "Percentage": 25,
+    "split_required": "true"
+  }
+}

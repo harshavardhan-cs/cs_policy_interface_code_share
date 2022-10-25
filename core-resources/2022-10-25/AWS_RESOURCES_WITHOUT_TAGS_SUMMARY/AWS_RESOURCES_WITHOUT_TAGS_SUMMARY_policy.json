@@ -1,0 +1,17 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_RESOURCES_WITHOUT_TAGS",
+  "InputParameters": {
+    "Mode": {
+      "type": "string",
+      "default": "Summary",
+      "constraints": [
+        {
+          "allowed_values": [
+            "Summary"
+          ]
+        }
+      ]
+    }
+  }
+}

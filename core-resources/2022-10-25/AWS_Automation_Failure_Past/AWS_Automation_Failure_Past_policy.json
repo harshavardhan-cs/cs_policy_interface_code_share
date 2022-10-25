@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_Automation_Failure_Past_At_NoofDays",
+  "InputParameters": {
+    "NoofDays": {
+      "type": "string",
+      "default": 30
+    }
+  }
+}

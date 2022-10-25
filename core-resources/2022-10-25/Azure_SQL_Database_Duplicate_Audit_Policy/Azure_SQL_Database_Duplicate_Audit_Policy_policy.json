@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_SQL_DATABASE_DUPLICATE_AUDIT_POLICY",
+  "InputParameters": {
+  }
+}

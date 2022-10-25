@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the Lambda function is throwing error for more than 5% of the overall invocation within a specified period then the issue in code needs to fixed to save unnecessary cost for errored invocations.",
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "resource_type": "Lambda",
+  "service_resource": [
+    "Functions"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS LAMBDA ERROR IN EXECUTION RECOMMEND",
+  "name": "AWS_LAMBDA_ERROR_IN_EXECUTION_RECOMMEND",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_Lambda_Error_Execution\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"number\",\n      \"default\": \"14\"\n    }\n  },\n  \"CostSavingsRuleName\": \"aws_lambda_cost_savings_recommendation\",\n  \"CostSavingsRuleInputParameters\": {\n    \"cond\": \"error\"\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_Lambda_Error_In_Execution_Recommend"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/functions/y8e2nds78t",
+  "metadata": {
+  }
+}

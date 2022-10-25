@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This Policy identifies the AWS Redshift Manual snapshots aged above given number of days.",
+  "classification": "Cost",
+  "sub_classification": "Idle",
+  "resource_type": "Redshift",
+  "service_resource": [
+      "Redshift_Cluster_Snapshots"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+      "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Redshift Manual Snapshot Aged",
+  "name": "AWS_REDSHIFT_MANUAL_SNAPSHOT_AGED",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_RESOURCE_AGED\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"number\",\n      \"default\": 30,\n      \"description\": \"Please enter number of days\",\n      \"constraints\": [\n        {\n          \"range\":{\n            \"max\": 365,\n            \"min\": 1\n          }\n        }\n      ]\n    },\n    \"Attribute\": {\n      \"type\": \"string\",\n      \"default\": \"SnapshotCreateTime\",\n      \"constraints\": [\n        {\n          \"allowed_values\": [\n          \"SnapshotCreateTime\"\n          ]\n        }\n      ]\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+      "Cloud"
+  ],
+  "recommendations": [
+      "AWS_Fix_Redshift_ManualSnapshot_Aged"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/redshift/awsredshclusaged0405",
+  "metadata": {
+  }
+}

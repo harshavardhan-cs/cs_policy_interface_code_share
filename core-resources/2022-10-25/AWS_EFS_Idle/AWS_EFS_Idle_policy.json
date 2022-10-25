@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_EFS_IDLE",
+  "InputParameters": {
+      "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    }
+  }
+}

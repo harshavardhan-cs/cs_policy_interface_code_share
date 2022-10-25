@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Disks not attached to any VM Instances are considered orphaned. These Disks are charged without being used and hanging around without any purpose.",
+  "classification": "Cost",
+  "sub_classification": "Orphaned",
+  "resource_type": "Compute_Engine",
+  "service_resource": [
+    "Disks"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "GCP"
+  ],
+  "category": "service",
+  "display_name": "GCP Disks Orphaned",
+  "name": "GCP_Disks_Orphaned",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"GCPOrphanedResources\",\n  \"InputParameters\": {\n  },\n  \"ResourceProperties\": [\n    \"DiskType\",\n    \"type\"\n  ]\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "GCP_Fix_Orphaned_Disk"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/gcp/cost/disks/dskorpn24sd",
+  "metadata": {
+  }
+}

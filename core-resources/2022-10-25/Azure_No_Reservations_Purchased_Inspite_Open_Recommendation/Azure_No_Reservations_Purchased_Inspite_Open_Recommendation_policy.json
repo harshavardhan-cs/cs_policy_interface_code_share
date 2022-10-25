@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_NO_RESERVATIONS_PURCHASED_INSPITE_OPEN_RECOMMENDATION",
+  "InputParameters": {
+  }
+}

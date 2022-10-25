@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_EC2_METRIC_STATUS_CHECK_FAILED",
+  "InputParameters": {
+    "MetricPercentage": {
+      "type": "string"
+    },
+    "NoofDays": {
+      "type": "number",
+      "default": 30,
+      "description": "No of Days from the Current Date we wanted to see the data"
+    }
+  }
+}

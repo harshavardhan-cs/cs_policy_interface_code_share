@@ -1,0 +1,30 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_RESOURCE_UNDERUTILISED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    },
+    "MetricName": {
+      "type": "string",
+      "optional": true,
+      "description": "Specify the appropriate Metric name like CPUUtilization",
+      "constraints": [
+        {
+          "allowed_values": [
+            "CPUUtilization",
+            "EBSByteBalance%",
+            "EBSIOBalance%",
+            "EngineUptime",
+            "FreeLocalStorage",
+            "NetworkThroughput",
+            "NetworkTransmitThroughput",
+            "VolumeBytesUsed",
+            "VolumeWriteIOPs"
+          ]
+        }
+      ]
+    }
+  }
+}

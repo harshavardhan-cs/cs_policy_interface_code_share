@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "GCP Buckets that do not have any objects are considered as orphaned",
+  "classification": "Cost",
+  "sub_classification": "Orphaned",
+  "resource_type": "Bucket",
+  "service_resource": [
+    "Buckets"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "GCP"
+  ],
+  "category": "service",
+  "display_name": "GCP Buckets Orphaned",
+  "name": "GCP_Buckets_Orphaned",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"GCPOrphanedResources\",\n  \"InputParameters\": {\n  },\n  \"ResourceProperties\": [\n    \"name\"\n  ]\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "GCP_Fix_Buckets_Orphaned"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/gcp/cost/buckets/bcktorphn4rc4",
+  "metadata": {
+  }
+}

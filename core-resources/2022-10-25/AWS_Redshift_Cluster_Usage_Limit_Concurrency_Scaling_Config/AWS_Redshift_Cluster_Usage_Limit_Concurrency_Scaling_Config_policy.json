@@ -1,0 +1,17 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_REDSHIFT_USAGE_LIMIT_CONCURRENCY_SCALING_CONFIG",
+  "InputParameters": {
+    "FeatureType": {
+      "type": "string",
+      "default": "concurrency-scaling",
+      "constraints": [
+        {
+          "allowed_values": [
+            "concurrency-scaling"
+          ]
+        }
+      ]
+    }
+  }
+}

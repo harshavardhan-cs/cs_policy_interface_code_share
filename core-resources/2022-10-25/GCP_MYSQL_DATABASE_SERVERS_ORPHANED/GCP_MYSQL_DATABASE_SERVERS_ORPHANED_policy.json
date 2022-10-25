@@ -1,0 +1,26 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCP_SQL_Instances_Orphaned",
+  "InputParameters": {
+    "Attributes": {
+      "type": "string",
+      "constraints": [
+        {
+          "allowed_values": [
+            "Database_Version"
+          ]
+        }
+      ]
+    },
+    "Value": {
+      "type": "string",
+      "constraints": [
+        {
+          "allowed_values": [
+            "MYSQL"
+          ]
+        }
+      ]
+    }
+  }
+}

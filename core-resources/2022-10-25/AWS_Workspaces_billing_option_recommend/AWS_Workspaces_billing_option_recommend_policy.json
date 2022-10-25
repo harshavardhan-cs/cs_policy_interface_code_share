@@ -1,0 +1,98 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_WORKSPACES_BILLING_OPTION_RECOMMEND",
+  "InputParameters": {
+    "ValueLimit": {
+      "type": "number",
+      "description": "The number of hours a Value instance can run in a month before being converted to ALWAYS_ON",
+      "default": 81,
+      "constraints": [
+        {
+          "range": {
+            "min": 1,
+            "max": 744
+          }
+        }
+      ]
+    },
+    "StandardLimit": {
+      "type": "number",
+      "description": "The number of hours a Standard instance can run in a month before being converted to ALWAYS_ON",
+      "default": 85,
+      "constraints": [
+        {
+          "range": {
+            "min": 1,
+            "max": 744
+          }
+        }
+      ]
+    },
+    "PerformanceLimit": {
+      "type": "number",
+      "description": "The number of hours a Performance instance can run in a month before being converted to ALWAYS_ON",
+      "default": 83,
+      "constraints": [
+        {
+          "range": {
+            "min": 1,
+            "max": 744
+          }
+        }
+      ]
+    },
+    "PowerLimit": {
+      "type": "number",
+      "description": "The number of hours a Power instance can run in a month before being converted to ALWAYS_ON",
+      "default": 83,
+      "constraints": [
+        {
+          "range": {
+            "min": 1,
+            "max": 744
+          }
+        }
+      ]
+    },
+    "PowerProLimit": {
+      "type": "number",
+      "description": "The number of hours a Power Pro instance can run in a month before being converted to ALWAYS_ON",
+      "default": 80,
+      "constraints": [
+        {
+          "range": {
+            "min": 1,
+            "max": 744
+          }
+        }
+      ]
+    },
+    "GraphicsLimit": {
+      "type": "number",
+      "description": "The number of hours a Graphics instance can run in a month before being converted to ALWAYS_ON",
+      "default": 217,
+      "constraints": [
+        {
+          "range": {
+            "min": 1,
+            "max": 744
+          }
+        }
+      ]
+    },
+    "GraphicsProLimit": {
+      "type": "number",
+      "description": "The number of hours a Graphics Pro instance can run in a month before being converted to ALWAYS_ON",
+      "default": 80,
+      "constraints": [
+        {
+          "range": {
+            "min": 1,
+            "max": 744
+          }
+        }
+      ]
+    }
+  },
+  "CostSavingsRuleName": "aws_workspaces_billing_option_cost_recommend"
+}

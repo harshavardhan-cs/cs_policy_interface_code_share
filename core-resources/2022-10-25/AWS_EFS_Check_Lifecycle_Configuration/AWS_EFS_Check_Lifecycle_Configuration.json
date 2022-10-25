@@ -1,0 +1,32 @@
+{
+  "status": "active",
+  "description": "This policy checks the Lifecycle management policies are configured on EFS volumes.Lifecycle management policies automatically manages cost-effective storage for file systems.When enabled lifecycle management migrates files that have not been accessed for a set period of time to the EFS Standard Infrequent Access ('Standard IA') or One Zone Infrequent Access ('One Zone IA') storage class depending on your file system.",
+  "classification": "Cost",
+  "sub_classification": "Governance",
+  "resource_type": "EFS",
+  "service_resource": [
+    "File_systems"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EFS Lifecycle Recommend",
+  "name": "AWS_EFS_LIFECYCLE_RECOMMEND",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_EFS_LIFECYCLE_RECOMMEND\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Configure_LifeCycle_Management_Policy"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/config/bdyn28",
+  "metadata": {
+  }
+}
+

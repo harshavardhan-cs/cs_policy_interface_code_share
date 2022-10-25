@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_DYNAMODB_UNUSED_TABLES_RECOMMEND",
+  "InputParameters": {
+       "ElapsedDays": {
+        "type": "number",
+        "default": 30
+      }
+  }
+}

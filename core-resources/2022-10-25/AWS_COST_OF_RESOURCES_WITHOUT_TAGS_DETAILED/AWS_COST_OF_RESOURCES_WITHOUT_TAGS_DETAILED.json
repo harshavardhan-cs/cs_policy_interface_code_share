@@ -1,0 +1,29 @@
+{
+  "status": "active",
+  "description": "This policy checks the resources that can be tagged and identifies the list of resources that do not have any tags specified and the cost it has incurred during the last billing period. This will help understand how the cost management is based on tags",
+  "classification": "Cost",
+  "sub_classification": "Tags",
+  "resource_type": "Others",
+  "service_resource": [],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS_COST_OF_RESOURCES_WITHOUT_TAGS_DETAILED",
+  "name": "AWS_COST_OF_RESOURCES_WITHOUT_TAGS_DETAILED",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_COST_OF_RESOURCES_WITHOUT_TAGS\",\n  \"InputParameters\": {\n    \"Mode\": {\n      \"type\": \"string\",\n      \"constraints\": [\n        {\n          \"allowed_values\": [\n            \"Detailed\"\n          ]\n        }\n      ]\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Percentage_of_Cost_By_Resources_Without_Tags_Detailed"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/tagbudget/DgtgrYE38452",
+  "metadata": {
+  }
+}

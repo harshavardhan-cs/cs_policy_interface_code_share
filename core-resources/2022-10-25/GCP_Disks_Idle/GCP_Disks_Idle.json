@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Disks which are attached to a vm which is in stopped state over a period of time or Disks which are not utilized properly over a period of time can be considerd as idle.",
+  "classification": "Cost",
+  "sub_classification": "Idle",
+  "resource_type": "Compute_Engine",
+  "service_resource": [
+    "Disks"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "GCP"
+  ],
+  "category": "service",
+  "display_name": "GCP Disks Idle",
+  "name": "GCP_Disks_Idle",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"GCPDiskIdle\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"number\",\n      \"default\": \"30\"\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "GCP_Fix_Idle_Disk"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/gcp/cost/disks/diskidlyu23nb7w",
+  "metadata": {
+  }
+}

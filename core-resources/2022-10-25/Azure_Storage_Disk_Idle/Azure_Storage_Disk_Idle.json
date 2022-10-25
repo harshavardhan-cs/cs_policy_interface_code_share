@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Azure Storage Disks having Average Utilization less than 5% of the Max Utilization during the period of last 30 days are considered as idle. Utilization data is identified using the Azure Monitoring Data. ElapsedDays input parameter can be modified as per user convenience.",
+  "classification": "Cost",
+  "sub_classification": "Idle",
+  "resource_type": "Storage_Disks",
+  "service_resource": [
+    "Disks"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure Storage Disk Idle",
+  "name": "AZURE_STORAGE_DISK_IDLE",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_STORAGE_DISK_IDLE\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"string\",\n      \"default\": \"30\"\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Fix_Storage_Disk_Idle"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/compliance/others/ayain",
+  "metadata": {
+  }
+}

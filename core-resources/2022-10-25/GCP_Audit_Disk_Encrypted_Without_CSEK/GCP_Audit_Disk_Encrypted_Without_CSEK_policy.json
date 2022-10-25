@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCP_AUDIT_DISK_ENCRYPTED_WITHOUT_CSEK",
+  "InputParameters": {
+  }
+}

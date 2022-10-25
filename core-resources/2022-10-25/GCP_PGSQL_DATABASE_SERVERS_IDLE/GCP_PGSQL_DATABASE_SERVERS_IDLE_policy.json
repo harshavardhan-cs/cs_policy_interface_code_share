@@ -1,0 +1,20 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCP_SQL_Instances_Idle",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "number",
+      "default": "30"
+    },
+    "Value": {
+      "type": "string",
+      "constraints": [
+        {
+          "allowed_values": [
+            "POSTGRES"
+          ]
+        }
+      ]
+    }
+  }
+}

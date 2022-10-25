@@ -1,0 +1,21 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCPBigQueryTimeoutRecommend",
+  "InputParameters": {
+    "Threshold": {
+      "type": "number",
+      "constraints": [
+        {
+          "range": {
+            "max": 1000,
+            "min": 1
+          }
+        }
+      ]
+    }
+  },
+  "CostSavingsRuleName": "gcp_big_query_cost_saving_recommendations",
+  "CostSavingsRuleInputParameters": {
+    "Group_By": "Project"
+  }
+}

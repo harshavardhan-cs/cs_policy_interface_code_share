@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Azure Cache Redis Enterprise metric values less than 30% during given ElapsedDays are considered underutilized. Azure Monitor is the source for these assessment metrics.",
+  "classification": "Cost",
+  "sub_classification": "Underutilized",
+  "resource_type": "Azure_Cache_Redis",
+  "service_resource": [
+    "Redis_Enterprise"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure Cache Redis Enterprise Underutilized",
+  "name": "AZURE_CACHE_REDIS_ENTERPRISE_UNDERUTILIZED",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_RESOURCE_UNDERUTILISED\",\n  \"InputParameters\": {\n      \"ElapsedDays\": {\n        \"type\": \"string\",\n        \"default\": \"30\"\n      }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Fix_Cache_Redis_Enterprise_Underutilized"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/cost/azure_cache_redis/azurecheredisentundr2807",
+  "metadata": {
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether Compute engine instances are having public IP Address.If public IP Address are used, the it is violation.",
+  "classification": "Security",
+  "sub_classification": "Data",
+  "resource_type": "Compute_Engine",
+  "service_resource": [
+    "VM_Instances"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "GCP"
+  ],
+  "category": "service",
+  "display_name": "GCP Audit Instance Using Public IP Address",
+  "name": "GCP_AUDIT_INSTANCE_USING_PUBLIC_IP_ADDRESS",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"GCP_AUDIT_INSTANCE_USING_PUBLIC_IP_ADDRESS\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "GCP_Fix_Instance_Using_Public_IP_Address"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/gcp/security/compute/san08",
+  "metadata": {
+  }
+}

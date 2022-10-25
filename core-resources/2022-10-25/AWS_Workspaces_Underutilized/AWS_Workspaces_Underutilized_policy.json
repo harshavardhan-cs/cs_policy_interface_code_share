@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_Workspaces_UnderUtilized",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "number",
+      "default": "30"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCPBigQueryReservationSlotsRecommend",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "75"
+    }
+  },
+  "CostSavingsRuleName": "gcp_big_query_cost_saving_recommendations",
+  "CostSavingsRuleInputParameters": {
+    "Group_By": "Project"
+  }
+}

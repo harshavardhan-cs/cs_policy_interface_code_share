@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_CACHE_REDIS_ENTERPRISE_TO_PREMIUM_RECOMMEND",
+  "InputParameters":{
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    }
+  },
+  "CostSavingsRuleName": "azure_cache_redis_enterprise_to_premium_recommend"
+}

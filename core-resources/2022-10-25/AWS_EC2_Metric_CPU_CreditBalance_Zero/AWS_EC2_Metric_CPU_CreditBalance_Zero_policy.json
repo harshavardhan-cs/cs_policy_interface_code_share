@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_EC2_Metric_CPU_CreditBalance_Zero",
+  "InputParameters": {
+  }
+}

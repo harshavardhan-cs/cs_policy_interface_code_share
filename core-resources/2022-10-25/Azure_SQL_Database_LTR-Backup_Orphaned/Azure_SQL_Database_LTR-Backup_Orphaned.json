@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Azure SQL Database Long-term Retention(LTR) Backups that are associated with deleted resources are considered orphans.",
+  "classification": "Cost",
+  "sub_classification": "Governance",
+  "resource_type": "Databases",
+  "service_resource": [
+    "Long_Term_Retention_Backups"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure SQL Database LTR-Backup Orphaned",
+  "name": "AZURE_SQL_DATABASE_LTR-BACKUP_ORPHANED",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_ORPHANED\",\n  \"input_parameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Fix_SQL_Backup_LTR_Orphaned"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/cost/databases/azuresqldbltrbackorph2208",
+  "metadata": {
+  }
+}

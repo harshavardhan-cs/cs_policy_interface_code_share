@@ -1,0 +1,16 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCP_COST_OF_RESOURCES_WITHOUT_TAGS",
+  "InputParameters": {
+    "Mode": {
+      "type": "string",
+      "constraints": [
+        {
+          "allowed_values": [
+            "Summary"
+          ]
+        }
+      ]
+    }
+  }
+}

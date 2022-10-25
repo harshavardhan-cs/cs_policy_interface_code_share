@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_AUDIT_EBS_NOT_ENCRYPTED_WITH_CMK",
+  "InputParameters": {
+  }
+}

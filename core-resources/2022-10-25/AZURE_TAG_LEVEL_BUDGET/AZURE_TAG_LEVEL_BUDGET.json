@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy checks Budgets are defined at the Tag level for an Azure account. Tag level budget helps in keeping the cost under control at a granular level. There can be multiple tag level budgets defined but at least one should be present.",
+  "classification": "Cost",
+  "sub_classification": "Budget",
+  "resource_type": "Cost",
+  "service_resource": [
+    "Budget"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "AZURE TAG LEVEL BUDGET",
+  "name": "AZURE_TAG_LEVEL_BUDGET",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_TAG_LEVEL_BUDGET\",\n  \"InputParameters\": {}\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AZURE_Create_Tag_Level_Budgets"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/cost/tagbudget/dtfdflom",
+  "metadata": {
+  }
+}

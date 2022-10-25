@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_EC2_PercentageofInstanceswithoutBackup",
+  "InputParameters": {
+    "NoofDays": {
+      "type": "number",
+      "default": 7
+    }
+  }
+}

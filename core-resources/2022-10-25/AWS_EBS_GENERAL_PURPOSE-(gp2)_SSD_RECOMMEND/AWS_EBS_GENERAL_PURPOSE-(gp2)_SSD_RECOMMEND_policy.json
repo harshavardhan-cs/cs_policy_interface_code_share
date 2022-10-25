@@ -1,0 +1,7 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_EBS_GENERAL_PURPOSE_gp2_SSD_RECOMMEND",
+  "InputParameters": {
+  },
+  "CostSavingsRuleName": "aws_ebs_cost_saving_recommendations"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "To list the Virtual Machine in a subscription in deallocated state with Managed disk attached.",
+  "classification": "Cost",
+  "sub_classification": "Idle",
+  "resource_type": "Virtual_Machines",
+  "service_resource": [
+    "Virtual_Machines"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Deallocated Virtual Machines with Managed Disks Attached",
+  "name": "Azure_VM_Deallocated_State_with_Managed_Disk",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"Deallocated_Virtual_Machines_with_Managed_Disks_Attached\"\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Fix_VM_Deallocated_State_with_Managed_Disk"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/cost/config/bkdyhgj",
+  "metadata": {
+  }
+}

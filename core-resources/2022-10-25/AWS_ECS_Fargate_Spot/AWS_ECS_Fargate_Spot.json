@@ -1,0 +1,32 @@
+{
+  "status": "active",
+  "description": "This policy audits use of Capacity type Fargate SPOT in the Fargate Cluster for the past 30 days. FARGATE cluster can be updated to use only FARGATE_SPOT or mix of FARGATE and FARGATE_SPOT. This will help reduce unnecessary charges and save cost.",
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "resource_type": "ECS",
+  "service_resource": [
+    "Cluster"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS_ECS_FARGATE_SPOT_RECOMMEND",
+  "name": "AWS_ECS_FARGATE_SPOT_RECOMMEND",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_ECS_CLUSTER_SPOT_RECOMMEND\",\n  \"InputParameters\": {\n  },\n  \"CostSavingsRuleName\": \"savings_by_percentage\",\n  \"CostSavingsRuleInputParameters\": {\n    \"Percentage\": 25,\n    \"split_required\": \"true\"\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Fix_AWS_ECS_Fargate_Spot"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/cluster/hhthfhtllhh",
+  "metadata": {
+  }
+}
+

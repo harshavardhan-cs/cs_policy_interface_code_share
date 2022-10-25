@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Azure Storage Accounts that are not being used by any resource are considered as orphans.",
+  "classification": "Cost",
+  "sub_classification": "Orphaned",
+  "resource_type": "Accounts",
+  "service_resource": [
+    "Storage_Accounts"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure Storage Accounts Orphaned",
+  "name": "AZURE_STORAGE_ACCOUNTS_ORPHANED",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_ORPHANED\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Fix_Storage_Accounts_Orphaned"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/compliance/others/cy423",
+  "metadata": {
+  }
+}

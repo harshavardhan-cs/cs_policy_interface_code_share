@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_RECENTLY_PURCHASED_RESERVATIONS",
+  "InputParameters": {
+    "No_of_days": {
+      "type": "number",
+      "label": "Number of days",
+      "default": 7
+    }
+  }
+}

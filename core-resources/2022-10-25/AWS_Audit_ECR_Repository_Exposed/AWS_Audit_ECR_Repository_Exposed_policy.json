@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_AUDIT_ECR_REPOSITORY_EXPOSED",
+  "InputParameters": {
+  }
+}

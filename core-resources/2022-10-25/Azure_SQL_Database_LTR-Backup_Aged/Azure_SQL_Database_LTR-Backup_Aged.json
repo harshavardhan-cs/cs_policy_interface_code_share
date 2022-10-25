@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Azure SQL database Long-term Retention(LTR) Backups having aged more than Elapsed days are to be deleted.",
+  "classification": "Cost",
+  "sub_classification": "Governance",
+  "resource_type": "Databases",
+  "service_resource": [
+    "Long_Term_Retention_Backups"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure SQL Database LTR-Backup Aged",
+  "name": "AZURE_SQL_DATABASE_LTR-BACKUP_AGED",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_RESOURCE_AGED\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"number\",\n      \"default\": 30,\n      \"description\": \"Please enter number of days\",\n      \"constraints\": [\n        {\n          \"range\":{\n            \"max\": 365,\n            \"min\": 1\n          }\n        }\n      ]\n    }\n  }\n}\n",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Fix_SQL_Database_Ltr-Backup_Aged"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/cost/databases/azuresqldbltrbackaged2608",
+  "metadata": {
+  }
+}

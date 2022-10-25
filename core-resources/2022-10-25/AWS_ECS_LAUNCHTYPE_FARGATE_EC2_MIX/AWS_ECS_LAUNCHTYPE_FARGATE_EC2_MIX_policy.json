@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_ECS_LAUNCHTYPE_FARGATE_EC2_MIX",
+  "InputParameters": {},
+  "CostSavingsRuleName": "savings_by_percentage",
+  "CostSavingsRuleInputParameters": {
+    "Percentage": 10,
+    "split_required": "true"
+  }
+}

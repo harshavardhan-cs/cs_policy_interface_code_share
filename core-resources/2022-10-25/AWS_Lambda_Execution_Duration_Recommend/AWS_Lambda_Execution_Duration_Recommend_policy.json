@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_Lambda_Execution_Duration",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "14"
+    }
+  },
+  "CostSavingsRuleName": "aws_lambda_cost_savings_recommendation",
+  "CostSavingsRuleInputParameters": {
+    "cond": "duration"
+  }
+}

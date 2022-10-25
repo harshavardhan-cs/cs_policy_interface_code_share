@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Audits AWS ACM (SSL/TLS) certificates which are expired or in PENDING_VALIDATION status",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "resource_type": "Certificate_Manager",
+  "service_resource": [
+    "Certificate"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit ACM Cert Validate",
+  "name": "AWS_Audit_ACM_Cert_Validity",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_AUDIT_ACM_CERT_VALIDITY\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_ACM_Cert_Validity"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/security/certificate/s1a2n",
+  "metadata": {
+  }
+}

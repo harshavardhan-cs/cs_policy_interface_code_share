@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "AWS Route53 Resolver Endpoints having metrics with very low Utilization for given Elapsed Days is considered idle. Utilization is identified using the AWS Cloud Watch metric data. Elapsed Days input parameter can be modified as per user convenience.",
+  "classification": "Cost",
+  "sub_classification": "Idle",
+  "resource_type": "Route53_Resolver",
+  "service_resource": [
+    "Resolver_Endpoint"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "Aws Route53 Resolver Inbound Endpoints Idle",
+  "name": "AWS_ROUTE53_RESOLVER_INBOUND_ENDPOINTS_IDLE",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_ROUTE53_RESOLVER_INBOUND_ENDPOINTS_IDLE\",\n  \"InputParameters\": {\n      \"ElapsedDays\": {\n          \"type\": \"string\",\n          \"default\": \"30\"\n      }\n  },\n  \"CostSavingsRuleName\": \"aws_route53_resolver_endpoints\"\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Aws_Fix_Route53_Resolver_Inbound_Endpoints_Idle"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/cost/route53/awsrout53reslendptidle2608",
+  "metadata": {
+  }
+}

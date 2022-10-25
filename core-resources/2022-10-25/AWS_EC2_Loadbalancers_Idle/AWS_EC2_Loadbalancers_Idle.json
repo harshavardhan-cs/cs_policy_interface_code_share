@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether EC2 LoadBalancers are idle.",
+  "classification": "Cost",
+  "sub_classification": "Idle",
+  "resource_type": "EC2",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Load Balancers Idle",
+  "name": "AWS_EC2_LOADBALANCERS_IDLE",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_RESOURCE_IDLE\",\n  \"InputParameters\": {\n      \"ElapsedDays\": {\n        \"type\": \"string\",\n        \"default\": \"30\"\n      }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_EC2_LoadBalancers_Idle"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/compliance/others/psmlt",
+  "metadata": {
+  }
+}

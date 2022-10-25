@@ -1,0 +1,28 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_RESOURCE_UNDERUTILISED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string"
+    },
+    "MetricName": {
+      "type": "string",
+      "optional": true,
+      "description": "Specify the appropriate Metric name like CPUUtilization",
+      "constraints": [
+        {
+          "allowed_values": [
+            "CPU Credits Consumed",
+            "CPU Credits Remaining",
+            "Disk Read Operations/Sec",
+            "Disk Write Operations/Sec",
+            "CPUSurplusCreditsCharged",
+            "Network In",
+            "Network Out",
+            "Percentage CPU"
+          ]
+        }
+      ]
+    }
+  }
+}

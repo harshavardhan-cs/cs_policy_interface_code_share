@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_APP_SERVICE_PLAN_IDLE",
+  "InputParameters": {
+      "ElapsedDays": {
+        "type": "string",
+        "default": "30"
+      }
+  }
+}

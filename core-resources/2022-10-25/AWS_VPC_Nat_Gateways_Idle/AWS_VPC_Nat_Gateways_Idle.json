@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "AWS Nat Gateways having no active Connections during the given Elapsed days are considered Idle.",
+  "classification": "Cost",
+  "sub_classification": "Idle",
+  "resource_type": "VPC",
+  "service_resource": [
+    "Nat_Gateways"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS VPC Nat Gateways Idle",
+  "name": "AWS_VPC_NAT_GATEWAYS_IDLE",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_RESOURCE_PAAS\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"string\",\n      \"default\": \"30\"\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_VPC_Nat_Gateways_Idle"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/vpc/awsvpcnatgtwys2508",
+  "metadata": {
+  }
+}

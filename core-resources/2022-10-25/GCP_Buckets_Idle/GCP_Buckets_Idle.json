@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "GCP Buckets that do not have any utilization for the past 30 days are considered as idle. While the Number of Days is set as 30 by default, it can be changed when executing the policy",
+  "classification": "Cost",
+  "sub_classification": "Idle",
+  "resource_type": "Bucket",
+  "service_resource": [
+    "Buckets"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "GCP"
+  ],
+  "category": "service",
+  "display_name": "GCP Buckets Idle",
+  "name": "GCP_Buckets_Idle",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"GCPBucketIdleResources\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"string\",\n      \"default\": \"30\"\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "GCP_Fix_Buckets_Idle"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/gcp/cost/buckets/bcktidl4tgv65",
+  "metadata": {
+  }
+}

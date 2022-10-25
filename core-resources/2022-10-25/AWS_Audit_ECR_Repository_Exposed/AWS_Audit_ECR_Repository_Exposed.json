@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether Elastic Container Registry (ECR) image Repositories which are exposed.",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "resource_type": "ECR_private_repository",
+  "service_resource": [
+    "Repository_private"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit ECR Repository Exposed",
+  "name": "AWS_Audit_ECR_Repository_Exposed",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_AUDIT_ECR_REPOSITORY_EXPOSED\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_ECR_Repository_Exposed"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/security/repository_private/bh7jd",
+  "metadata": {
+  }
+}

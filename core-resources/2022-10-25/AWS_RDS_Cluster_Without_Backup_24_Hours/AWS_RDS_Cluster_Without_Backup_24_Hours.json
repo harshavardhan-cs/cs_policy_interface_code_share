@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits Number of RDS Database Clusters that do not have any snapshots created during the period of last 24 hours.",
+  "classification": "Operation",
+  "sub_classification": "Availability",
+  "resource_type": "RDS",
+  "service_resource": [
+    "DB_Cluster"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit RDS Cluster Without Backup For 24 Hours",
+  "name": "AWS_AUDIT_RDS_CLUSTER_WITHOUT_BACKUP_FOR_24_HOURS",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_RDS_DB_CLUSTER_WITHOUT_BACKUP_LAST_24_HOURS\",\n  \"InputParameters\": {\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_RDS_Cluster_Without_Backup_For_24_Hours"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/operation/rdscluster/wk322",
+  "metadata": {
+  }
+}

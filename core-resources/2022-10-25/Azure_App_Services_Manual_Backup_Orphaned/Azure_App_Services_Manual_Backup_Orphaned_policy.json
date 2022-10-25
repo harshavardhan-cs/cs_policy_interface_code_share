@@ -1,0 +1,7 @@
+{
+  "Version": "1.0",
+  "RuleName": "AZURE_ORPHANED",
+  "InputParameters": {
+  },
+  "CostSavingsRuleName": "azure_app_service_manual_backup_orphaned"
+}

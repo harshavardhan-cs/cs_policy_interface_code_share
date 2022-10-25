@@ -1,0 +1,17 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_REDSHIFT_USAGE_LIMIT_CROSS_REGION_DATA_SHARING_CONFIG",
+  "InputParameters": {
+    "FeatureType": {
+      "type": "string",
+      "default": "cross-region-datasharing",
+      "constraints": [
+        {
+          "allowed_values": [
+            "cross-region-datasharing"
+          ]
+        }
+      ]
+    }
+  }
+}

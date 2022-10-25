@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether EC instance is underutilized.",
+  "classification": "Cost",
+  "sub_classification": "Underutilized",
+  "resource_type": "ECS",
+  "service_resource": [
+    "Cluster"
+  ],
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ECS Cluster Underutilized",
+  "name": "AWS_ECS_Cluster_Underutilized",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AWS_RESOURCE_UNDERUTILISED\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"string\",\n      \"default\": \"30\"\n    },\n    \"MetricName\": {\n      \"type\": \"string\",\n      \"optional\": true,\n      \"description\": \"Specify the appropriate Metric name like CPUUtilization\",\n      \"constraints\": [\n        {\n          \"allowed_values\": [\n            \"CPUUtilization\",\n            \"CPUReservation\",\n            \"MemoryReservation\",\n            \"GPUReservation\",\n            \"MemoryUtilization\"\n          ]\n        }\n      ]\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Fix_ECS_Cluster_Underutilized"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/aws/cost/others/ecsclsuu5yvbewr",
+  "metadata": {
+  }
+}

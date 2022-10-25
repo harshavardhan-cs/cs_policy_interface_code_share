@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Azure Virtual Machine Scaleset metrics of type Utilization having the maximum utilization value less than the low utilization threshold are considred as underutilized. Azure Analytics is the source for these assessment metrics",
+  "classification": "Cost",
+  "sub_classification": "Underutilized",
+  "resource_type": "Virtual_Machines",
+  "service_resource": [
+    "Virtual_Machine_Scale_Sets"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "Azure"
+  ],
+  "category": "service",
+  "display_name": "Azure VM Scalesets Underutilized",
+  "name": "Azure_VM_Scalesets_Underutilized",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"RuleName\": \"AZURE_RESOURCE_UNDERUTILISED\",\n  \"InputParameters\": {\n    \"ElapsedDays\": {\n      \"type\": \"string\"\n    },\n    \"MetricName\": {\n      \"type\": \"string\",\n      \"optional\": true,\n      \"description\": \"Specify the appropriate Metric name like CPUUtilization\",\n      \"constraints\": [\n        {\n          \"allowed_values\": [\n            \"CPU Credits Consumed\",\n            \"CPU Credits Remaining\",\n            \"Disk Read Operations/Sec\",\n            \"Disk Write Operations/Sec\",\n            \"CPUSurplusCreditsCharged\",\n            \"Network In\",\n            \"Network Out\",\n            \"Percentage CPU\"\n          ]\n        }\n      ]\n    }\n  }\n}",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "Azure_Fix_VM_ScaleSets_Underutilized"
+  ],
+  "scope": "global",
+  "engine_type": "corestack_policy",
+  "uri": "policy/corestack_policy/global/azure/cost/virtualmachines/vmsclstdsu82",
+  "metadata": {
+  }
+}

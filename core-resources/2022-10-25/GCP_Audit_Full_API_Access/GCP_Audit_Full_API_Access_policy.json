@@ -1,0 +1,6 @@
+{
+  "Version": "1.0",
+  "RuleName": "GCP_AUDIT_FULL_API_ACCESS",
+  "InputParameters": {
+  }
+}

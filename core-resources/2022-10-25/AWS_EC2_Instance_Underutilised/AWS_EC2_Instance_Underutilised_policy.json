@@ -1,0 +1,30 @@
+{
+  "Version": "1.0",
+  "RuleName": "AWS_RESOURCE_UNDERUTILISED",
+  "InputParameters": {
+    "ElapsedDays": {
+      "type": "string",
+      "default": "30"
+    },
+    "MetricName": {
+      "type": "string",
+      "optional": true,
+      "default": "cpu_usage_idle",
+      "description": "Specify the appropriate Metric name like CPUUtilization",
+      "constraints": [
+        {
+          "allowed_values": [
+            "cpu_usage_idle",
+            "cpu_usage_system",
+            "disk_used_percent",
+            "mem_used_percent",
+            "Available memory",
+            "Percentage of Memory Used",
+            "CPUUtilization",
+            "NetworkOut"
+          ]
+        }
+      ]
+    }
+  }
+}
