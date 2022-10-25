@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether Amazon Elasticsearch Service (Amazon ES) domains have encryption at rest configuration enabled. The rule is NON_COMPLIANT if the EncryptionAtRestOptions field is not enabled.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Domain"
+  ],
+  "resource_type": "Elasticsearch Service",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ELASTICSEARCH Encrypted at Rest",
+  "name": "AWS_ELASTICSEARCH_Encrypted_at_Rest",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/yOraR",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"ELASTICSEARCH_ENCRYPTED_AT_REST\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceIdentifier\": \"ELASTICSEARCH_ENCRYPTED_AT_REST\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\"\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_ELASTICSEARCH_Encrypted_at_Rest"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_ELASTICSEARCH_Encrypted_at_Rest.json"
+  }
+}

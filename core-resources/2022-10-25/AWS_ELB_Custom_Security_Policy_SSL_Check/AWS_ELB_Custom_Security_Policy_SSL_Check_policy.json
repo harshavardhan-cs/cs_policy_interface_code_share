@@ -1,0 +1,21 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "ELB_CUSTOM_SECURITY_POLICY_SSL_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "sslProtocolsAndCiphers": {
+        "type": "string",
+        "label": "SSL Protocols And Ciphers",
+        "default": "SHA256",
+        "description": "SSL Protocols And Ciphers"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::ElasticLoadBalancing::LoadBalancer",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "ELB_CUSTOM_SECURITY_POLICY_SSL_CHECK",
+    "RuleSets": []
+  }
+}

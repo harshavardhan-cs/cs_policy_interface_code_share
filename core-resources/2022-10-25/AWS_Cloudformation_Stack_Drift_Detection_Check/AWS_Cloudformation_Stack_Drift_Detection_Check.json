@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "This policy audits whether an AWS CloudFormation stack's actual configuration differs, or has drifted, from it's expected configuration.\n",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Stack"
+  ],
+  "resource_type": "Cloudformation",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Cloudformation Stack Drift Detection Check",
+  "name": "AWS_Cloudformation_Stack_Drift_Detection_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/x71GO",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CLOUDFORMATION_STACK_DRIFT_DETECTION_CHECK\",\n    \"InputParameters\": {\n      \"cloudformationRoleArn\": {\n        \"type\": \"string\",\n        \"label\": \"CFN Role ARN\",\n        \"description\": \"AWS CloudFormation role ARN with IAM policy permissions to detect drift for AWS CloudFormation Stacks\"\n      }\n    },\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceEvents\": \"AWS::CloudFormation::Stack\",\n    \"SourceIdentifier\": \"CLOUDFORMATION_STACK_DRIFT_DETECTION_CHECK\"\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Cloudformation_Stack_Drift_Detection_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Cloudformation_Stack_Drift_Detection_Check.json"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "DYNAMODB_TABLE_ENCRYPTION_ENABLED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::DynamoDB::Table",
+    "SourceIdentifier": "DYNAMODB_TABLE_ENCRYPTION_ENABLED",
+    "RuleSets": []
+  }
+}

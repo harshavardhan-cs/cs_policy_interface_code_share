@@ -1,0 +1,27 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "EC2_MANAGEDINSTANCE_INVENTORY_BLACKLISTED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "inventoryNames": {
+        "type": "comma_delimited",
+        "label": "Inventory Names",
+        "default": "AWS:Network",
+        "description": "comma separated values of Inventory names eg : AWS:Network"
+      },
+      "platformType": {
+        "type": "string",
+        "label": "platform Type",
+        "default": "Linux",
+        "description": "Type of the platform"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::SSM::ManagedInstanceInventory",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "EC2_MANAGEDINSTANCE_INVENTORY_BLACKLISTED",
+    "RuleSets": []
+  }
+}

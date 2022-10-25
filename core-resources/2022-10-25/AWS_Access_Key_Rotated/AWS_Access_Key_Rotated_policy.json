@@ -1,0 +1,26 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "ACCESS_KEYS_ROTATED",
+    "SourceEvents": "AWS::S3::Bucket",
+    "InputParameters": {
+      "maxAccessKeyAge": {
+        "type": "number",
+        "label": "Maximum AccessKey Age",
+        "default": 90,
+        "description": "Maximum Age of the Access key",
+        "constraints": [
+          {
+            "range": {
+              "min": 1,
+              "max": 90
+            }
+          }
+        ]
+      }
+    },
+    "OptionalParameters": "{\"WhitelistedUserList\":\"\",\"KeyActiveTimeOutInDays\":\"\"}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "ACCESS_KEYS_ROTATED"
+  }
+}

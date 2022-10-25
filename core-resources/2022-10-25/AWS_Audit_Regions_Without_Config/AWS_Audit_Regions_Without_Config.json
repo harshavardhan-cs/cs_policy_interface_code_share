@@ -1,0 +1,31 @@
+{
+  "name": "AWS_Audit_Regions_Without_Config",
+  "display_name": "AWS Audit Regions Without Config",
+  "description": "This policy checks wheather AWS Config is configured in all regions.",
+  "category": "service",
+  "status": "active",
+  "content": "region_without_config(Region,ConfigEnabled) :- aws_config_rules:rules(Region=Region,ConfigEnabled=ConfigEnabled),ne(ConfigEnabled,'True');",
+  "parameters": {},
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "AWS_Config"
+  ],
+  "resource_type": "AWS_Config",
+  "severity": "low",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/operation/others/4dhw1",
+  "recommendations": [
+  ]
+}

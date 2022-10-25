@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "This policy audits whether your Amazon Machine Images (AMIs) are not older than X days.",
+  "classification": "Operation",
+  "severity": "low",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Own_Private_Images"
+  ],
+  "resource_type": "EC2",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit AMIS Older than X Days",
+  "name": "AWS_Audit_AMIs_Older_than_X_Days",
+  "uri": "policy/aws_config/global/aws/compliance/own_private_images/6r66rc",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"AWS_Audit_AMIs_Older_than_X_Days\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": \"AWS_Audit_AMIs_Older_than_X_Days.zip\",\n    \"InputParameters\": {\n      \"numberOfDays\": {\n        \"type\": \"number\",\n        \"label\": \"Number of Days Old\",\n        \"default\": 45,\n        \"description\": \"Number of Days from Creation Date\"\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourcePeriodic\": \"Six_Hours\"\n  },\n  \"Tags\": \"[]\"\n}\n",
+  "is_system_policy": false,
+  "config_type": "custom",
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_AMIs_Older_than_X_Days"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {}
+}

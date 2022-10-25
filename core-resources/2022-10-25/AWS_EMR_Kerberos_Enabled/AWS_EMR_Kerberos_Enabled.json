@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This will check to see if the EMR Kerberos is Enabled or not",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Cluster"
+  ],
+  "resource_type": "EMR",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EMR Kerberos Enabled",
+  "name": "AWS_EMR_Kerberos_Enabled",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/smwe7",
+  "content": "{\n  \"Parameters\": {\n    \"RuleName\": \"EMR_KERBEROS_ENABLED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{\\\"TicketLifetimeInHours\\\":\\\"\\\",\\\"Realm\\\":\\\"\\\",\\\"Domain\\\":\\\"\\\",\\\"AdminServer\\\":\\\"\\\",\\\"KdcServer\\\":\\\"\\\"}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"EMR_KERBEROS_ENABLED\",\n    \"RuleSets\": []\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_EMR_Kerberos_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_EMR_Kerberos_Enabled.json"
+  }
+}

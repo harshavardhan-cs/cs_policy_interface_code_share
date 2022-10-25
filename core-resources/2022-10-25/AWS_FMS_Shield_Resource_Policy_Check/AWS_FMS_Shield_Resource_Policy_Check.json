@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Checks whether an Application Load Balancer, Amazon CloudFront distributions, Elastic Load Balancer or Elastic IP has AWS Shield protection. This rule also checks if they have web ACL associated for Application Load Balancer and Amazon CloudFront distributions.\n",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS FMS Shield Resource Policy Check",
+  "name": "AWS_FMS_Shield_Resource_Policy_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/XCYua",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"FMS_SHIELD_RESOURCE_POLICY_CHECK\",\n    \"InputParameters\": {\n      \"webACLId\": {\n        \"type\": \"string\",\n        \"label\": \"webACLId\",\n        \"description\": \"Id of the webACL\"\n      },\n      \"resourceTypes\": {\n        \"type\": \"comma_delimited_list\",\n        \"label\": \"Resource Types\",\n        \"description\": \"Resource scope which this config rule will applied to\"\n      }\n    },\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"SourceEvents\": \"AWS::CloudFront::Distribution,AWS::ElasticLoadBalancingV2::LoadBalancer,AWS::WAFRegional::WebACL,AWS::EC2::EIP,AWS::ElasticLoadBalancing::LoadBalancer,AWS::ShieldRegional::Protection,AWS::Shield::Protection\",\n    \"SourceIdentifier\": \"FMS_SHIELD_RESOURCE_POLICY_CHECK\"\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_FMS_Shield_Resource_Policy_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_FMS_Shield_Resource_Policy_Check.json"
+  }
+}

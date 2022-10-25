@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "Use the rds-multi-az-support AWS Config managed rule to check whether high availability is enabled for your Amazon RDS DB instances.",
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Databases"
+  ],
+  "resource_type": "RDS",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS RDS Multi Az Support",
+  "name": "AWS_RDS_Multi_Az_Support",
+  "uri": "policy/aws_config/global/aws/compliance/others/IavJV",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"RDS_MULTI_AZ_SUPPORT\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::RDS::DBInstance\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"RDS_MULTI_AZ_SUPPORT\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_RDS_Multi_Az_Support"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_RDS_Multi_Az_Support.json"
+  }
+}

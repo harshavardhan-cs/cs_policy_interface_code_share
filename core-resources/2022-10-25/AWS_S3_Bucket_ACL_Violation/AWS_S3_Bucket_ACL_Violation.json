@@ -1,0 +1,34 @@
+{
+  "name": "AWS_S3_Bucket_ACL_Violation",
+  "display_name": "AWS S3 Bucket ACL Violation",
+  "description": "Policy to check AWS S3 Buckets ACL configured with public read access. Buckets ACL with public read access can be anonymously accessed by people over internet.\n\nUse Case(s):Can be used to quickly identify S3 Buckets ACL with public read access and modify the access policy.",
+  "category": "service",
+  "status": "active",
+  "content": "bucket(ResourceId, CreationDate, Region, Source) :- aws_s3_bucket:s3_bucket(ResourceId=ResourceId, CreationDate=CreationDate, Region=Region), aws_s3_bucket:bucket_acl(ResourceId=ResourceId, Permission=Permission), aws_s3_bucket:bucket_acl.grantee(ResourceId=ResourceId, Type=Type, URI=URI, ID=ID, Permission=Permission), equal('Group', Type), equal('READ', Permission), in('acs.amazonaws.com/groups/global', URI), concat('ACL', '', Source);",
+  "parameters": {},
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Buckets"
+  ],
+  "resource_type": "S3",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+    "onboarding_policy": true
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/bucket/znfdx",
+  "dependent_rules": {},
+  "recommendations": [
+    "AWS_Manage_S3_Bucket_ACL_Read_Access"
+  ]
+}

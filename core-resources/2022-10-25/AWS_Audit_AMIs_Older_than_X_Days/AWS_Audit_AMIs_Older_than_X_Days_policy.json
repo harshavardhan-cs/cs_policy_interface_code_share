@@ -1,0 +1,19 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "AWS_Audit_AMIs_Older_than_X_Days",
+    "SourceRuntime": "python3.9",
+    "CodeKey": "AWS_Audit_AMIs_Older_than_X_Days.zip",
+    "InputParameters": {
+      "numberOfDays": {
+        "type": "number",
+        "label": "Number of Days Old",
+        "default": 45,
+        "description": "Number of Days from Creation Date"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourcePeriodic": "Six_Hours"
+  },
+  "Tags": "[]"
+}

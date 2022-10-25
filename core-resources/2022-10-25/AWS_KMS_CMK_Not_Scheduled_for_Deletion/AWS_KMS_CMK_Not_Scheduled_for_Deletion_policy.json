@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "KMS_CMK_NOT_SCHEDULED_FOR_DELETION",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "KMS_CMK_NOT_SCHEDULED_FOR_DELETION"
+  }
+}

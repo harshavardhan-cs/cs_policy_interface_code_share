@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "IAM_USER_NO_POLICIES_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::IAM::User",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "IAM_USER_NO_POLICIES_CHECK",
+    "RuleSets": []
+  }
+}

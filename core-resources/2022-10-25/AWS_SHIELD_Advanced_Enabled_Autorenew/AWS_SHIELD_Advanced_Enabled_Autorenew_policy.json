@@ -1,0 +1,12 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "SHIELD_ADVANCED_ENABLED_AUTORENEW",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceIdentifier": "SHIELD_ADVANCED_ENABLED_AUTORENEW",
+    "SourcePeriodic": "TwentyFour_Hours"
+  }
+}

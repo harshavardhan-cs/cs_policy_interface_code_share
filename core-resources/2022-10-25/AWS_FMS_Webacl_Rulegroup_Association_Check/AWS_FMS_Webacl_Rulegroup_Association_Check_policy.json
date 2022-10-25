@@ -1,0 +1,18 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "FMS_WEBACL_RULEGROUP_ASSOCIATION_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "ruleGroups": {
+        "type": "comma_delimited_list",
+        "label": "Rule Groups",
+        "description": "Name of the Rule groups"
+      }
+    },
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceEvents": "AWS::WAF::WebACL,AWS::WAFRegional::WebACL",
+    "SourceIdentifier": "FMS_WEBACL_RULEGROUP_ASSOCIATION_CHECK"
+  }
+}

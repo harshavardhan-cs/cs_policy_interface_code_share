@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "This policy audits whether running instances are using specified AMIs by tags. Specify the tags that identify the AMIs. Running instances with AMIs that don't have at least one of the specified tags are NON_COMPLIANT.",
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS APPROVED AMIS BY TAGS",
+  "name": "AWS_Approved_AMIS_By_Tags",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/%m7*g",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"APPROVED_AMIS_BY_TAG\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"InputParameters\": {\n      \"amisByTagKeyAndValue\": {\n        \"type\": \"string\",\n        \"label\": \"AMIs By TagKey and Value\",\n        \"default\": \"tag-key:tag-value\",\n        \"description\": \"Specifc AMIs Tag\"\n      }\n    },\n    \"SourceIdentifier\": \"APPROVED_AMIS_BY_TAG\"\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Approved_AMIS_By_Tags"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Approved_AMIS_By_Tags.json"
+  }
+}

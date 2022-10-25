@@ -1,0 +1,32 @@
+{
+  "name": "AWS_Audit_Lambda_Service_Without_Deadletter_Configuration",
+  "display_name": "AWS Audit Lambda Service Without Deadletter Configuration",
+  "description": "This policy lists the AWS Lambda functions which are not having dead letter configurations",
+  "category": "service",
+  "status": "active",
+  "content": "lambda(function_name,DeadletterConfig_targetarn) :-aws_lambda_function:aws_lambda(function_name=function_name,DeadletterConfig_targetarn=DeadletterConfig_targetarn),equal(DeadletterConfig_targetarn,'');",
+  "parameters": {},
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Functions"
+  ],
+  "resource_type": "Lambda",
+  "severity": "low",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/lambda/qvtpu",
+  "recommendations": [
+    "AWS_Audit_Lambda_Service_Without_Deadletter_Configuration"
+  ]
+}

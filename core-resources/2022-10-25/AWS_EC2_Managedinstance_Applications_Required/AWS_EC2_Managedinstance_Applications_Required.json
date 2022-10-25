@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Use the ec2-managedinstance-applications-required managed AWS Config rule to check that all of the specified applications are installed on the instance.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Managedinstance Applications Required",
+  "name": "AWS_EC2_Managedinstance_Applications_Required",
+  "uri": "policy/aws_config/global/aws/compliance/others/6keEC",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"EC2_MANAGEDINSTANCE_APPLICATIONS_REQUIRED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"applicationNames\": {\n        \"type\": \"comma_delimited_list\",\n        \"label\": \"Application Names\",\n        \"description\": \"comma separated values of application names eg : Chrome:0.5.3,firefox ( applicationname:version) version is optional\"\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::SSM::ManagedInstanceInventory\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"EC2_MANAGEDINSTANCE_APPLICATIONS_REQUIRED\",\n    \"RuleSets\": []\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_EC2_Managedinstance_Applications_Required"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_EC2_Managedinstance_Applications_Required.json"
+  }
+}

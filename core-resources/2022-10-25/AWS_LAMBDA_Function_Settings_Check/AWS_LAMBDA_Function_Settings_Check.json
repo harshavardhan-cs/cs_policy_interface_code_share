@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": " Use the lambda-function-settings-check AWS Config managed rule to match the expected values for runtime, role, timeout, and memory size.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Functions"
+  ],
+  "resource_type": "Lambda",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS LAMBDA Function Settings Check",
+  "name": "AWS_LAMBDA_Function_Settings_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/rmBBO",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"LAMBDA_FUNCTION_SETTINGS_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"runtime\": {\n        \"type\": \"comma_delimited_list\",\n        \"label\": \"Runtime language\",\n        \"description\": \"Name of the runtime preference. eg : python2.7, python3.8\"\n      },\n      \"timeout\": {\n        \"type\": \"number\",\n        \"default\": 3,\n        \"label\": \"Timeout\",\n        \"description\": \"value for timeout\"\n      },\n      \"memorySize\": {\n        \"type\": \"number\",\n        \"label\": \"Memory Size\",\n        \"default\": 128,\n        \"description\": \"size of the memory\"\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::Lambda::Function\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"LAMBDA_FUNCTION_SETTINGS_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_LAMBDA_Function_Settings_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_LAMBDA_Function_Settings_Check.json"
+  }
+}

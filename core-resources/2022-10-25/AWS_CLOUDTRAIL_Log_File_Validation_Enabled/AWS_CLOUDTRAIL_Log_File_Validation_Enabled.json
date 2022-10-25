@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether AWS CloudTrail has Log File Validation enabled.",
+  "classification": "Operation",
+  "sub_classification": "Logging",
+  "service_resource": [
+    "Trail"
+  ],
+  "resource_type": "CloudTrail",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CLOUDTRAIL Log File Validation Enabled",
+  "name": "AWS_CLOUDTRAIL_Log_File_Validation_Enabled",
+  "uri": "policy/aws_config/global/aws/compliance/others/2LlfS",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CLOUD_TRAIL_LOG_FILE_VALIDATION_ENABLED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"CLOUD_TRAIL_LOG_FILE_VALIDATION_ENABLED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_CLOUDTRAIL_Log_File_Validation_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_CLOUDTRAIL_Log_File_Validation_Enabled.json"
+  }
+}

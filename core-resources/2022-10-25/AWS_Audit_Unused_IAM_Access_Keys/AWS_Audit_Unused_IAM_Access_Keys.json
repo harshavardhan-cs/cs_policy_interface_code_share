@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the unused IAM access keys has been created for the user.",
+  "classification": "Access",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "IAM_Users"
+  ],
+  "resource_type": "IAM",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit Unused IAM Access Keys",
+  "name": "AWS_Audit_Unused_IAM_Access_Keys",
+  "uri": "policy/aws_config/global/aws/compliance/others/dfsfe",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CHECK_UNUSED_IAM_ACCESS_KEYS\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CS-exec-type\": \"custom\",\n    \"OptionalParameters\": \"{}\",\n    \"InputParameters\": \"{}\",\n    \"RuleSets\": []\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "custom",
+  "type": [
+    "cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_Unused_IAM_Access_Keys"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Audit_Unused_IAM_Access_Keys.json"
+  }
+}

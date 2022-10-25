@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the DNS Settings are in the VPC.",
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Hosted_Zones"
+  ],
+  "resource_type": "Route53",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit Route53 Enabled",
+  "name": "AWS_Audit_Route53_Enabled",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/nxZhH",
+  "content": "{\n  \"Version\": \"1.0\", \n  \"Parameters\": {\n    \"SourceRuntime\": \"python3.9\", \n    \"RuleName\": \"AWS_Audit_Route53_Enabled\", \n    \"SourceEvents\": \"AWS::EC2::VPC\", \n    \"OptionalParameters\": \"{}\", \n    \"CS-exec-type\": \"custom\",\n    \"InputParameters\": \"{}\"\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "custom",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_Route53_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Audit_Route53_Enabled.json"
+  }
+}

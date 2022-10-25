@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether an AWS Lambda function is configured with a dead-letter queue. The rule is NON_COMPLIANT if the Lambda function is not configured with a dead-letter queue.\n",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Functions"
+  ],
+  "resource_type": "Lambda",
+  "severity": "low",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS LAMBDA DLQ Check",
+  "name": "AWS_LAMBDA_DLQ_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/44dDL",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"RuleName\": \"LAMBDA_DLQ_CHECK\",\n    \"SourceEvents\": \"AWS::Lambda::Function\",\n    \"SourceIdentifier\": \"LAMBDA_DLQ_CHECK\",\n    \"OptionalParameters\": \"{\\\"dlqArn\\\":\\\"\\\"}\",\n    \"InputParameters\": \"{}\"\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_LAMBDA_DLQ_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_LAMBDA_DLQ_Check.json"
+  }
+}

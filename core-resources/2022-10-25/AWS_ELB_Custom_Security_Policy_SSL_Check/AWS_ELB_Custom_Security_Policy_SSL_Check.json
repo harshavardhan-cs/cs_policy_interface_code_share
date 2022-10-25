@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether your Classic Load Balancer SSL listeners are using a custom policy. The rule is only applicable if there are SSL listeners for the Classic Load Balancer.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ELB Custom Security Policy SSL Check",
+  "name": "AWS_ELB_Custom_Security_Policy_SSL_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/Ytseg",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"ELB_CUSTOM_SECURITY_POLICY_SSL_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"sslProtocolsAndCiphers\": {\n        \"type\": \"string\",\n        \"label\": \"SSL Protocols And Ciphers\",\n        \"default\": \"SHA256\",\n        \"description\": \"SSL Protocols And Ciphers\"\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::ElasticLoadBalancing::LoadBalancer\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"ELB_CUSTOM_SECURITY_POLICY_SSL_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_ELB_Custom_Security_Policy_SSL_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_ELB_Custom_Security_Policy_SSL_Check.json"
+  }
+}

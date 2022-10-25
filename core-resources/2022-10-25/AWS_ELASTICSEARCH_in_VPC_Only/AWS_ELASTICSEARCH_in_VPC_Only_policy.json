@@ -1,0 +1,12 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "ELASTICSEARCH_IN_VPC_ONLY",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceIdentifier": "ELASTICSEARCH_IN_VPC_ONLY",
+    "SourcePeriodic": "TwentyFour_Hours"
+  }
+}

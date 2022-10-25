@@ -1,0 +1,9 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "S3_BUCKET_PUBLIC_WRITE_PROHIBITED",
+    "InputParameters": "{}",
+    "SourceEvents": "AWS::S3::Bucket",
+    "SourceIdentifier": "S3_BUCKET_PUBLIC_WRITE_PROHIBITED"
+  }
+}

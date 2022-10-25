@@ -1,0 +1,31 @@
+{
+  "name": "AWS_Audit_EFS_Encryption",
+  "display_name": "AWS Audit EFS Encryption",
+  "description": "This policy checks for unencrypted EFS.",
+  "category": "service",
+  "status": "active",
+  "content": "efs(file_system_id,Encrypted) :-aws_efs_filesystem:efs(file_system_id=file_system_id,Encrypted=Encrypted),ne(Encrypted,'True');",
+  "parameters": {},
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "FileSystem"
+  ],
+  "resource_type": "EFS",
+  "severity": "medium",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {},
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/efs/s2etp",
+  "recommendations": [
+    "AWS_Audit_EFS_Encryption"
+  ]
+}

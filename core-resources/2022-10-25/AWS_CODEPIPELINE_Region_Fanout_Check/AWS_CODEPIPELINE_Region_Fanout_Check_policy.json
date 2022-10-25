@@ -1,0 +1,21 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CODEPIPELINE_REGION_FANOUT_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "regionFanoutFactor": {
+        "type": "number",
+        "label": "Region FanOut Factor",
+        "default": 3,
+        "description": "value for the region fanout"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::CodePipeline::Pipeline",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "CODEPIPELINE_REGION_FANOUT_CHECK",
+    "RuleSets": []
+  }
+}

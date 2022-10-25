@@ -1,0 +1,31 @@
+{
+  "name": "Audit_AWS_RDS_Multi_Availability_Zone_Not_Enabled_Instance",
+  "display_name": "Audit AWS RDS Multi Availability Zone Not Enabled Instance",
+  "description": "Policy to check the RDS instance in which Multi Availability zone is not enabled.",
+  "category": "service",
+  "status": "active",
+  "content": "vm(ResourceId, ResourceName, InstanceType, Status, CreatedDate) :- aws_rds_instance:rds_instance(ResourceId=ResourceId, CreatedTime=CreatedTime, Status=Status, ResourceName=ResourceName, InstanceType=InstanceType, AvailabilityZone=AvailabilityZone), extract_date(CreatedTime, CreatedDate), equal(AvailabilityZone, 'False');",
+  "parameters": {},
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Databases"
+  ],
+  "resource_type": "RDS",
+  "severity": "low",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/consumption/instance/fqyy7",
+  "recommendations": [
+  ]
+}

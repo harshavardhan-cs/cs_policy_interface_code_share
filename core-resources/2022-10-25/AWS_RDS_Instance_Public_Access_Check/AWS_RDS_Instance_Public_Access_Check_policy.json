@@ -1,0 +1,12 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "RDS_INSTANCE_PUBLIC_ACCESS_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "SourceEvents": "AWS::RDS::DBInstance",
+    "SourceIdentifier": "RDS_INSTANCE_PUBLIC_ACCESS_CHECK",
+    "RuleSets": []
+  }
+}

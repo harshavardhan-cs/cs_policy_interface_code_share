@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "RESTRICTED_SSH",
+    "SourceEvents":"AWS::EC2::SecurityGroup",
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourcePeriodic": "One_Hour",
+     "SourceIdentifier": "INCOMING_SSH_DISABLED"
+  }
+}

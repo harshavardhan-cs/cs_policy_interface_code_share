@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the AWS Lambda function policy attached to the Lambda resource prohibits public access. If the Lambda function policy allows public access it is NON_COMPLIANT. ",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Functions"
+  ],
+  "resource_type": "Lambda",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS LAMBDA Function Public Access Prohibited",
+  "name": "AWS_LAMBDA_Function_Public_Access_Prohibited",
+  "uri": "policy/aws_config/global/aws/compliance/others/ZtwYb",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"LAMBDA_FUNCTION_PUBLIC_ACCESS_PROHIBITED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::Lambda::Function\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"LAMBDA_FUNCTION_PUBLIC_ACCESS_PROHIBITED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_LAMBDA_Function_Public_Access_Prohibited"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_LAMBDA_Function_Public_Access_Prohibited.json"
+  }
+}

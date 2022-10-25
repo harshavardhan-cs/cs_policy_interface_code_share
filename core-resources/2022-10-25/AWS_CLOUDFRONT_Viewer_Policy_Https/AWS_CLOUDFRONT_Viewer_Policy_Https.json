@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Checks whether your Amazon CloudFront distributions use HTTPS (directly or via a redirection). The rule is NON_COMPLIANT if the value of ViewerProtocolPolicy is set to allow-all for defaultCacheBehavior or for cacheBehaviors . This means that the rule is non compliant when viewers can use HTTP or HTTPS.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Web_Distributions"
+  ],
+  "resource_type": "CloudFront",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CLOUDFRONT Viewer Policy Https",
+  "name": "AWS_CLOUDFRONT_Viewer_Policy_Https",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/DBcMX",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"RuleName\": \"CLOUDFRONT_VIEWER_POLICY_HTTPS\",\n    \"SourceEvents\": \"AWS::CloudFront::Distribution\",\n    \"SourceIdentifier\": \"CLOUDFRONT_VIEWER_POLICY_HTTPS\",\n    \"OptionalParameters\": \"{}\",\n    \"InputParameters\": \"{}\"\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_CLOUDFRONT_Viewer_Policy_Https"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_CLOUDFRONT_Viewer_Policy_Https.json"
+  }
+}

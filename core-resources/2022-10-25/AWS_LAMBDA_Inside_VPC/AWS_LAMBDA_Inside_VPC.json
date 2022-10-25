@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether an AWS Lambda function is in an Amazon Virtual Private Cloud. The rule is NON_COMPLIANT if the Lambda function is not in a VPC.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Functions"
+  ],
+  "resource_type": "Lambda",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS LAMBDA Inside VPC",
+  "name": "AWS_LAMBDA_Inside_VPC",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/NLPEr",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"RuleName\": \"LAMBDA_INSIDE_VPC\",\n    \"SourceEvents\": \"AWS::Lambda::Function\",\n    \"SourceIdentifier\": \"LAMBDA_INSIDE_VPC\",\n    \"OptionalParameters\": \"{\\\"subnetId\\\": \\\"\\\"}\",\n    \"InputParameters\": \"{}\"\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_LAMBDA_Inside_VPC"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_LAMBDA_Inside_VPC.json"
+  }
+}

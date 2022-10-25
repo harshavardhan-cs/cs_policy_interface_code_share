@@ -1,0 +1,32 @@
+{
+  "name": "AWS_Audit_Linked_Accounts_Without_SCP",
+  "display_name": "AWS Audit Linked Accounts Without SCP",
+  "description": "This policy checks where linked accounts without Service Control Policies.",
+  "category": "service",
+  "status": "active",
+  "content": "linked_account_without_scp(AccountId,AccountType) :- aws_organizations_accounts:accounts(ResourceName=ResourceName, ResourceId=AccountId, SCPPoliciesEnabled=SCPPoliciesEnabled, AccountType=AccountType), equal(AccountType, 'Linked Account'), ne(SCPPoliciesEnabled,'True');",
+  "parameters": {},
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Accounts"
+  ],
+  "resource_type": "AWS_Organizations",
+  "severity": "low",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/operation/others/4dhq7",
+  "recommendations": [
+    "AWS_SCP_Enabled_Linked_Accounts"
+  ]
+}

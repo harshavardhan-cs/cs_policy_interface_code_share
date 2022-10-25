@@ -1,0 +1,12 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "EC2_TERMINATION_PROTECTION_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": "SEC2_TERMINATION_PROTECTION_CHECK.zip",
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourcePeriodic": "Three_Hours"
+  },
+  "Tags": "[]"
+}

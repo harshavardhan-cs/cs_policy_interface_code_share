@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "DYNAMODB_AUTOSCALING_ENABLED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::DynamoDB::Table",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "DYNAMODB_AUTOSCALING_ENABLED",
+    "RuleSets": []
+  }
+}

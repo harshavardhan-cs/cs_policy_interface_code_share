@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the resource type has a CloudWatch alarm for the metric.",
+  "classification": "Operation",
+  "sub_classification": "Monitoring",
+  "service_resource": [
+    "Alarm"
+  ],
+  "resource_type": "Cloudwatch",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CLOUDWATCH Alarm Resource Check",
+  "name": "AWS_CLOUDWATCH_Alarm_Resource_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/3xXGV",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CLOUDWATCH_ALARM_RESOURCE_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"resourceType\": {\n        \"type\": \"string\",\n        \"default\": \"AWS::EC2::Instance\",\n        \"label\": \"Resource Type\",\n        \"description\": \"Type of the resource\"\n      },\n      \"metricName\": {\n        \"type\": \"string\",\n        \"label\": \"Metric Name\",\n        \"default\": \"CPU\",\n        \"description\": \"Type of the metric\"\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"CLOUDWATCH_ALARM_RESOURCE_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_CLOUDWATCH_Alarm_Resource_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_CLOUDWATCH_Alarm_Resource_Check.json"
+  }
+}

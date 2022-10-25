@@ -1,0 +1,61 @@
+{
+  "name": "AWS_SecurityGroup_Port_Violation",
+  "display_name": "AWS Security Group Port Violation",
+  "description": "Policy to check for port(s) opened with CIDR block 0.0.0.0/0 in an AWS account. Port(s) can be specified when executing the policy \nUse case(s): \nCan be used to identify SSH/RDP/DB port if open to public",
+  "category": "service",
+  "status": "active",
+  "content": "sg(SG_id, SG_name, from_port, to_port, grant, IP_protocol) :- aws_ec2_sg:securitygroup(sg_name=SG_name, sg_id=SG_id), aws_ec2_sg:securitygroup_rules(from_port=from_port, to_port=to_port, sg_id=SG_id, ip_protocol=IP_protocol, rule_id=rule_id), aws_ec2_sg:securitygroup_rules.grants(rule_id=rule_id, grant=grant), btw(from_port, to_port, #port#), equal('0.0.0.0/0', grant);",
+  "parameters": {
+    "port": {
+      "type": "number",
+      "description": "Port number if opened with CIDR block 0.0.0.0/0 to be considered as violation.",
+      "label": "Port",
+      "default": 22,
+      "constraints": [
+        {
+          "range": {
+            "min": 1,
+            "max": 65535
+          }
+        }
+      ]
+    }
+  },
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Security_Groups"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+    "system_scheduled_details": [
+      {
+        "interval": 320,
+        "args": {
+          "port": "22"
+        }
+      },
+      {
+        "interval": 320,
+        "args": {
+          "port": "80"
+        }
+      }
+    ]
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": true,
+  "uri": "policy/congress/global/aws/compliance/security_group/dswd6",
+  "recommendations": [
+    "AWS_Fix_Violated_SecurityGroup_Rules"
+  ]
+}

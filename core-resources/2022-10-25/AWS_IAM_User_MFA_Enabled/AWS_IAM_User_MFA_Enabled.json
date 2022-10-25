@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the AWS Identity and Access Management users have multi-factor authentication (MFA) enabled.\n",
+  "classification": "Access",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "IAM_Users"
+  ],
+  "resource_type": "IAM",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS IAM User MFA Enabled",
+  "name": "AWS_IAM_User_MFA_Enabled",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/a2QxW",
+  "content": "{\n  \"Parameters\": {\n    \"RuleName\": \"IAM_USER_MFA_ENABLED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"IAM_USER_MFA_ENABLED\",\n    \"RuleSets\": []\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_IAM_User_MFA_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_IAM_User_MFA_Enabled.json"
+  }
+}

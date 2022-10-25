@@ -1,0 +1,18 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CLOUDFORMATION_STACK_DRIFT_DETECTION_CHECK",
+    "InputParameters": {
+      "cloudformationRoleArn": {
+        "type": "string",
+        "label": "CFN Role ARN",
+        "description": "AWS CloudFormation role ARN with IAM policy permissions to detect drift for AWS CloudFormation Stacks"
+      }
+    },
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceEvents": "AWS::CloudFormation::Stack",
+    "SourceIdentifier": "CLOUDFORMATION_STACK_DRIFT_DETECTION_CHECK"
+  }
+}

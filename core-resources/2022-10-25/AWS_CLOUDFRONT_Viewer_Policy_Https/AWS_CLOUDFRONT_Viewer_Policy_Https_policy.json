@@ -1,0 +1,15 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "RuleName": "CLOUDFRONT_VIEWER_POLICY_HTTPS",
+    "SourceEvents": "AWS::CloudFront::Distribution",
+    "SourceIdentifier": "CLOUDFRONT_VIEWER_POLICY_HTTPS",
+    "OptionalParameters": "{}",
+    "InputParameters": "{}",
+    "SupportedRegions": [
+      "us-east-1"
+    ]
+  }
+}

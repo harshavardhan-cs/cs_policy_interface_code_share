@@ -1,0 +1,31 @@
+{
+  "name": "AWS_Audit_Route53_Auto_Renew",
+  "display_name": "AWS Audit Route53 Auto Renew",
+  "description": "This policy checks for auto renewal configuration of  Route 53.",
+  "category": "service",
+  "status": "active",
+  "content": "route53(domain_name,auto_renew) :-aws_route53_domains:route53(domain_name=domain_name, auto_renew=auto_renew),equal(auto_renew,'False');",
+  "parameters": {},
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Hosted_Zones"
+  ],
+  "resource_type": "Route53",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {},
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/route53/gxg3s",
+  "recommendations": [
+    "AWS_Audit_Route53_Auto_Renew"
+  ]
+}

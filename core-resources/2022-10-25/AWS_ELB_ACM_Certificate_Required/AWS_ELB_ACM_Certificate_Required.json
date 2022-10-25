@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "Use the elb-acm-certificate-required AWS Config managed rule to check whether the Elastic Load Balance(s) uses SSL certificates provided by AWS Certificate Manager.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ELB ACM Certificate Required",
+  "name": "AWS_ELB_ACM_Certificate_Required",
+  "uri": "policy/aws_config/global/aws/compliance/others/MblNC",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"ELB_ACM_CERTIFICATE_REQUIRED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::ElasticLoadBalancing::LoadBalancer\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"ELB_ACM_CERTIFICATE_REQUIRED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_ELB_ACM_Certificate_Required"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_ELB_ACM_Certificate_Required.json"
+  }
+}

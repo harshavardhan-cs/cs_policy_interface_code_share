@@ -1,0 +1,86 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "RESTRICTED_COMMON_PORTS",
+    "SourceEvents": "AWS::EC2::SecurityGroup",
+    "InputParameters": {
+      "blockedPort1": {
+        "type": "number",
+        "default": 20,
+        "label": "Blocked Port1",
+        "description": "value for blocked port1",
+        "constraints": [
+          {
+            "range": {
+              "min": 0,
+              "max": 65535
+            }
+          }
+        ]
+      },
+      "blockedPort2": {
+        "type": "number",
+        "label": "Blocked Port2",
+        "description": "value for blocked port2",
+        "optional": true,
+        "default": 21,
+        "constraints": [
+          {
+            "range": {
+              "min": 0,
+              "max": 65535
+            }
+          }
+        ]
+      },
+      "blockedPort3": {
+        "type": "number",
+        "label": "Blocked Port3",
+        "description": "value for blocked port3",
+        "optional": true,
+        "default": 3389,
+        "constraints": [
+          {
+            "range": {
+              "min": 0,
+              "max": 65535
+            }
+          }
+        ]
+      },
+      "blockedPort4": {
+        "type": "number",
+        "label": "Blocked Port4",
+        "description": "value for blocked port4",
+        "optional": true,
+        "default": 3306,
+        "constraints": [
+          {
+            "range": {
+              "min": 0,
+              "max": 65535
+            }
+          }
+        ]
+      },
+      "blockedPort5": {
+        "type": "number",
+        "label": "Blocked Port5",
+        "description": "value for blocked port5",
+        "optional": true,
+        "default": 4333,
+        "constraints": [
+          {
+            "range": {
+              "min": 0,
+              "max": 65535
+            }
+          }
+        ]
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourcePeriodic": "One_Hour",
+    "SourceIdentifier": "RESTRICTED_INCOMING_TRAFFIC"
+  }
+}

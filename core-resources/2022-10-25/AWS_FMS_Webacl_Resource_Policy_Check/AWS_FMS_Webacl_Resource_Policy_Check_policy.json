@@ -1,0 +1,18 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "FMS_WEBACL_RESOURCE_POLICY_CHECK",
+    "CodeKey": null,
+    "SourceRuntime": "python3.9",
+    "InputParameters": {
+      "webACLId": {
+        "type": "string",
+        "label": "Web ACLId",
+        "description": "Id of the WebACL"
+      }
+    },
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceEvents": "AWS::CloudFront::Distribution,AWS::ApiGateway::Stage,AWS::ElasticLoadBalancingV2::LoadBalancer,AWS::WAFRegional::WebACL",
+    "SourceIdentifier": "FMS_WEBACL_RESOURCE_POLICY_CHECK"
+  }
+}

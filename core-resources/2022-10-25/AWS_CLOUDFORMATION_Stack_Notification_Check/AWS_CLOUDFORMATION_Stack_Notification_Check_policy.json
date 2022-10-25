@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CLOUDFORMATION_STACK_NOTIFICATION_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {},
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::CloudFormation::Stack",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "CLOUDFORMATION_STACK_NOTIFICATION_CHECK",
+    "RuleSets": []
+  }
+}

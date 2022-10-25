@@ -1,0 +1,31 @@
+{
+  "name": "AWS_Audit_S3_Life_Cycle_Configuration",
+  "display_name": "AWS Audit S3 Life Cycle Configuration",
+  "description": "This policy checks where S3 buckets has life cycle configured.",
+  "category": "service",
+  "status": "active",
+  "content": "bucket_life_cycle_configuration(ResourceId,CreationDate,Region) :- aws_s3_bucket:s3_bucket(ResourceId=ResourceId,CreationDate=CreationDate,Region=Region,LifeCycleConfigured=LifeCycleConfigured),ne(LifeCycleConfigured,'True');",
+  "parameters": {},
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Buckets"
+  ],
+  "resource_type": "S3",
+  "severity": "low",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/bucket/4dhq6",
+  "recommendations": [
+  ]
+}

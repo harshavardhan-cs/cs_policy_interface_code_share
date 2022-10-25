@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Use the fms-webacl-resource-policy-check AWS Config managed rule to check whether the web ACL is associated with Application Load Balancer or Amazon CloudFront distributions.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS FMS Webacl Resource Policy Check",
+  "name": "AWS_FMS_Webacl_Resource_Policy_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/IAOx6",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"FMS_WEBACL_RESOURCE_POLICY_CHECK\",\n    \"CodeKey\": null,\n    \"SourceRuntime\": \"python3.9\",\n    \"InputParameters\": {\n      \"webACLId\": {\n        \"type\": \"string\",\n        \"label\": \"Web ACLId\",\n        \"description\": \"Id of the WebACL\"\n      }\n    },\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceEvents\": \"AWS::CloudFront::Distribution,AWS::ApiGateway::Stage,AWS::ElasticLoadBalancingV2::LoadBalancer,AWS::WAFRegional::WebACL\",\n    \"SourceIdentifier\": \"FMS_WEBACL_RESOURCE_POLICY_CHECK\"\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_FMS_Webacl_Resource_Policy_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_FMS_Webacl_Resource_Policy_Check.json"
+  }
+}

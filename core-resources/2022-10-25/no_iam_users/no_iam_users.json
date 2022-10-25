@@ -1,0 +1,37 @@
+{
+  "name": "AWS_Audit_IAM_Availability_Compliance",
+  "display_name": "AWS Audit IAM Availability Compliance",
+  "description": "Policy to verify whether the account has IAM user based policy for better access control.",
+  "category": "service",
+  "status": "active",
+  "content": "no_iam_users(user, arn) :- aws_iam_credential_report:credential_report(user=user, arn=arn), equal(user, '<root_account>'), not iam_users();",
+  "parameters": {},
+  "classification": "Access",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "IAM_Users"
+  ],
+  "resource_type": [
+    "IAM"
+  ],
+  "severity": "medium",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "dependent_rules": {
+    "iam_users": "iam_users() :- aws_iam_credential_report:credential_report(user=user, arn=arn), ne(user, '<root_account>');"
+  },
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/iam_user/nwdc3",
+  "recommendations": [
+    "AWS_Manage_IAM_Users"
+  ]
+}

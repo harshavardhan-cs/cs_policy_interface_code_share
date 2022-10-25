@@ -1,0 +1,35 @@
+{
+  "name": "AWS_Audit_Instances_Without_Backup",
+  "display_name": "AWS Audit Instances Without Backup",
+  "description": "This policy checks for instances without backup.",
+  "category": "service",
+  "status": "active",
+  "content": "instance(ResourceId, ResourceName) :- aws_ec2_instance:instance(ResourceId=ResourceId, ResourceName=ResourceName, RootDeviceName=RootDeviceName), aws_ec2_instance:instance_block_device_mappings(ResourceId=ResourceId, DeviceName=DeviceName, VolumeId=VolumeId), not has_snapshots(VolumeId);",
+  "parameters": {},
+  "classification": "Operation",
+  "sub_classification": "Availability",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/instance/5tunb",
+  "recommendations": [
+    "AWS_Audit_Instances_Without_Backup"
+  ],
+  "dependent_rules": {
+    "has_snapshots": "has_snapshots(x) :- aws_ec2_snapshot:volume_snapshot(volume_id=x, status=status), equal(status, 'completed');"
+  }
+}

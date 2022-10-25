@@ -1,0 +1,16 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "APPROVED_AMIS_BY_TAG",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "InputParameters": {
+      "amisByTagKeyAndValue": {
+        "type": "string",
+        "label": "AMIs By TagKey and Value",
+        "default": "tag-key:tag-value",
+        "description": "Specifc AMIs Tag"
+      }
+    },
+    "SourceIdentifier": "APPROVED_AMIS_BY_TAG"
+  }
+}

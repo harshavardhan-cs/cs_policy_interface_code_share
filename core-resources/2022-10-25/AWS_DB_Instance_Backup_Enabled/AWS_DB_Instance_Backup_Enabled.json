@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Use the db-instance-backup-enabled AWS Config managed rule to evaluate whether your Amazon RDS DB instances have backups enabled.",
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Databases"
+  ],
+  "resource_type": "RDS",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS DB Instance Backup Enabled",
+  "name": "AWS_DB_Instance_Backup_Enabled",
+  "uri": "policy/aws_config/global/aws/compliance/others/qjeKE",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"DB_INSTANCE_BACKUP_ENABLED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::RDS::DBInstance\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"DB_INSTANCE_BACKUP_ENABLED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_DB_Instance_Backup_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_DB_Instance_Backup_Enabled.json"
+  }
+}

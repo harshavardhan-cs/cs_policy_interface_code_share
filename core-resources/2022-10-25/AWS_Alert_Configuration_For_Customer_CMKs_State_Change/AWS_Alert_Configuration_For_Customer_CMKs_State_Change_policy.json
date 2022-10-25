@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CHECK_ALERT_CONFIGURATION_FOR_CUSTOMER_CMKs_STATE_CHANGE",
+    "SourceRuntime": "python3.9",
+    "CS-exec-type": "custom",
+    "OptionalParameters": "{}",
+    "InputParameters": {},
+    "RuleSets": []
+  }
+}

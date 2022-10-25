@@ -1,0 +1,20 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "EC2_MANAGEDINSTANCE_APPLICATIONS_REQUIRED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "applicationNames": {
+        "type": "comma_delimited_list",
+        "label": "Application Names",
+        "description": "comma separated values of application names eg : Chrome:0.5.3,firefox ( applicationname:version) version is optional"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::SSM::ManagedInstanceInventory",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "EC2_MANAGEDINSTANCE_APPLICATIONS_REQUIRED",
+    "RuleSets": []
+  }
+}

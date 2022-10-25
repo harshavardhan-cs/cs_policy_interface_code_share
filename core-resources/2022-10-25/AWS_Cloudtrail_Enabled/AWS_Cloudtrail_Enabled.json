@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "This policy audits whether AWS CloudTrail is enabled in your AWS account. Optionally, you can specify which S3 bucket, SNS topic, and Amazon CloudWatch Logs ARN to use.",
+  "classification": "Operation",
+  "sub_classification": "Logging",
+  "service_resource": [
+    "Trail"
+  ],
+  "resource_type": "CloudTrail",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CLOUDTRAIL ENABLED",
+  "name": "AWS_Cloudtrail_Enabled",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/mere1",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CLOUDTRAIL_ENABLED\",\n    \"SourceIdentifier\": \"CLOUD_TRAIL_ENABLED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{\\\"s3BucketName\\\":\\\"\\\",\\\"snsTopicArn\\\":\\\"\\\",\\\"cloudWatchLogsLogGroupArn\\\":\\\"\\\"}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\"\n  }\n}\n\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Cloudtrail_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Cloudtrail_Enabled.json"
+  }
+}

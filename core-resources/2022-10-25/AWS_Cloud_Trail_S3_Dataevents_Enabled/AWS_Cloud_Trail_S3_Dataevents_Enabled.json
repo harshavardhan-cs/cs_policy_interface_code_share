@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Checks whether at least one AWS CloudTrail trail is logging Amazon S3 data events for all S3 buckets",
+  "classification": "Operation",
+  "sub_classification": "Logging",
+  "service_resource": [
+    "Buckets"
+  ],
+  "resource_type": "S3",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CLOUD TRAIL S3 DATA EVENT ENCRYPTION ENABLED",
+  "name": "AWS_Cloud_Trail_S3_Dataevents_Enabled",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/t7uh9",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"RuleName\": \"CLOUDTRAIL_S3_DATAEVENTS_ENABLED\",\n    \"OptionalParameters\": \"{\\\"S3BucketName\\\": \\\"\\\"}\",\n    \"InputParameters\": \"{}\",\n    \"SourceIdentifier\": \"CLOUDTRAIL_S3_DATAEVENTS_ENABLED\"\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Cloud_Trail_S3_Dataevents_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "resources": "S3",
+    "file": "AWS_Cloud_Trail_S3_Dataevents_Enabled.json"
+  }
+}

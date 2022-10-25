@@ -1,0 +1,13 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "ROOT_ACCOUNT_HARDWARE_MFA_ENABLED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "ROOT_ACCOUNT_HARDWARE_MFA_ENABLED",
+    "RuleSets": []
+  }
+}

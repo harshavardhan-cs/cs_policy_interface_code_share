@@ -1,0 +1,12 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "RDS_SNAPSHOTS_PUBLIC_PROHIBITED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "SourceEvents": "AWS::RDS::DBInstance",
+    "SourceIdentifier": "RDS_SNAPSHOTS_PUBLIC_PROHIBITED",
+    "RuleSets": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "This policy audits whether key rotation is enabled for each customer master key (CMK).",
+  "classification": "Access",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Key"
+  ],
+  "resource_type": "Key_Management_Service",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CMK BACKING KEY ROTATION ENABLED",
+  "name": "AWS_CMK_Backing_Key_Rotation_Enabled",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/reon7",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CMK_BACKING_KEY_ROTATION_ENABLED\",\n    \"InputParameters\": \"{}\",\n    \"SourceIdentifier\": \"CMK_BACKING_KEY_ROTATION_ENABLED\"\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_CMK_Backing_Key_Rotation_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_CMK_Backing_Key_Rotation_Enabled.json"
+  }
+}

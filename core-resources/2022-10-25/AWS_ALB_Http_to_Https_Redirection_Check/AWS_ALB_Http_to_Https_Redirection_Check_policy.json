@@ -1,0 +1,12 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "ALB_HTTP_TO_HTTPS_REDIRECTION_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {},
+    "OptionalParameters": "{}",
+    "SourceIdentifier": "ALB_HTTP_TO_HTTPS_REDIRECTION_CHECK",
+    "SourcePeriodic": "TwentyFour_Hours"
+  }
+}

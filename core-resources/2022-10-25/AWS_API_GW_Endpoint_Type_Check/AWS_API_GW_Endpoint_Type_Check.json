@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "This policy audits that Amazon API Gateway APIs are of the type specified in the rule parameter endpointConfigurationType . The rule returns NON_COMPLIANT if the REST API does not match the endpoint type configured in the rule parameter.",
+  "classification": "Security",
+  "sub_classification": "End Point protection",
+  "service_resource": [
+    "AWS::ApiGateway::RestApi"
+  ],
+  "resource_type": "AWS_Config",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS API GW Endpoint Type Check",
+  "name": "AWS_API_GW_Endpoint_Type_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/qKsaU",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"API_GW_ENDPOINT_TYPE_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"endpointConfigurationTypes\": {\n        \"type\": \"string\",\n        \"label\": \"Endpoint Configuration Types\",\n        \"default\": \"REGIONAL\",\n        \"description\": \"comma separated values of endpoint configuration types\",\n        \"constraints\": [\n          {\n            \"allowed_values\": [\n              \"REGIONAL\",\n              \"PRIVATE\",\n              \"EDGE\"\n            ]\n          }\n        ]\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceIdentifier\": \"API_GW_ENDPOINT_TYPE_CHECK\",\n    \"SourceEvents\": \"AWS::ApiGateway::RestApi\"\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_API_GW_Endpoint_Type_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_API_GW_Endpoint_Type_Check.json"
+  }
+}

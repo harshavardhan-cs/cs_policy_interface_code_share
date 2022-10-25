@@ -1,0 +1,21 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "EC2_MANAGEDINSTANCE_PLATFORM_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "platformType": {
+        "type": "string",
+        "label": "platform Type",
+        "default": "Linux",
+        "description": "Type of the platform"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::SSM::ManagedInstanceInventory",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "EC2_MANAGEDINSTANCE_PLATFORM_CHECK",
+    "RuleSets": []
+  }
+}

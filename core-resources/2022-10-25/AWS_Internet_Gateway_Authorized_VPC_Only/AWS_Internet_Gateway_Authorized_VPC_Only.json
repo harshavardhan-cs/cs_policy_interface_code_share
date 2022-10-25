@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits for the Internet Authorized Gateways for a given VPN.",
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Internet_Gateways"
+  ],
+  "resource_type": "VPC",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Internet Gateway Authorized VPC Only",
+  "name": "AWS_Internet_Gateway_Authorized_VPC_Only",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/OHa2D",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"INTERNET_GATEWAY_AUTHORIZED_VPC_ONLY\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceEvents\": \"AWS::EC2::InternetGateway\",\n    \"SourceIdentifier\": \"INTERNET_GATEWAY_AUTHORIZED_VPC_ONLY\"\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Internet_Gateway_Authorized_VPC_Only"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Internet_Gateway_Authorized_VPC_Only.json"
+  }
+}

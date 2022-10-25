@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "DB_INSTANCE_BACKUP_ENABLED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::RDS::DBInstance",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "DB_INSTANCE_BACKUP_ENABLED",
+    "RuleSets": []
+  }
+}

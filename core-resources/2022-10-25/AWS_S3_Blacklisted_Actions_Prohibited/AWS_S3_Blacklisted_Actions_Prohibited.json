@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Checks that the Amazon Simple Storage Service bucket policy does not allow blacklisted bucket-level and object-level actions on resources in the bucket for principals from other AWS accounts.",
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Buckets"
+  ],
+  "resource_type": "S3",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS S3 BLACKLISTED ACTIONS PROHIBITED",
+  "name": "AWS_S3_Blacklisted_Actions_Prohibited",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/lsew7",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"S3_BUCKET_BLACKLISTED_ACTIONS_PROHIBITED\",\n    \"SourceEvents\": \"AWS::S3::Bucket\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"InputParameters\": {\n      \"blacklistedActionPattern\": {\n        \"type\": \"comma_delimited\",\n        \"label\": \"Blacklisted Action Pattern\",\n        \"description\": \"Patterns of the policy eg: s3:GetBucket*, s3:DeleteObject\",\n        \"default\": \"s3:GetBucket\"\n      }\n    },\n    \"SourceIdentifier\": \"S3_BUCKET_BLACKLISTED_ACTIONS_PROHIBITED\"\n  }\n}",
+  "is_system_policy": true,
+  "config_type": "managed",
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_S3_Blacklisted_Actions_Prohibited"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "resources": "S3",
+    "file": "AWS_S3_Blacklisted_Actions_Prohibited.json"
+  }
+}

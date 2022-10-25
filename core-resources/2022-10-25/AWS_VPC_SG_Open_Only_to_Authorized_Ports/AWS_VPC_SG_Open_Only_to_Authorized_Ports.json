@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the security group with 0.0.0.0/0 of any Amazon Virtual Private Cloud (Amazon VPC) allows only specific inbound TCP or UDP traffic. The rule and any security group with inbound 0.0.0.0/0. are NON_COMPLIANT if you do not provide any ports in the parameters.",
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Security_Groups"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS VPC SG Open Only to Authorized Ports",
+  "name": "AWS_VPC_SG_Open_Only_to_Authorized_Ports",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/kD7vV",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"VPC_SG_OPEN_ONLY_TO_AUTHORIZED_PORTS\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{\\\"authorizedUDPPorts\\\": \\\"\\\", \\\"authorizedTCPPorts\\\": \\\"\\\"}\",\n    \"SourceEvents\": \"AWS::EC2::SecurityGroup\",\n    \"SourceIdentifier\": \"VPC_SG_OPEN_ONLY_TO_AUTHORIZED_PORTS\",\n    \"RuleSets\": []\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_VPC_SG_Open_Only_to_Authorized_Ports"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_VPC_SG_Open_Only_to_Authorized_Ports.json"
+  }
+}

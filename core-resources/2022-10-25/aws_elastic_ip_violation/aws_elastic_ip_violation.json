@@ -1,0 +1,33 @@
+{
+  "name": "AWS_Unused_Elastic_IPs",
+  "display_name": "AWS Unused Elastic IPs",
+  "description": "Policy to check unused Elastic IPs in an AWS account. Elastic IP which are not associated to any Virtual Machine or Loadbalancer in an AWS account will be considered as violations\nUse case(s):\nCan be used to identify unused Elastic IPs that can be deleted to save money",
+  "category": "service",
+  "status": "active",
+  "content": "ip(public_ip, private_ip_address, allocation_id, network_interface_id) :- aws_ec2_elastic_ips:elastic_ip(network_interface_id=network_interface_id, public_ip=public_ip, private_ip_address=private_ip_address, allocation_id=allocation_id, association_id=association_id), equal(association_id, 'None');",
+  "parameters": {},
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "service_resource": [
+    "Elastic IPs"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+    "onboarding_policy": true
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/consumption/elastic_ips/f5qg2",
+  "recommendations": [
+    "AWS_Release_Disassociated_Elastic_IPs"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "This policy audits whether Cloudwatch Log exists in AWS account.",
+  "classification": "Operation",
+  "sub_classification": "Logging",
+  "resource_type": "Cloudwatch",
+  "service_resource": [
+    "LogGroup"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit CloudWatch Log Exists",
+  "name": "AWS_Audit_CloudWatch_Log_Exists",
+  "uri": "policy/aws_config/global/aws/compliance/others/voxq5",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CHECK_EXISTENCE_OF_CLOUDWATCH_LOG\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CS-exec-type\": \"custom\",\n    \"OptionalParameters\": \"{}\",\n    \"InputParameters\": \"{}\",\n    \"RuleSets\": []\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "custom",
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_CloudWatch_Log_Exists"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Audit_CloudWatch_Log_Exists.json"
+  }
+}

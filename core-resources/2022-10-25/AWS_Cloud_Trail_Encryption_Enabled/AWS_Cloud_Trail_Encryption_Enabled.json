@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Checks whether AWS CloudTrail is configured to use the server side encryption (SSE) AWS Key Management Service (AWS KMS) customer master key (CMK) encryption",
+  "classification": "Operation",
+  "sub_classification": "Logging",
+  "service_resource": [
+    "Trail"
+  ],
+  "resource_type": "CloudTrail",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CLOUD TRAIL ENCRYPTION",
+  "name": "AWS_Cloud_Trail_Encryption_Enabled",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/tTRE2",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CLOUD_TRAIL_ENCRYPTION_ENABLED\",\n    \"InputParameters\": {},\n    \"OptionalParameters\": \"{}\",\n    \"SourceIdentifier\": \"CLOUD_TRAIL_ENCRYPTION_ENABLED\"\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Cloud_Trail_Encryption_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Cloud_Trail_Encryption_Enabled.json"
+  }
+}

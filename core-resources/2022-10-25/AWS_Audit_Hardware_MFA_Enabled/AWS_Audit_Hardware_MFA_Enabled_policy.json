@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CHECK_ROOT_HARDWARE_MFA",
+    "SourceRuntime": "python3.9",
+    "CS-exec-type": "custom",
+    "OptionalParameters": "{}",
+    "InputParameters": "{}",
+    "RuleSets": []
+  }
+}

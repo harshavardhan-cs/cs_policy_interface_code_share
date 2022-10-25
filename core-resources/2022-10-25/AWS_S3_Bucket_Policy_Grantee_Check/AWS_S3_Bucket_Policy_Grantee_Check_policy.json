@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "S3_BUCKET_POLICY_GRANTEE_CHECK",
+    "SourceEvents": "AWS::S3::Bucket",
+    "OptionalParameters": "{\"awsPrincipals\":\"arn:aws:iam::111122223333:user/Alice, arn:aws:iam::444455556666:role/Bob, 123456789012\",\"servicePrincipals\":\"cloudtrail.amazonaws.com, lambda.amazonaws.com.\"federatedUsers\":\"cognito-identity.amazonaws.com, arn:aws:iam::111122223333:saml-provider/my-provider.\",\"ipAddresses\":\"10.0.0.1, 192.168.1.0/24\",\"vpcIds\":\"vpc-1234abc0, vpc-ab1234c0\"}",
+    "InputParameters": "{}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "S3_BUCKET_POLICY_GRANTEE_CHECK"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits to see of the CMK Key is scheduled for any deletion.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Key"
+  ],
+  "resource_type": "Key_Management_Service",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS KMS CMK Not Scheduled for Deletion",
+  "name": "AWS_KMS_CMK_Not_Scheduled_for_Deletion",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/muoPz",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"KMS_CMK_NOT_SCHEDULED_FOR_DELETION\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"KMS_CMK_NOT_SCHEDULED_FOR_DELETION\"\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_KMS_CMK_Not_Scheduled_for_Deletion"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_KMS_CMK_Not_Scheduled_for_Deletion.json"
+  }
+}

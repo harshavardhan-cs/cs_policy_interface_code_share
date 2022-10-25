@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the common ports are allowed for incoming traffic.",
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Security_Groups"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS RESTRICTED COMMON PORTS",
+  "name": "AWS_Restricted_Common_Ports",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/denq8",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"RESTRICTED_COMMON_PORTS\",\n    \"SourceEvents\": \"AWS::EC2::SecurityGroup\",\n    \"InputParameters\": {\n      \"blockedPort1\": {\n        \"type\": \"number\",\n        \"default\": 20,\n        \"label\": \"Blocked Port1\",\n        \"description\": \"value for blocked port1\",\n        \"constraints\": [\n          {\n            \"range\": {\n              \"min\": 0,\n              \"max\": 65535\n            }\n          }\n        ]\n      },\n      \"blockedPort2\": {\n        \"type\": \"number\",\n        \"label\": \"Blocked Port2\",\n        \"description\": \"value for blocked port2\",\n        \"optional\": true,\n        \"default\": 21,\n        \"constraints\": [\n          {\n            \"range\": {\n              \"min\": 0,\n              \"max\": 65535\n            }\n          }\n        ]\n      },\n      \"blockedPort3\": {\n        \"type\": \"number\",\n        \"label\": \"Blocked Port3\",\n        \"description\": \"value for blocked port3\",\n        \"optional\": true,\n        \"default\": 3389,\n        \"constraints\": [\n          {\n            \"range\": {\n              \"min\": 0,\n              \"max\": 65535\n            }\n          }\n        ]\n      },\n      \"blockedPort4\": {\n        \"type\": \"number\",\n        \"label\": \"Blocked Port4\",\n        \"description\": \"value for blocked port4\",\n        \"optional\": true,\n        \"default\": 3306,\n        \"constraints\": [\n          {\n            \"range\": {\n              \"min\": 0,\n              \"max\": 65535\n            }\n          }\n        ]\n      },\n      \"blockedPort5\": {\n        \"type\": \"number\",\n        \"label\": \"Blocked Port5\",\n        \"description\": \"value for blocked port5\",\n        \"optional\": true,\n        \"default\": 4333,\n        \"constraints\": [\n          {\n            \"range\": {\n              \"min\": 0,\n              \"max\": 65535\n            }\n          }\n        ]\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourcePeriodic\": \"One_Hour\",\n    \"SourceIdentifier\": \"RESTRICTED_INCOMING_TRAFFIC\"\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Restricted_Common_Ports"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Restricted_Common_Ports.json"
+  }
+}

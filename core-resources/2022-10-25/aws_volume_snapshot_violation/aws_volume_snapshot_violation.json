@@ -1,0 +1,57 @@
+{
+  "name": "AWS_Old_Volume_Snapshots",
+  "display_name": "AWS Old Volume Snapshots",
+  "description": "Policy to check for older volume snapshots in an AWS account. By default, volume snapshots older than 30 days will be considered as a violation\nUse case(s): \nCan be used to identify older & unused volume snapshots that can be deleted to save money",
+  "category": "service",
+  "status": "active",
+  "content": "vs(snapshot_id, snapshot_name, volume_id, created_date, policy_execution_date) :- aws_ec2_snapshot:volume_snapshot(volume_id=volume_id, snapshot_id=snapshot_id, snapshot_name=snapshot_name, start_time=creation_time), now(today), extract_date(today, policy_execution_date), extract_date(creation_time, created_date), datetime_minus(today, '00:#Number_of_Days#:00:00:00', older_date), datetime_lteq(creation_time, older_date), not with_image(snapshot_id);",
+  "parameters": {
+    "Number_of_Days": {
+      "type": "number",
+      "description": "Volume Snapshots which running older than specified Number of Days will be considered as violations. This is to specify a threshold for the age of the resources.",
+      "label": "Number_Of_Days_Older",
+      "default": 30,
+      "constraints": [
+        {
+          "range": {
+            "min": 1
+          }
+        }
+      ]
+    }
+  },
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "service_resource": [
+    "Snapshots"
+  ],
+  "resource_type": "EBS",
+  "severity": "medium",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "dependent_rules": {
+    "with_image": "with_image(x) :- aws_ec2_image:image_block_device_mappings(SnapshotId=x);"
+  },
+  "scope": "global",
+  "metadata": {
+    "system_scheduled_details": [
+      {
+        "interval": 1440,
+        "args": {
+          "Number_of_Days": "30"
+        }
+      }
+    ]
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": true,
+  "uri": "policy/congress/global/aws/cost/snapshots/zcerl",
+  "recommendations": [
+    "AWS_Delete_Unused_Volume_Snapshots"
+  ]
+}

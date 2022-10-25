@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "Use the ebs-optimized-instance AWS Config managed rule to check whether Amazon EBS optimization is enabled for your EC2 instances.",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EBS Optimized Instance",
+  "name": "AWS_EBS_Optimized_Instance",
+  "uri": "policy/aws_config/global/aws/compliance/others/eaFMo",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"EBS_OPTIMIZED_INSTANCE\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::EC2::Instance\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"EBS_OPTIMIZED_INSTANCE\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_EBS_Optimized_Instance"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_EBS_Optimized_Instance.json"
+  }
+}

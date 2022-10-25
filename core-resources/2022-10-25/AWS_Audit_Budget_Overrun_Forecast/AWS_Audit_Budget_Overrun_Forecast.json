@@ -1,0 +1,31 @@
+{
+  "status": "active",
+  "description": "Cost of '[Limit details eg Service: Lambda]' is estimated to overrun the budget limit",
+  "classification": "Cost",
+  "severity": "medium",
+  "sub_classification": "Utilization",
+  "service_resource": [
+    "Accounts"
+  ],
+  "resource_type": "AWS_Organizations",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Budget Overrun Forecast",
+  "name": "AWS_Audit_Budget_Overrun_Forecast",
+  "uri": "policy/aws_config/global/aws/compliance/others/9a213",
+  "content": "{\n    \"Version\": \"1.0\",\n    \"Parameters\": {\n      \"RuleName\": \"AWS_BUDGET_OVERRUN_FORECAST\",\n      \"SourceRuntime\": \"python3.9\",\n      \"CodeKey\": \"AWS_BUDGET_OVERRUN_FORECAST.zip\",\n      \"InputParameters\": \"{}\",\n      \"OptionalParameters\": \"{}\",\n      \"SourcePeriodic\": \"TwentyFour_Hours\"\n    },\n    \"Tags\": \"[]\"\n  }",
+  "is_system_policy": false,
+  "config_type": "custom",
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_Budget_Overrun_Forecast"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {}
+}

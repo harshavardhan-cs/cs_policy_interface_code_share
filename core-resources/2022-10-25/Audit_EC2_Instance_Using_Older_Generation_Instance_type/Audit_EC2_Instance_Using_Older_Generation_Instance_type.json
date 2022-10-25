@@ -1,0 +1,31 @@
+{
+  "name": "Audit_EC2_Instance_Using_Older_Generation_Instance_type",
+  "display_name": "Audit AWS EC2 Instance Using Older Generation Instance Type",
+  "description": "Policy to check for AWS Instances configured with Older generation instance type.",
+  "category": "service",
+  "status": "active",
+  "content": "vm(ResourceId, ResourceName, InstanceType, Status, CreatedDate) :- aws_ec2_instance:instance(ResourceId=ResourceId, StartTime=CreationTime, Status=Status, ResourceName=ResourceName, InstanceType=InstanceType), extract_date(CreationTime, CreatedDate), nin(InstanceType, 'm1.small,m1.medium,m1.large,m1.xlarge,m3.medium,m3.large,m3.xlarge,m3.2xlarge,c1.medium,c1.xlarge,c2.8xlarge,c3.large,c3.xlarge,c3.2xlarge,c3.4xlarge,c3.8xlarge,g2.2xlarge*,g2.8xlarge**,m2.xlarge,m2.2xlarge,m2.4xlarge,cr1.8xlarge,r3.large,r3.xlarge,r3.2xlarge,r3.4xlarge,r3.8xlarge,i2.xlarge,i2.2xlarge,i2.4xlarge,i2.8xlarge,hs1.8xlarge,t1.micro'), equal(Status, 'running');",
+  "parameters": {},
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "low",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/consumption/instance/fqyy5",
+  "recommendations": [
+  ]
+}

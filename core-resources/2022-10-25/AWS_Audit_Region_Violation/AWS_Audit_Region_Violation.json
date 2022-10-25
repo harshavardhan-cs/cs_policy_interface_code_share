@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "This policy audits whether resources meet the standard region requirements.",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Accounts"
+  ],
+  "resource_type": "AWS_Organizations",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit Region Violation",
+  "name": "AWS_Audit_Region_Violation",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/MWvql",
+  "content": "{\n  \"Version\": \"1.0\", \n  \"Parameters\": {\n    \"SourceRuntime\": \"python3.9\", \n    \"RuleName\": \"AWS_Audit_Region_Violation\", \n    \"SourceEvents\": \"AWS::ElasticLoadBalancingV2::LoadBalancer,AWS::ElasticLoadBalancing::LoadBalancer,AWS::CloudTrail::Trail,AWS::EC2::Instance,AWS::Redshift::Cluster,AWS::RDS::DBInstance\", \n    \"OptionalParameters\": \"{}\", \n    \"CS-exec-type\": \"custom\",\n    \"InputParameters\": \"{}\"\n  } \n}\n",
+  "is_system_policy": false,
+  "config_type": "custom",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_Region_Violation"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Audit_Region_Violation.json"
+  }
+}

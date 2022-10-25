@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether your Auto Scaling groups that are associated with a load balancer are using Elastic Load Balancing health Checks.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Autoscaling Group ELB Healthcheck Required",
+  "name": "AWS_Autoscaling_Group_ELB_HEALTHcheck_Required",
+  "uri": "policy/aws_config/global/aws/compliance/others/ca46B",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"AUTOSCALING_GROUP_ELB_HEALTHCHECK_REQUIRED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::AutoScaling::AutoScalingGroup\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"AUTOSCALING_GROUP_ELB_HEALTHCHECK_REQUIRED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Autoscaling_Group_ELB_HEALTHcheck_Required"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Autoscaling_Group_ELB_HEALTHcheck_Required.json"
+  }
+}

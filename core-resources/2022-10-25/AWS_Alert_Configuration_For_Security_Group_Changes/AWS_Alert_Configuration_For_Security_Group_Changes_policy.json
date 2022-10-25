@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CHECK_ALERT_CONFIGURATION_FOR_SECURITY_GROUP_CHANGES",
+    "SourceRuntime": "python3.9",
+    "CS-exec-type": "custom",
+    "OptionalParameters": "{}",
+    "InputParameters": {},
+    "RuleSets": []
+  }
+}

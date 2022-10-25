@@ -1,0 +1,12 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "AWS_Audit_EC2_Blacklisted_AMI",
+    "SourceRuntime": "python3.9",
+    "CodeKey": "AWS_Audit_EC2_Blacklisted_AMI.zip",
+    "InputParameters": "{\"Blacklisted_AMIs\":\"\"}",
+    "OptionalParameters": "{}",
+    "SourcePeriodic": "Six_Hours"
+  },
+  "Tags": "[]"
+}

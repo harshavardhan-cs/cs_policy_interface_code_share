@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "It is recommended to have Amazon EC2 instances in your account are managed by AWS Systems Manager.",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Instance Managed by Ssm",
+  "name": "AWS_EC2_Instance_Managed_by_Ssm",
+  "uri": "policy/aws_config/global/aws/compliance/others/ij27X",
+  "content": "{\n  \"Version\": \"1.0\", \n  \"Parameters\": {\n    \"RuleName\": \"EC2_INSTANCE_MANAGED_BY_SSM\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"SourceEvents\": \"AWS::EC2::Instance,AWS::SSM::ManagedInstanceInventory\",\n    \"OptionalParameters\": \"{}\", \n    \"InputParameters\": \"{}\",\n    \"SourceIdentifier\": \"EC2_INSTANCE_MANAGED_BY_SSM\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "type": [
+    "cloud"
+  ],
+  "recommendations": [
+    "AWS_EC2_Instance_Managed_by_Ssm"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "resources": "EC2",
+    "file": "AWS_EC2_Instance_Managed_by_Ssm.json"
+  }
+}

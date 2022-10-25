@@ -1,0 +1,21 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "DESIRED_INSTANCE_TYPE",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "instanceType": {
+        "type": "string",
+        "label": "Instance Type",
+        "default": "t1.micro",
+        "description": "Type of the instance"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::EC2::Instance",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "DESIRED_INSTANCE_TYPE",
+    "RuleSets": []
+  }
+}

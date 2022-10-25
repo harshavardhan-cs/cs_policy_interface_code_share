@@ -1,0 +1,16 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "S3_BUCKET_POLICY_NOT_MORE_PERMISSIVE",
+    "SourceEvents": "AWS::S3::Bucket",
+    "InputParameters": {
+      "controlPolicy": {
+        "type": "string",
+        "label": "Control Policy",
+        "description": "value of the policy"
+      }
+    },
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "S3_BUCKET_POLICY_NOT_MORE_PERMISSIVE"
+  }
+}

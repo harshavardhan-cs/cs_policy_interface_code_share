@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "It is recommended to have the compliance status of the Amazon EC2 Systems Manager patch compliance is COMPLIANT  after the patch installation on the instance. ",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Patch Compliance Status Check",
+  "name": "AWS_EC2_Patch_Compliance_Status_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/FkzQK",
+  "content": "{\n  \"Version\": \"1.0\", \n  \"Parameters\": {\n    \"RuleName\": \"EC2_MANAGEDINSTANCE_PATCH_COMPLIANCE_STATUS_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"SourceEvents\": \"AWS::SSM::PatchCompliance\",\n    \"OptionalParameters\": \"{}\", \n    \"InputParameters\": \"{}\",\n    \"SourceIdentifier\": \"EC2_MANAGEDINSTANCE_PATCH_COMPLIANCE_STATUS_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "type": [
+    "cloud"
+  ],
+  "recommendations": [
+    "AWS_EC2_Patch_Compliance_Status_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "resources": "EC2",
+    "file": "AWS_EC2_Patch_Compliance_Status_Check.json"
+  }
+}

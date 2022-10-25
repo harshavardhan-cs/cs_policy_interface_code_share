@@ -1,0 +1,18 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "SourcePeriodic": "One_Hour",
+    "SourceIdentifier": "CLOUDWATCH_LOG_GROUP_ENCRYPTED",
+    "RuleName": "CLOUDWATCH_LOG_GROUP_ENCRYPTED",
+    "OptionalParameters": "{}",
+    "InputParameters": {
+      "KmsKeyId": {
+        "type": "string",
+        "label": "KMS KeyID",
+        "description": "ID of the Kms key"
+      }
+    }
+  }
+}

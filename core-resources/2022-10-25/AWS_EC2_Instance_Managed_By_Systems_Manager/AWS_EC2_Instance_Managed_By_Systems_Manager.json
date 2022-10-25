@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "Checks whether the Amazon EC2 instances in your account are managed by AWS Systems Manager. ",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Instance Managed By Systems Manager",
+  "name": "AWS_EC2_Instance_Managed_By_Systems_Manager",
+  "uri": "policy/aws_config/global/aws/compliance/others/9D2jf",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"EC2_INSTANCE_MANAGED_BY_SSM\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::EC2::Instance,AWS::SSM::ManagedInstanceInventory\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"EC2_INSTANCE_MANAGED_BY_SSM\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_EC2_Instance_Managed_By_Systems_Manager"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_EC2_Instance_Managed_By_Systems_Manager.json"
+  }
+}

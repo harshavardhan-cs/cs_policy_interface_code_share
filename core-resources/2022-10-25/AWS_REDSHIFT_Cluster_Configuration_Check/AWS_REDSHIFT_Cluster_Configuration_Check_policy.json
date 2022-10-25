@@ -1,0 +1,42 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": " REDSHIFT_CLUSTER_CONFIGURATION_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "clusterDbEncrypted": {
+        "type": "string",
+        "default": "true",
+        "label": "Cluster DB Encrypted",
+        "description": "value for cluster DB encryption",
+        "constraints": [
+          {
+            "allowed_values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      "loggingEnabled": {
+        "type": "string",
+        "default": "true",
+        "label": "Logging Enabled",
+        "description": "value for logging enabled",
+        "constraints": [
+          {
+            "allowed_values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::Redshift::Cluster",
+    "SourceIdentifier": " REDSHIFT_CLUSTER_CONFIGURATION_CHECK",
+    "RuleSets": []
+  }
+}

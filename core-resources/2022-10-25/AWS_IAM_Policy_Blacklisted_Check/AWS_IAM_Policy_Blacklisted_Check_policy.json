@@ -1,0 +1,20 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "IAM_POLICY_BLACKLISTED_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "policyArns": {
+        "type": "comma_delimited_list",
+        "label": "policy ARNs",
+        "description": "ARNs of multiple policies"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::IAM::User,AWS::IAM::Group,AWS::IAM::Role",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "IAM_POLICY_BLACKLISTED_CHECK",
+    "RuleSets": []
+  }
+}

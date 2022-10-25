@@ -1,0 +1,12 @@
+{
+    "Version": "1.0",
+    "Parameters": {
+      "RuleName": "AWS_BUDGET_OVERRUN_FORECAST",
+      "SourceRuntime": "python3.9",
+      "CodeKey": "AWS_BUDGET_OVERRUN_FORECAST.zip",
+      "InputParameters": "{}",
+      "OptionalParameters": "{}",
+      "SourcePeriodic": "TwentyFour_Hours"
+    },
+    "Tags": "[]"
+  }

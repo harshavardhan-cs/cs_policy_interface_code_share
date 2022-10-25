@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether AWS CloudTrail trails are configured to send logs to Amazon CloudWatch Logs.",
+  "classification": "Operation",
+  "sub_classification": "Monitoring",
+  "service_resource": [
+    "Trail"
+  ],
+  "resource_type": "CloudTrail",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CLOUDTRAIL CLOUDWATCH LOGS Enabled",
+  "name": "AWS_CLOUDTRAIL_CLOUDWATCH_LOGS_Enabled",
+  "uri": "policy/aws_config/global/aws/compliance/others/baLl4",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CLOUD_TRAIL_CLOUD_WATCH_LOGS_ENABLED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"CLOUD_TRAIL_CLOUD_WATCH_LOGS_ENABLED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_CLOUDTRAIL_CLOUDWATCH_LOGS_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_CLOUDTRAIL_CLOUDWATCH_LOGS_Enabled.json"
+  }
+}

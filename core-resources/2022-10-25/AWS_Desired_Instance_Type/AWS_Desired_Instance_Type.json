@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Use the desired-instance-type AWS Config managed rule to evaluate whether your instances are using a specific instance type.",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Desired Instance Type",
+  "name": "AWS_Desired_Instance_Type",
+  "uri": "policy/aws_config/global/aws/compliance/others/sFIfu",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"DESIRED_INSTANCE_TYPE\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"instanceType\": {\n        \"type\": \"string\",\n        \"label\": \"Instance Type\",\n        \"default\": \"t1.micro\",\n        \"description\": \"Type of the instance\"\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::EC2::Instance\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"DESIRED_INSTANCE_TYPE\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Desired_Instance_Type"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Desired_Instance_Type.json"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether AWS Shield Advanced is enabled in your AWS account and this subscription is set to automatically renew.",
+  "classification": "Security",
+  "sub_classification": "End Point protection",
+  "service_resource": [
+    "Shield"
+  ],
+  "resource_type": "Shield",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS SHIELD Advanced Enabled Autorenew",
+  "name": "AWS_SHIELD_Advanced_Enabled_Autorenew",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/D1f0N",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"SHIELD_ADVANCED_ENABLED_AUTORENEW\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceIdentifier\": \"SHIELD_ADVANCED_ENABLED_AUTORENEW\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\"\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_SHIELD_Advanced_Enabled_Autorenew"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_SHIELD_Advanced_Enabled_Autorenew.json"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CLOUD_TRAIL_CLOUD_WATCH_LOGS_ENABLED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "CLOUD_TRAIL_CLOUD_WATCH_LOGS_ENABLED",
+    "RuleSets": []
+  }
+}

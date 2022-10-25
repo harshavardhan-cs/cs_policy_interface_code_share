@@ -1,0 +1,12 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "ROOT_ACCOUNT_MFA_ENABLED",
+    "SourceEvents": "AWS::IAM::User",
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "ROOT_ACCOUNT_MFA_ENABLED"
+
+  }
+}

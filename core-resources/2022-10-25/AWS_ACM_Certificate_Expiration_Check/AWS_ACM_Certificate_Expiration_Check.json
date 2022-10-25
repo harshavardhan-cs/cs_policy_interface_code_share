@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "Use the acm-certificate-expiration-check AWS Config managed rule to evaluate whether your ACM Certificates are marked for expiration.",
+  "classification": "Access",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Certificate"
+  ],
+  "resource_type": "Certificate_Manager",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ACM Certificate Expiration Check",
+  "name": "AWS_ACM_Certificate_Expiration_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/7PXgW",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"ACM_CERTIFICATE_EXPIRATION_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {},\n    \"OptionalParameters\": \"{\\\"daysToExpiration\\\":\\\"\\\"}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceEvents\": \"AWS::ACM::Certificate\",\n    \"SourceIdentifier\": \"ACM_CERTIFICATE_EXPIRATION_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "type": [
+    "cloud"
+  ],
+  "recommendations": [
+    "AWS_ACM_Certificate_Expiration_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_ACM_Certificate_Expiration_Check.json"
+  }
+}

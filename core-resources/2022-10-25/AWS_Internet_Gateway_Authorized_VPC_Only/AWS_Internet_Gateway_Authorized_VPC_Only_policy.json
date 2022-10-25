@@ -1,0 +1,12 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "INTERNET_GATEWAY_AUTHORIZED_VPC_ONLY",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceEvents": "AWS::EC2::InternetGateway",
+    "SourceIdentifier": "INTERNET_GATEWAY_AUTHORIZED_VPC_ONLY"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Audit_RDS_Instance_Using_Older_Generation_Instance_type",
+  "display_name": "Audit AWS RDS Instance Using Older Generation Instance Type",
+  "description": "Policy to check for AWS RDS Instances configured with Older generation instance type.",
+  "category": "service",
+  "status": "active",
+  "content": "vm(ResourceId, ResourceName, InstanceType, Status, CreatedDate) :- aws_rds_instance:rds_instance(ResourceId=ResourceId, CreatedTime=CreatedTime, Status=Status, ResourceName=ResourceName, InstanceType=InstanceType), extract_date(CreatedTime, CreatedDate), nin(InstanceType, 'db.m1.small,db.m1.medium,db.m1.large,db.m1.xlarge,db.m3.medium,db.m3.large,db.m3.xlarge,db.m3.2xlarge,db.m2.xlarge,db.m2.2xlarge,db.m2.4xlarge,db.r3.large,db.r3.xlarge,db.r3.2xlarge,db.r3.4xlarge,db.r3.8xlarge,db.t2.micro,db.t2.small,db.t2.medium,db.t2.large,db.t2.xlarge,db.t2.2xlarge,db.m4.large,db.m4.xlarge,db.m4.2xlarge,db.m4.4xlarge,db.m4.10xlarge,db.m4.16xlarge,db.r4.large,db.r4.xlarge,db.r4.2xlarge,db.r4.4xlarge,db.r4.8xlarge,db.r4.16xlarge,db.r3.large,db.r3.xlarge,db.r3.2xlarge,db.r3.4xlarge,db.r3.8xlarge'), equal(Status, 'running');",
+  "parameters": {},
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Databases"
+  ],
+  "resource_type": "RDS",
+  "severity": "low",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/consumption/instance/fqyy6",
+  "recommendations": [
+  ]
+}

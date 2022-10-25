@@ -1,0 +1,33 @@
+{
+  "name": "AWS_Audit_Unencrypted_Disk_Attached_To_VM",
+  "display_name": "AWS Audit Unencrypted Disk Attached To VM",
+  "description": "Policy to list unencrypted disks attached to VM",
+  "category": "service",
+  "status": "active",
+  "content": "volume(volume_id, volume_name, instance_id, type, status, zone, encrypted) :- aws_ec2_volume:volumes(volume_id=volume_id, volume_name=volume_name, instance_id=instance_id, type=type, status=status, zone=zone, encrypted=encrypted), equal(encrypted, 'False'), ne(instance_id, '');",
+  "parameters": {},
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+    "onboarding_policy": true
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/volume/vqfd3",
+  "recommendations": [
+    "AWS_Audit_Unencrypted_Disk_Attached_To_VM"
+  ]
+}

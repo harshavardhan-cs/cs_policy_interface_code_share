@@ -1,0 +1,32 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the Amazon Relational Database Service instances are not publicaly accessible.",
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Databases"
+  ],
+  "resource_type": "RDS",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS RDS Instance Public Access Check",
+  "name": "AWS_RDS_Instance_Public_Access_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/eToYu",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"RDS_INSTANCE_PUBLIC_ACCESS_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::RDS::DBInstance\",\n    \"SourceIdentifier\": \"RDS_INSTANCE_PUBLIC_ACCESS_CHECK\",   \n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "type": [
+    "cloud"
+  ],
+  "recommendations": [
+    "AWS_RDS_Instance_Public_Access_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_RDS_Instance_Public_Access_Check.json"
+  }
+}

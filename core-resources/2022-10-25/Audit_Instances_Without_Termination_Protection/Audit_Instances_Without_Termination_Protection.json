@@ -1,0 +1,32 @@
+{
+  "name": "AWS_Audit_Instances_Without_Termination_Protection",
+  "display_name": "AWS Audit Instances Without Termination Protection",
+  "description": "This policy checks for instances without termination protection.",
+  "category": "service",
+  "status": "active",
+  "content": "instance(ResourceId, DisableApiTermination) :- aws_ec2_instance:instance(ResourceId=ResourceId, DisableApiTermination=DisableApiTermination), ne(DisableApiTermination, 'True');",
+  "parameters": {},
+  "classification": "Security",
+  "sub_classification": "Host",
+  "resource_type": "EC2",
+  "service_resource": [
+    "Instances"
+  ],
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/instance/yng3n",
+  "recommendations": [
+    "AWS_Audit_Instances_Without_Termination_Protection"
+  ]
+}

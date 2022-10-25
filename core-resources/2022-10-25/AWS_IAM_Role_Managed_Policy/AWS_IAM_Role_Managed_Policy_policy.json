@@ -1,0 +1,18 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "IAM_ROLE_MANAGED_POLICY_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "managedPolicyArns": {
+        "type": "comma_delimited_list",
+        "label": "Managed policy ARNs",
+        "description": "ARNs of multiple Managed policies"
+      }
+    },
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceEvents": "AWS::IAM::Role",
+    "SourceIdentifier": "IAM_ROLE_MANAGED_POLICY_CHECK"
+  }
+}

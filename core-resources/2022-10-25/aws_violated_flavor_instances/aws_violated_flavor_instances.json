@@ -1,0 +1,39 @@
+{
+  "name": "AWS_InstanceType_Violation",
+  "display_name": "AWS InstanceType Violation",
+  "description": "Policy to check for AWS Instances configured with Instance Type other the recommended ones. Recommended Instance Type(s) can be specified as input when executing the policy. \nUse case(s): \nCan be used to identify Instances that can down sized to lower instance types if higher than the recommended",
+  "category": "service",
+  "status": "active",
+  "content": "vm(ResourceId, ResourceName, InstanceType, Status, CreatedDate) :- aws_ec2_instance:instance(ResourceId=ResourceId, StartTime=CreationTime, Status=Status, ResourceName=ResourceName, InstanceType=InstanceType), extract_date(CreationTime, CreateDate), nin(InstanceType, #InstanceType#), equal(Status, 'running');",
+  "parameters": {
+    "Instance_Type": {
+      "type": "string",
+      "description": "Instances configured with the Instance Type other than the ones specified will be considered as violations. \nNote: Multiple Instance Types can be specified by separating them with commas",
+      "label": "Instance_Type",
+      "default": "t2.nano,t2.micro,t2.small"
+    }
+  },
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "resource_type": "EC2",
+  "service_resource": [
+    "Instances"
+  ],
+  "severity": "medium",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/consumption/instance/fqyy4",
+  "recommendations": [
+    "AWS_Manage_Instances_With_Inappropriate_Configuration"
+  ]
+}

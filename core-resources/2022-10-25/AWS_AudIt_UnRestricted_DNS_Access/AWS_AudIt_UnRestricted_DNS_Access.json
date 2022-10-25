@@ -1,0 +1,32 @@
+{
+  "name": "AWS_Audit_UnRestricted_DNS_Access",
+  "display_name": "AWS Audit UnRestricted DNS Access",
+  "description": "This poliy checks if the EC2 intance DNS ( Domain Name  Service) is exposed.This can cause DOS attack or any other malicious attacks.",
+  "category": "service",
+  "status": "active",
+  "content": "sg(SG_id, SG_name, from_port, to_port, grant, IP_protocol) :- aws_ec2_sg:securitygroup(sg_name=SG_name, sg_id=SG_id), aws_ec2_sg:securitygroup_rules(from_port=from_port, to_port=to_port, sg_id=SG_id, ip_protocol=IP_protocol, rule_id=rule_id), aws_ec2_sg:securitygroup_rules.grants(rule_id=rule_id, grant=grant), in(IP_protocol, 'tcp,6,udp,17,-1'), btw(from_port,to_port, 53), equal('0.0.0.0/0', grant);",
+  "parameters": {},
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Security_Groups"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "resources": [],
+  "metadata": {
+  },
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/security_group/iig55",
+  "recommendations": [
+    "AWS_Audit_UnRestricted_DNS_Access"
+  ]
+}

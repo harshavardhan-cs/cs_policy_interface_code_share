@@ -1,0 +1,12 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "ELB_DELETION_PROTECTION_ENABLED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceIdentifier": "ELB_DELETION_PROTECTION_ENABLED",
+    "SourceEvents": "AWS::ElasticLoadBalancingV2::LoadBalancer"
+  }
+}

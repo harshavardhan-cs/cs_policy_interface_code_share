@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Verifies that your Amazon S3 bucket policies do not allow other inter-account permissions than the control S3 bucket policy that you provide",
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Buckets"
+  ],
+  "resource_type": "S3",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS S3 BUCKET POLICY NOT MORE PERMISSIVE",
+  "name": "AWS_S3_Bucket_Policy_Not_More_Permissive",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/ju67f",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"S3_BUCKET_POLICY_NOT_MORE_PERMISSIVE\",\n    \"SourceEvents\": \"AWS::S3::Bucket\",\n    \"InputParameters\": {\n      \"controlPolicy\": {\n        \"type\": \"string\",\n        \"label\": \"Control Policy\",\n        \"description\": \"value of the policy\"\n      }\n    },\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"S3_BUCKET_POLICY_NOT_MORE_PERMISSIVE\"\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_S3_Bucket_Policy_Not_More_Permissive"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "resources": "S3",
+    "file": "AWS_S3_Bucket_Policy_Not_More_Permissive.json"
+  }
+}

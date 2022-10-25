@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CHECK_EXISTENCE_OF_IAM_USER",
+    "SourceRuntime": "python3.9",
+    "CS-exec-type": "custom",
+    "OptionalParameters": "{}",
+    "InputParameters": "{}",
+    "RuleSets": []
+  }
+}

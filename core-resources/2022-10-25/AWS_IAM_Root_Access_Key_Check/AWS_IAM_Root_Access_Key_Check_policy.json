@@ -1,0 +1,9 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "IAM_ROOT_ACCESS_KEY_CHECK",
+    "InputParameters": "{}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "IAM_ROOT_ACCESS_KEY_CHECK"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CMK_BACKING_KEY_ROTATION_ENABLED",
+    "InputParameters": "{}",
+    "SourceIdentifier": "CMK_BACKING_KEY_ROTATION_ENABLED"
+  }
+}

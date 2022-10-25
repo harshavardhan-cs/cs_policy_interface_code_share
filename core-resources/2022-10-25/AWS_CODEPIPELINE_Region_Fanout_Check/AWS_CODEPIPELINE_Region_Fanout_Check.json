@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether each stage in the AWS CodePipeline deploys to more than N times the number of the regions the AWS CodePipeline has deployed in all the previous combined stages, where N is the region fanout number.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "AWS::CodePipeline::Pipeline"
+  ],
+  "resource_type": "AWS_Config",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CODEPIPELINE Region Fanout Check",
+  "name": "AWS_CODEPIPELINE_Region_Fanout_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/Thg5Y",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CODEPIPELINE_REGION_FANOUT_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"regionFanoutFactor\": {\n        \"type\": \"number\",\n        \"label\": \"Region FanOut Factor\",\n        \"default\": 3,\n        \"description\": \"value for the region fanout\"\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::CodePipeline::Pipeline\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"CODEPIPELINE_REGION_FANOUT_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_CODEPIPELINE_Region_Fanout_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_CODEPIPELINE_Region_Fanout_Check.json"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "API_GW_ENDPOINT_TYPE_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "endpointConfigurationTypes": {
+        "type": "string",
+        "label": "Endpoint Configuration Types",
+        "default": "REGIONAL",
+        "description": "comma separated values of endpoint configuration types",
+        "constraints": [
+          {
+            "allowed_values": [
+              "REGIONAL",
+              "PRIVATE",
+              "EDGE"
+            ]
+          }
+        ]
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceIdentifier": "API_GW_ENDPOINT_TYPE_CHECK",
+    "SourceEvents": "AWS::ApiGateway::RestApi"
+  }
+}

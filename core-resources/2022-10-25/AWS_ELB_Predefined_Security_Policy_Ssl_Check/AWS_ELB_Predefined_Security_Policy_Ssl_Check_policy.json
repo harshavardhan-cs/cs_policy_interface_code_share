@@ -1,0 +1,19 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "ELB_PREDEFINED_SECURITY_POLICY_SSL_CHECK",
+    "InputParameters": {
+      "predefinedPolicyName": {
+        "type": "string",
+        "label": "Predefined Policy Name",
+        "default": "",
+        "description": "Name of the predefined policy"
+      }
+    },
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceEvents": "AWS::ElasticLoadBalancing::LoadBalancer",
+    "SourceIdentifier": "ELB_PREDEFINED_SECURITY_POLICY_SSL_CHECK"
+  }
+}

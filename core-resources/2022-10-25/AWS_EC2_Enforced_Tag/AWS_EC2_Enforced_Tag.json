@@ -1,0 +1,63 @@
+{
+  "name": "AWS_EC2_Enforced_Tag",
+  "display_name": "AWS Enforced Tag EC2",
+  "description": "Policy to retrieve AWS EC2 resources without the input tag. Tags are used for logical grouping of resources. \nUse case(s):\nCan be used to quickly identify resources without the input tag specified.",
+  "category": "service",
+  "status": "active",
+  "content": "enforce_tags(ResourceId, ResourceName, Status, ResourceType, #Tag_Name#) :- aws_ec2_instance:instance(ResourceId=ResourceId, Status=Status, ResourceName=ResourceName), concat('', 'Instances', ResourceType), not instance_has_tags(ResourceId);",
+  "parameters": {
+    "Tag_Name": {
+      "type": "string",
+      "description": "Names of the tag which we have to be considered as not violation",
+      "default": "Owner",
+      "label": "Tag_Name",
+      "constraints": [
+          {
+            "allowed_values": [
+              "owner",
+              "Environment"
+            ]
+          }
+        ]
+      }
+    },
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Instances",
+    "Volumes",
+    "Snapshots",
+    "Own_Private_Images",
+    "Elastic IPs"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "dependent_rules": {
+    "1": "instance_has_tags(x) :- aws_ec2_instance:instance_tags(x, y, z), equal(y, #Tag_Name#);",
+    "2": "volume_has_tags(x) :- aws_ec2_volume:volume_tags(x, y, z), equal(y, #Tag_Name#);",
+    "3": "snapshot_has_tags(x) :- aws_ec2_snapshot:snapshot_tags(x, y, z), equal(y, #Tag_Name#);",
+    "4": "image_has_tags(x) :- aws_ec2_image:image_tags(x, y, z), equal(y, #Tag_Name#);",
+    "5": "ip_has_tags(x) :- aws_ec2_elastic_ips:elastic_ip_tags(x, y, z), equal(y, #Tag_Name#);",
+    "6": "enforce_tags(resource_id, resource_name, status, 'Volumes', #Tag_Name#) :- aws_ec2_volume:volumes(volume_id=resource_id, status=status, volume_name=resource_name), not volume_has_tags(resource_id);",
+    "7": "enforce_tags(resource_id, resource_name, status, 'Snapshots', #Tag_Name#) :- aws_ec2_snapshot:volume_snapshot(snapshot_id=resource_id, status=status, snapshot_name=resource_name), not snapshot_has_tags(resource_id);",
+    "8": "enforce_tags(resource_id, resource_name, status, 'Own_Private_Images', #Tag_Name#) :- aws_ec2_image:images(ImageId=resource_id, State=status, Name=resource_name), not image_has_tags(resource_id);",
+    "9": "enforce_tags(resource_id, resource_name, 'NA', 'Elastic IPs', #Tag_Name#) :- aws_ec2_elastic_ips:elastic_ip(public_ip=resource_name, allocation_id=resource_id, domain=domain), equal(domain, 'vpc'), not ip_has_tags(resource_id);"
+  },
+  "scope": "global",
+  "metadata": {
+    "file": "AWS_EC2_Enforced_Tag.json"
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/consumption/ec2/vfqqb",
+  "recommendations": [
+    "AWS_Manage_Enforce_Tag_Missing_EC2_Resources"
+  ]
+}

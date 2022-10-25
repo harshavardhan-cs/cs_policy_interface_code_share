@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether Amazon Virtual Private Cloud flow logs are found and enabled for Amazon VPC.",
+  "classification": "Operation",
+  "sub_classification": "Logging",
+  "service_resource": [
+    "VPC"
+  ],
+  "resource_type": "VPC",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS VPC FLOW LOGS ENABLED",
+  "name": "AWS_VPC_Flow_Logs_Enabled",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/@nmot",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"VPC_FLOW_LOGS_ENABLED\",\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{\\\"trafficType\\\":\\\"\\\"}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"VPC_FLOW_LOGS_ENABLED\"\n\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_VPC_Flow_Logs_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_VPC_Flow_Logs_Enabled.json"
+  }
+}

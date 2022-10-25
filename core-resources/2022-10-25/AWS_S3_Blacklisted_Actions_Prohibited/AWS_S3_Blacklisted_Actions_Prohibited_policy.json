@@ -1,0 +1,17 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "S3_BUCKET_BLACKLISTED_ACTIONS_PROHIBITED",
+    "SourceEvents": "AWS::S3::Bucket",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "InputParameters": {
+      "blacklistedActionPattern": {
+        "type": "comma_delimited",
+        "label": "Blacklisted Action Pattern",
+        "description": "Patterns of the policy eg: s3:GetBucket*, s3:DeleteObject",
+        "default": "s3:GetBucket"
+      }
+    },
+    "SourceIdentifier": "S3_BUCKET_BLACKLISTED_ACTIONS_PROHIBITED"
+  }
+}

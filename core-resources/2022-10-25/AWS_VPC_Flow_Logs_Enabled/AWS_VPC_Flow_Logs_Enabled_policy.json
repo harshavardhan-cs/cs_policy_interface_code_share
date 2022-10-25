@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "VPC_FLOW_LOGS_ENABLED",
+    "InputParameters": "{}",
+    "OptionalParameters": "{\"trafficType\":\"\"}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "VPC_FLOW_LOGS_ENABLED"
+
+  }
+}

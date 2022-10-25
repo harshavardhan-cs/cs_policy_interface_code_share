@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Checks whether the first deployment stage of the AWS Codepipeline performs more than one deployment.\nAWS_DMS_Replication_Not_Public",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "AWS::CodePipeline::Pipeline"
+  ],
+  "resource_type": "AWS_Config",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Codepipeline Deployment Count Check",
+  "name": "AWS_Codepipeline_Deployment_Count_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/Y4RBh",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CODEPIPELINE_DEPLOYMENT_COUNT_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceEvents\": \"AWS::CodePipeline::Pipeline\",\n    \"SourceIdentifier\": \"CODEPIPELINE_DEPLOYMENT_COUNT_CHECK\"\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Codepipeline_Deployment_Count_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Codepipeline_Deployment_Count_Check.json"
+  }
+}

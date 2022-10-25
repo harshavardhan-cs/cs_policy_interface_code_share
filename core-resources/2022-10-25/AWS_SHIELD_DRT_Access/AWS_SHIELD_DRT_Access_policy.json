@@ -1,0 +1,15 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "SourcePeriodic": "One_Hour",
+    "RuleName": "SHIELD_DRT_ACCESS",
+    "SourceIdentifier": "SHIELD_DRT_ACCESS",
+    "OptionalParameters": "{}",
+    "InputParameters": "{}",
+    "SupportedRegions": [
+      "us-east-1"
+    ]
+  }
+}

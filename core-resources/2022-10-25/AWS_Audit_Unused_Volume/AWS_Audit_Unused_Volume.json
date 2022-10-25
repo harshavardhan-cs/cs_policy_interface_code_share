@@ -1,0 +1,32 @@
+{
+  "name": "AWS_Audit_Unused_Volumes",
+  "display_name": "AWS Audit Unused Volumes",
+  "description": "Policy to list EBS which are not being used",
+  "category": "service",
+  "status": "active",
+  "content": "volumes(volume_id, volume_name, status):- aws_ec2_volume:volumes(volume_id=volume_id, volume_name=volume_name, status=status),equal(status,'available');",
+  "parameters": {},
+  "classification": "Cost",
+  "sub_classification": "Config",
+  "service_resource": [
+    "Volumes"
+  ],
+  "resource_type": "EBS",
+  "severity": "medium",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/cost/volume/tdmfe",
+  "recommendations": [
+    "AWS_Delete_Unused_Volumes"
+  ]
+}

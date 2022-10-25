@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "This policy audits that the AWS Identity and Access Management (IAM) role is attached to all AWS managed policies specified in the list of managed policies.",
+  "classification": "Access",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "IAM_Roles"
+  ],
+  "resource_type": "IAM",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS IAM Role Managed Policy",
+  "name": "AWS_IAM_Role_Managed_Policy",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/t0mgp",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"IAM_ROLE_MANAGED_POLICY_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"managedPolicyArns\": {\n        \"type\": \"comma_delimited_list\",\n        \"label\": \"Managed policy ARNs\",\n        \"description\": \"ARNs of multiple Managed policies\"\n      }\n    },\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceEvents\": \"AWS::IAM::Role\",\n    \"SourceIdentifier\": \"IAM_ROLE_MANAGED_POLICY_CHECK\"\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_IAM_Role_Managed_Policy"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_IAM_Role_Managed_Policy.json"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Use the redshift-cluster-maintenancesettings-check AWS Config managed rule to check whether Amazon Redshift clusters have the specified maintenance settings.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Redshift_Clusters"
+  ],
+  "resource_type": "Redshift",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS REDSHIFT Cluster Maintenancesettings Check",
+  "name": "AWS_REDSHIFT_Cluster_Maintenancesettings_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/jAk6n",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"REDSHIFT_CLUSTER_MAINTENANCESETTINGS_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"allowVersionUpgrade\": {\n        \"type\": \"string\",\n        \"default\": \"true\",\n        \"label\": \"Allowed Version Upgrade\",\n        \"description\": \"value for allowed version upgrade\",\n        \"constraints\": [\n          {\n            \"allowed_values\": [\n              \"true\",\n              \"false\"\n            ]\n          }\n        ]\n      },\n      \"automatedSnapshotRetentionPeriod\": {\n        \"type\": \"number\",\n        \"default\": 1,\n        \"label\": \"Automated Snapshot Retention Period\",\n        \"description\": \"value for automated snapshot retention period\"\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::Redshift::Cluster\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"REDSHIFT_CLUSTER_MAINTENANCESETTINGS_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_REDSHIFT_Cluster_Maintenancesettings_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_REDSHIFT_Cluster_Maintenancesettings_Check.json"
+  }
+}

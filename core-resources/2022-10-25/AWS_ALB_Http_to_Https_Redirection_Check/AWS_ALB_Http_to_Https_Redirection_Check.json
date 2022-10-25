@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Checks whether HTTP to HTTPS redirection is configured on all HTTP listeners of Application Load Balancers. The rule is NON_COMPLIANT if one or more HTTP listeners of Application Load Balancers do not have HTTP to HTTPS redirection configured.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ALB Http to Https Redirection Check",
+  "name": "AWS_ALB_Http_to_Https_Redirection_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/VvU67",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"ALB_HTTP_TO_HTTPS_REDIRECTION_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {},\n    \"OptionalParameters\": \"{}\",\n    \"SourceIdentifier\": \"ALB_HTTP_TO_HTTPS_REDIRECTION_CHECK\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\"\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_ALB_Http_to_Https_Redirection_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_ALB_Http_to_Https_Redirection_Check.json"
+  }
+}

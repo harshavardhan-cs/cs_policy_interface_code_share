@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the log agent is installed or not in the SSM managed instances",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Check Log Monitoring Enabled",
+  "name": "AWS_Check_Log_Monitoring",
+  "uri": "policy/aws_config/global/aws/compliance/others/05kju",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"EC2_MANAGEDINSTANCE_CHECK_LOG_AGENT_STATUS\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"applicationNames\": {\n        \"type\": \"string\",\n        \"default\": \"AmazonCloudWatchAgent\",\n        \"label\": \"Name of the application\",\n        \"edit\": false\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::SSM::ManagedInstanceInventory\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"EC2_MANAGEDINSTANCE_APPLICATIONS_REQUIRED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Check_Log_Monitoring"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Check_Log_Monitoring.json"
+  }
+}

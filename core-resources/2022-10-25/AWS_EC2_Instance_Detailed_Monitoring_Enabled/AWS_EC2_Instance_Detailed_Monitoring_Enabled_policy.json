@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "EC2_INSTANCE_DETAILED_MONITORING_ENABLED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::EC2::Instance",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "EC2_INSTANCE_DETAILED_MONITORING_ENABLED",
+    "RuleSets": []
+  }
+}

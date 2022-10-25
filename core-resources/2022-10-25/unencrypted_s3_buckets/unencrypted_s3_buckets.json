@@ -1,0 +1,33 @@
+{
+  "name": "AWS_Audit_Unencrypted_S3_Buckets",
+  "display_name": "AWS Audit Unencrypted S3 Buckets",
+  "description": "Policy to list unencrypted s3 buckets",
+  "category": "service",
+  "status": "active",
+  "content": "bucket(ResourceId, CreationDate, Region, Encrypted) :- aws_s3_bucket:s3_bucket(ResourceId=ResourceId, CreationDate=CreationDate, Region=Region, Encrypted=Encrypted), ne(Encrypted, 'True');",
+  "parameters": {},
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Buckets"
+  ],
+  "resource_type": "S3",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+    "onboarding_policy": true
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": true,
+  "uri": "policy/congress/global/aws/compliance/bucket/hec4u",
+  "recommendations": [
+    "AWS_Enable_S3_Bucket_Encryption"
+  ]
+}

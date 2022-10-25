@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Use the desired-instance-tenancy AWS Config managed rule to evaluate whether your instances have specified tenancy.",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Desired Instance Tenancy",
+  "name": "AWS_Desired_Instance_Tenancy",
+  "uri": "policy/aws_config/global/aws/compliance/others/eiDtZ",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"DESIRED_INSTANCE_TENANCY\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"tenancy\": {\n        \"type\": \"string\",\n        \"label\": \"Tenancy\",\n        \"default\": \"DEFAULT\",\n        \"description\": \"value for the tenancy\"\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::EC2::Instance\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"DESIRED_INSTANCE_TENANCY\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Desired_Instance_Tenancy"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Desired_Instance_Tenancy.json"
+  }
+}

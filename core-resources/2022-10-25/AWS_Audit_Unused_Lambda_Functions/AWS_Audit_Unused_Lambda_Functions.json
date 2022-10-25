@@ -1,0 +1,49 @@
+{
+  "name": "AWS_Audit_Unused_Lambda_Functions",
+  "display_name": "AWS Audit Unused Lambda Functions",
+  "description": "Policy to list unused Lambda functions for the  specific duration",
+  "category": "service",
+  "status": "active",
+  "content": "unused_lambda(function_name, function_arn, policy_execution_date, last_used) :- aws_lambda_function:aws_lambda(function_name=function_name, function_arn=function_arn, last_executed=last_executed), extract_date(last_executed, last_used), now(today), extract_date(today, policy_execution_date), datetime_minus(policy_execution_date, '00:#Number_of_Days#:00:00:00', older_date), datetime_lteq(last_executed, older_date);",
+  "parameters": {
+    "Number_of_Days": {
+      "type": "number",
+      "description": "Lambda Functions which are unused than specified Number of Days will be considered as violations.",
+      "label": "Number_Of_Days_Unused",
+      "default": 30,
+      "constraints": [
+        {
+          "range": {
+            "min": 1
+          }
+        }
+      ]
+    }
+  },
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Functions"
+  ],
+  "resource_type": "Lambda",
+  "severity": "low",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "dependent_rules": {
+    "unused_lambda": "unused_lambda(function_name, function_arn, policy_execution_date, last_used) :- aws_lambda_function:aws_lambda(function_name=function_name, function_arn=function_arn, last_executed=last_used), now(today), extract_date(today, policy_execution_date), equal(last_used, '');"
+  },
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/lambda/irisv",
+  "recommendations": [
+    "AWS_Audit_Unused_Lambda_Functions"
+  ]
+}

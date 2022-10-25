@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether Amazon Elastic Block Store snapshots are not publicly restorable. The rule is NON_COMPLIANT if one or more snapshots with the RestorableByUserIds field is set to all . If this field is set to all , then Amazon EBS snapshots are public.",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Snapshots"
+  ],
+  "resource_type": "EBS",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EBS Snapshot Public Restorable Check",
+  "name": "AWS_EBS_Snapshot_Public_Restorable_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/ShAEP",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"EBS_SNAPSHOT_PUBLIC_RESTORABLE_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceIdentifier\": \"EBS_SNAPSHOT_PUBLIC_RESTORABLE_CHECK\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\"\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_EBS_Snapshot_Public_Restorable_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_EBS_Snapshot_Public_Restorable_Check.json"
+  }
+}

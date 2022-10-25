@@ -1,0 +1,32 @@
+{
+  "status": "active",
+  "description": "This policy audits whether Amazon GuardDuty is enabled in your AWS account and region.",
+  "classification": "Security",
+  "sub_classification": "End Point protection",
+  "service_resource": [
+    "Detector"
+  ],
+  "resource_type": "GuardDuty",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS GUARDDUTY Enabled Centralized",
+  "name": "AWS_GUARDDUTY_Enabled_Centralized",
+  "uri": "policy/aws_config/global/aws/compliance/others/Gk3db",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"GUARDDUTY_ENABLED_CENTRALIZED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{\\\"CentralMonitoringAccount\\\":\\\"\\\"}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"GUARDDUTY_ENABLED_CENTRALIZED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "type": [
+    "cloud"
+  ],
+  "recommendations": [
+    "AWS_GUARDDUTY_Enabled_Centralized"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_GUARDDUTY_Enabled_Centralized.json"
+  }
+}

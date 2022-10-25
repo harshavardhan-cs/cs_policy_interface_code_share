@@ -1,0 +1,11 @@
+{
+  "Parameters": {
+    "RuleName": "IAM_USER_MFA_ENABLED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "IAM_USER_MFA_ENABLED",
+    "RuleSets": []
+  }
+}

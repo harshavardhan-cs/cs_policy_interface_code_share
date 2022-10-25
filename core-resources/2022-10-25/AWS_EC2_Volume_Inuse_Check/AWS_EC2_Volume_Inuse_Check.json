@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Use the ec2-volume-inuse-check AWS Config managed rule to check whether EBS volumes are attached to Amazon EC2 instances.",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Volume Inuse Check",
+  "name": "AWS_EC2_Volume_Inuse_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/lSFYG",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"EC2_VOLUME_INUSE_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"deleteOnTermination\": {\n        \"type\": \"string\",\n        \"label\": \"Delete On Termination\",\n        \"default\": \"true\",\n        \"description\": \"Delete on termination\",\n        \"constraints\": [\n          {\n            \"allowed_values\": [\n              \"true\",\n              \"false\"\n            ]\n          }\n        ]\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::EC2::Volume\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"EC2_VOLUME_INUSE_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_EC2_Volume_Inuse_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_EC2_Volume_Inuse_Check.json"
+  }
+}

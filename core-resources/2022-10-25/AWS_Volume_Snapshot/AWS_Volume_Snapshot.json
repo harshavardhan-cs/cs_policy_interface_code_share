@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether Volumes which does not have the snapshot.",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Volumes"
+  ],
+  "resource_type": "EBS",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Volume Snapshot",
+  "name": "AWS_Volume_Snapshot",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/Jenrs",
+  "content": "{\n  \"Version\": \"1.0\", \n  \"Parameters\": {\n    \"SourceRuntime\": \"python3.9\", \n    \"RuleName\": \"AWS_Volume_Snapshot\", \n    \"SourceEvents\": \"AWS::EC2::Volume\", \n    \"OptionalParameters\": \"{}\", \n    \"CS-exec-type\": \"custom\",\n    \"InputParameters\": \"{}\"\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Volume_Snapshot"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Volume_Snapshot.json"
+  }
+}

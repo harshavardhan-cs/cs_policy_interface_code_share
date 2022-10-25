@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "SourceRuntime": "python3.9",
+    "RuleName": "AWS_Audit_Region_Violation",
+    "SourceEvents": "AWS::ElasticLoadBalancingV2::LoadBalancer,AWS::ElasticLoadBalancing::LoadBalancer,AWS::CloudTrail::Trail,AWS::EC2::Instance,AWS::Redshift::Cluster,AWS::RDS::DBInstance",
+    "OptionalParameters": "{}",
+    "CS-exec-type": "custom",
+    "InputParameters": "{}"
+  }
+}

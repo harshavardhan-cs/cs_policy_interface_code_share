@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "This policy audits whether your Amazon EC2 instances belong to a virtual private cloud (VPC).",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Instances In VPC",
+  "name": "AWS_EC2_Instances_In_VPC",
+  "uri": "policy/aws_config/global/aws/compliance/others/zHk9B",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"INSTANCES_IN_VPC\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::EC2::Instance\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"INSTANCES_IN_VPC\",\n    \"RuleSets\": []\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_EC2_Instances_In_VPC"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_EC2_Instances_In_VPC.json"
+  }
+}

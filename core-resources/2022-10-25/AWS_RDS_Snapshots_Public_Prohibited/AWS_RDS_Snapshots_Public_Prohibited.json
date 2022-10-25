@@ -1,0 +1,32 @@
+{
+  "status": "active",
+  "description": "Checks whether the Amazon RDS snapshots are public.",
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Snapshots"
+  ],
+  "resource_type": "EBS",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS RDS Snapshots Public Prohibited",
+  "name": "AWS_RDS_Snapshots_Public_Prohibited",
+  "uri": "policy/aws_config/global/aws/compliance/others/x8fGE",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"RDS_SNAPSHOTS_PUBLIC_PROHIBITED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::RDS::DBInstance\",\n    \"SourceIdentifier\": \"RDS_SNAPSHOTS_PUBLIC_PROHIBITED\",   \n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "type": [
+    "cloud"
+  ],
+  "recommendations": [
+    "AWS_RDS_Snapshots_Public_Prohibited"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_RDS_Snapshots_Public_Prohibited.json"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Checks whether your Classic Load Balancer SSL listeners are using a predefined policy. The rule is only applicable if there are SSL listeners for the Classic Load Balancer.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ELB Predefined Security Policy Ssl Check",
+  "name": "AWS_ELB_Predefined_Security_Policy_Ssl_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/G0uSF",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"ELB_PREDEFINED_SECURITY_POLICY_SSL_CHECK\",\n    \"InputParameters\": {\n      \"predefinedPolicyName\": {\n        \"type\": \"string\",\n        \"label\": \"Predefined Policy Name\",\n        \"default\": \"\",\n        \"description\": \"Name of the predefined policy\"\n      }\n    },\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceEvents\": \"AWS::ElasticLoadBalancing::LoadBalancer\",\n    \"SourceIdentifier\": \"ELB_PREDEFINED_SECURITY_POLICY_SSL_CHECK\"\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_ELB_Predefined_Security_Policy_Ssl_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_ELB_Predefined_Security_Policy_Ssl_Check.json"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks that both AWS Virtual Private Network tunnels provided by AWS Site-to-Site VPN are in UP status. The rule returns NON_COMPLIANT if one or both tunnels are in DOWN status.",
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "VPC"
+  ],
+  "resource_type": "VPC",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS VPC VPN 2 Tunnels Up",
+  "name": "AWS_VPC_VPN_2_Tunnels_Up",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/iv7Os",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"VPC_VPN_2_TUNNELS_UP\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceIdentifier\": \"VPC_VPN_2_TUNNELS_UP\",\n    \"SourceEvents\": \"AWS::EC2::VPNConnection\"\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_VPC_VPN_2_Tunnels_Up"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_VPC_VPN_2_Tunnels_Up.json"
+  }
+}

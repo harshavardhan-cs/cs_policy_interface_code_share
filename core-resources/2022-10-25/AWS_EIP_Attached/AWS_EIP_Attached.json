@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "Use the eip-attached managed AWS Config rule to check whether all Elastic IP addresses that are allocated to a VPC are attached to EC2 instances or in-use elastic network interfaces (ENIs).",
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Elastic IPs"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EIP Attached",
+  "name": "AWS_EIP_Attached",
+  "uri": "policy/aws_config/global/aws/compliance/others/ZYEN7",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"EIP_ATTACHED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::EC2::EIP\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"EIP_ATTACHED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_EIP_Attached"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_EIP_Attached.json"
+  }
+}

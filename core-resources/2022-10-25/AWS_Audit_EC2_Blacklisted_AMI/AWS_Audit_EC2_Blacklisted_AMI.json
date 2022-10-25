@@ -1,0 +1,30 @@
+{
+  "status": "active",
+  "description": "This policy audits whether any AWS EC2 instances launched from blacklisted AMIs.",
+  "classification": "Security",
+  "severity": "high",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit EC2 Blacklisted AMI",
+  "name": "AWS_Audit_EC2_Blacklisted_AMI",
+  "uri": "policy/aws_config/global/aws/compliance/instances/3ded6",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"AWS_Audit_EC2_Blacklisted_AMI\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": \"AWS_Audit_EC2_Blacklisted_AMI.zip\",\n    \"InputParameters\": \"{\\\"Blacklisted_AMIs\\\":\\\"\\\"}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourcePeriodic\": \"Six_Hours\"\n  },\n  \"Tags\": \"[]\"\n}\n",
+  "is_system_policy": false,
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_EC2_Blacklisted_AMI"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {}
+}

@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "Checks that security groups are attached to Amazon Elastic Compute Cloud (Amazon EC2) instances or to an elastic network interface. The rule returns NON_COMPLIANT if the security group is not associated with an Amazon EC2 instance or an elastic network interface.",
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Security_Groups"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Security Group Attached To ENI",
+  "name": "AWS_EC2_Security_Group_Attached_To_ENI",
+  "uri": "policy/aws_config/global/aws/compliance/others/nUuok",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"EC2_SECURITY_GROUP_ATTACHED_TO_ENI\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::EC2::SecurityGroup\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"EC2_SECURITY_GROUP_ATTACHED_TO_ENI\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_EC2_Security_Group_Attached_To_ENI"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_EC2_Security_Group_Attached_To_ENI.json"
+  }
+}

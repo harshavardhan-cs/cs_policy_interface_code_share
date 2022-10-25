@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "EC2_SECURITY_GROUP_ATTACHED_TO_ENI",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::EC2::SecurityGroup",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "EC2_SECURITY_GROUP_ATTACHED_TO_ENI",
+    "RuleSets": []
+  }
+}

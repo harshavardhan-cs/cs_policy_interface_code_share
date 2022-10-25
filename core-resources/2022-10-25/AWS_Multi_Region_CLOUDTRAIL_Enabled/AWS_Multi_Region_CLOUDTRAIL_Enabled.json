@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "This policy audits whether AWS CloudTrail is enabled in multi region.",
+  "classification": "Operation",
+  "sub_classification": "Logging",
+  "service_resource": [
+    "Trail"
+  ],
+  "resource_type": "CloudTrail",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Multi Region CLOUDTRAIL Enabled",
+  "name": "AWS_Multi_Region_CLOUDTRAIL_Enabled",
+  "uri": "policy/aws_config/global/aws/compliance/others/aJ46r",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"MULTI_REGION_CLOUD_TRAIL_ENABLED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"MULTI_REGION_CLOUD_TRAIL_ENABLED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Multi_Region_CLOUDTRAIL_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Multi_Region_CLOUDTRAIL_Enabled.json"
+  }
+}

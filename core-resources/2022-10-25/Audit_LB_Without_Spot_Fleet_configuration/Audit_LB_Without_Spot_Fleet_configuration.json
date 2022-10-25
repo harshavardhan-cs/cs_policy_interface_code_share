@@ -1,0 +1,36 @@
+{
+  "name": "AWS_Audit_LB_Without_Spot_Fleet_Configuration",
+  "display_name": "AWS Audit LB Without Spot Fleet Configuration",
+  "description": "This policy checks for classic loadbalancers which are not configured in any spot fleet requests.",
+  "category": "service",
+  "status": "active",
+  "content": "load_balancers(name) :- aws_ec2_elb:elb(name=name), not has_spot_fleet_requests(name);",
+  "parameters": {},
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "resource_type": "EC2",
+  "severity": "low",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+    "onboarding_policy": true
+  },
+  "dependent_rules": {
+    "1": "has_spot_fleet_requests(x) :- aws_spot_requests:spot_fleet_requests(SpotFleetRequestId=SpotFleetRequestId, SpotFleetRequestState=SpotFleetRequestState), ne(SpotFleetRequestState, 'cancelled'), aws_spot_requests:spot_fleet_load_balancers(SpotFleetRequestId, x);"
+  },
+  "resources": [],
+  "is_temp": false,
+  "uri": "policy/congress/global/aws/compliance/others/7vrzt",
+  "is_system_policy": false,
+  "recommendations": [
+    "AWS_Manage_Load_Balancers_Without_Spot_Instances"
+  ]
+}

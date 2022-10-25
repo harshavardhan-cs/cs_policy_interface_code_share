@@ -1,0 +1,32 @@
+{
+  "name": "AWS_Audit_ELB_Access_Logging",
+  "display_name": "AWS Audit ELB Access Logging",
+  "description": "This policy checks if access logging is enabled to analyze the patterns of the access for future analysis and reference.",
+  "category": "service",
+  "status": "active",
+  "content": "elb(name, access_log_enabled):-aws_ec2_elb:elb(name=name,access_log_enabled=access_log_enabled), equal(access_log_enabled, 'False');",
+  "parameters": {},
+  "classification": "Operation",
+  "sub_classification": "Logging",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/elb/fejwq",
+  "recommendations": [
+    "AWS_Audit_ELB_Access_Logging"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "AWS_Audit_S3_Full_Control_Access",
+  "display_name": "AWS Audit S3 Full Control Access",
+  "description": "This policy checks AWS S3 buckets are not granting FULL_CONTROL access to authenticated users (i.e. signed AWS accounts or AWS IAM users) in order to prevent unauthorized access. An S3 bucket that allows full control access to authenticated users will give any AWS account or IAM user the ability to LIST (READ) objects, UPLOAD/DELETE (WRITE) objects, VIEW (READ_ACP) objects permissions and EDIT (WRITE_ACP) permissions for the objects within the bucket.",
+  "category": "service",
+  "status": "active",
+  "content": "bucket(ResourceId,CreationDate,Region,Encrypted,URI,Id,DisplayName,Type, Permission) :- aws_s3_bucket:s3_bucket(ResourceId=ResourceId, CreationDate=CreationDate,Region=Region,Encrypted=Encrypted), aws_s3_bucket:bucket_acl.grantee(DisplayName=DisplayName, Type=Type,URI=URI,ID=Id, Permission= Permission), in(Permission, 'READ, WRITE, READ_ACP, WRITE_ACP'), equal(URI,'http://acs.amazonaws.com/groups/global/AuthenticatedUsers');",
+  "parameters": {},
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Buckets"
+  ],
+  "resource_type": "S3",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/bucket/o7wrv",
+  "recommendations": [
+    "AWS_Audit_S3_Full_Control_Access"
+  ]
+}

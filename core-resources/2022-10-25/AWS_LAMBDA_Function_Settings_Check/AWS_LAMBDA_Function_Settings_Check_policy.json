@@ -1,0 +1,32 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "LAMBDA_FUNCTION_SETTINGS_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "runtime": {
+        "type": "comma_delimited_list",
+        "label": "Runtime language",
+        "description": "Name of the runtime preference. eg : python2.7, python3.8"
+      },
+      "timeout": {
+        "type": "number",
+        "default": 3,
+        "label": "Timeout",
+        "description": "value for timeout"
+      },
+      "memorySize": {
+        "type": "number",
+        "label": "Memory Size",
+        "default": 128,
+        "description": "size of the memory"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::Lambda::Function",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "LAMBDA_FUNCTION_SETTINGS_CHECK",
+    "RuleSets": []
+  }
+}

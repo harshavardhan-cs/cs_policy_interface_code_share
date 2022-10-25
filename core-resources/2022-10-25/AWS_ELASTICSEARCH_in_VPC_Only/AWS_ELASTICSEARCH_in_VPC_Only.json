@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether Amazon Elasticsearch Service (Amazon ES) domains are in Amazon Virtual Private Cloud (Amazon VPC). The rule is NON_COMPLIANT if the Amazon ES domain endpoint is public.",
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Domain"
+  ],
+  "resource_type": "Elasticsearch Service",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ELASTICSEARCH in VPC Only",
+  "name": "AWS_ELASTICSEARCH_in_VPC_Only",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/nVmT4",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"ELASTICSEARCH_IN_VPC_ONLY\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceIdentifier\": \"ELASTICSEARCH_IN_VPC_ONLY\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\"\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_ELASTICSEARCH_in_VPC_Only"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_ELASTICSEARCH_in_VPC_Only.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CHECK_ALERT_CONFIGURATION_FOR_NETWORK_ACCESS_CONTROL_LISTS_CHANGE",
+    "SourceRuntime": "python3.9",
+    "CS-exec-type": "custom",
+    "OptionalParameters": "{}",
+    "InputParameters": {},
+    "RuleSets": []
+  }
+}

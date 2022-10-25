@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "IAM_GROUP_HAS_USERS_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::IAM::Group",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "IAM_GROUP_HAS_USERS_CHECK",
+    "RuleSets": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "EC2_MANAGEDINSTANCE_PATCH_COMPLIANCE_STATUS_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "SourceEvents": "AWS::SSM::PatchCompliance",
+    "OptionalParameters": "{}",
+    "InputParameters": "{}",
+    "SourceIdentifier": "EC2_MANAGEDINSTANCE_PATCH_COMPLIANCE_STATUS_CHECK",
+    "RuleSets": []
+  }
+}

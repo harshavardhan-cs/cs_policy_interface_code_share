@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "Use the redshift-cluster-configuration-check AWS Config managed rule to check whether Amazon Redshift clusters have the specified settings.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Redshift_Clusters"
+  ],
+  "resource_type": "Redshift",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS REDSHIFT Cluster Configuration Check",
+  "name": "AWS_REDSHIFT_Cluster_Configuration_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/9V6QV",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \" REDSHIFT_CLUSTER_CONFIGURATION_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"clusterDbEncrypted\": {\n        \"type\": \"string\",\n        \"default\": \"true\",\n        \"label\": \"Cluster DB Encrypted\",\n        \"description\": \"value for cluster DB encryption\",\n        \"constraints\": [\n          {\n            \"allowed_values\": [\n              \"true\",\n              \"false\"\n            ]\n          }\n        ]\n      },\n      \"loggingEnabled\": {\n        \"type\": \"string\",\n        \"default\": \"true\",\n        \"label\": \"Logging Enabled\",\n        \"description\": \"value for logging enabled\",\n        \"constraints\": [\n          {\n            \"allowed_values\": [\n              \"true\",\n              \"false\"\n            ]\n          }\n        ]\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::Redshift::Cluster\",\n    \"SourceIdentifier\": \" REDSHIFT_CLUSTER_CONFIGURATION_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "type": [
+    "cloud"
+  ],
+  "recommendations": [
+    "AWS_REDSHIFT_Cluster_Configuration_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_REDSHIFT_Cluster_Configuration_Check.json"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Checks that the default security group of any Amazon Virtual Private Cloud\u200E (VPC) does not allow inbound or outbound traffic.",
+  "classification": "Security",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Security_Groups"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS DEFAULT SECURITY GROUP CLOSED",
+  "name": "AWS_Default_Security_Group_Closed",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/eulb4",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"VPC_DEFAULT_SECURITY_GROUP_CLOSED\",\n    \"InputParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::EC2::SecurityGroup\",\n    \"SourceIdentifier\": \"VPC_DEFAULT_SECURITY_GROUP_CLOSED\"\n\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Default_Security_Group_Closed"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Default_Security_Group_Closed.json"
+  }
+}

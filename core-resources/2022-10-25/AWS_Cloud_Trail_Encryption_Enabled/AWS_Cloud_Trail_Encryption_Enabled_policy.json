@@ -1,0 +1,9 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CLOUD_TRAIL_ENCRYPTION_ENABLED",
+    "InputParameters": {},
+    "OptionalParameters": "{}",
+    "SourceIdentifier": "CLOUD_TRAIL_ENCRYPTION_ENABLED"
+  }
+}

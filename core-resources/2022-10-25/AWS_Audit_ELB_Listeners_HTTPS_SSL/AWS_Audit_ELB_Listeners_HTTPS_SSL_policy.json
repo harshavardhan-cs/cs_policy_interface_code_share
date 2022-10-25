@@ -1,6 +1,12 @@
 {
   "Version": "1.0",
-  "RuleName": "AWS_AUDIT_ELB_LISTENERS_HTTPS_SSL",
-  "InputParameters": {
-  }
+  "Parameters": {
+    "RuleName": "AWS_Audit_ELB_Listeners_HTTPS_SSL",
+    "SourceRuntime": "python3.9",
+    "CodeKey": "AWS_Audit_ELB_Listeners_HTTPS_SSL.zip",
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourcePeriodic": "Six_Hours"
+  },
+  "Tags": "[]"
 }

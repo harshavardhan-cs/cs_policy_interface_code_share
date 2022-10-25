@@ -1,0 +1,32 @@
+{
+  "name": "AWS_Audit_UnRestricted_Telnet_Access",
+  "display_name": "AWS Audit UnRestricted Telnet Access",
+  "description": "This policy checks if the EC2 intance ICMP is exposed.This can cause DOS attack or smurf & fraggile  attacks.",
+  "category": "service",
+  "status": "active",
+  "content": "sg(SG_id, SG_name, from_port, to_port, grant, IP_protocol) :- aws_ec2_sg:securitygroup(sg_name=SG_name, sg_id=SG_id), aws_ec2_sg:securitygroup_rules(from_port=from_port, to_port=to_port, sg_id=SG_id, ip_protocol=IP_protocol, rule_id=rule_id), aws_ec2_sg:securitygroup_rules.grants(rule_id=rule_id, grant=grant), in(IP_protocol, 'tcp,6'), btw(from_port, to_port, 23), equal('0.0.0.0/0', grant);",
+  "parameters": {},
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Security_Groups"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "metadata": {
+  },
+  "uri": "policy/congress/global/aws/compliance/security_group/ch7rb",
+  "recommendations": [
+    "AWS_Audit_UnRestricted_Telnet_Access"
+  ]
+}

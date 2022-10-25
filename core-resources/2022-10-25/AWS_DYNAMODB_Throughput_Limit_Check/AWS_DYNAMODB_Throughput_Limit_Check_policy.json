@@ -1,0 +1,26 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "DYNAMODB_THROUGHPUT_LIMIT_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "accountRCUThresholdPercentage": {
+        "type": "number",
+        "label": "Account RCU Threshold Percentage",
+        "default": 80,
+        "description": "percentage of the RCS threshold"
+      },
+      "accountWCUThresholdPercentage": {
+        "type": "number",
+        "label": "Account WCU Threshold Percentage",
+        "default": 80,
+        "description": "percentage of the WCU threshold"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "DYNAMODB_THROUGHPUT_LIMIT_CHECK",
+    "RuleSets": []
+  }
+}

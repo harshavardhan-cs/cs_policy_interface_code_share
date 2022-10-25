@@ -1,0 +1,13 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "GUARDDUTY_ENABLED_CENTRALIZED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{\"CentralMonitoringAccount\":\"\"}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "GUARDDUTY_ENABLED_CENTRALIZED",
+    "RuleSets": []
+  }
+}

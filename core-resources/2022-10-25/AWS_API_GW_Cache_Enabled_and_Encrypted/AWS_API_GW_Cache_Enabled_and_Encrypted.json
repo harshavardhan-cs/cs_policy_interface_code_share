@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Checks that all methods in Amazon API Gateway stages have caching enabled and encrypted. The rule is NON_COMPLIANT if any method in an API Gateway stage is not configured for caching or the cache is not encrypted.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "ApiGateway_Stage"
+  ],
+  "resource_type": "APIGateway",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS API GW Cache Enabled and Encrypted",
+  "name": "AWS_API_GW_Cache_Enabled_and_Encrypted",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/OSGUE",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"API_GW_CACHE_ENABLED_AND_ENCRYPTED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {},\n    \"OptionalParameters\": \"{}\",\n    \"SourceIdentifier\": \"API_GW_CACHE_ENABLED_AND_ENCRYPTED\",\n    \"SourceEvents\": \"AWS::ApiGateway::Stage\"\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_API_GW_Cache_Enabled_and_Encrypted"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_API_GW_Cache_Enabled_and_Encrypted.json"
+  }
+}

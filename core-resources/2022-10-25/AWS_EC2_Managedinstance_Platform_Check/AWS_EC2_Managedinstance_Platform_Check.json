@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Use the ec2-managedinstance-platform-check AWS Config managed rule to check that your instances have the desired configurations.",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Managedinstance Platform Check",
+  "name": "AWS_EC2_Managedinstance_Platform_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/1c3pu",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"EC2_MANAGEDINSTANCE_PLATFORM_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"platformType\": {\n        \"type\": \"string\",\n        \"label\": \"platform Type\",\n        \"default\": \"Linux\",\n        \"description\": \"Type of the platform\"\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::SSM::ManagedInstanceInventory\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"EC2_MANAGEDINSTANCE_PLATFORM_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_EC2_Managedinstance_Platform_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_EC2_Managedinstance_Platform_Check.json"
+  }
+}

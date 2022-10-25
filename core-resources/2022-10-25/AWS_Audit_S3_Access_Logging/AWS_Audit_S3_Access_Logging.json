@@ -1,0 +1,31 @@
+{
+  "name": "AWS_Audit_S3_Access_Logging",
+  "display_name": "AWS Audit S3 Access Logging",
+  "description": "This policy checks for S3 logging configuration status.",
+  "category": "service",
+  "status": "active",
+  "content": "bucket(ResourceId,CreationDate,Region,LoggingEnabled) :- aws_s3_bucket:s3_bucket(ResourceId=ResourceId,CreationDate=CreationDate,Region=Region,LoggingEnabled=LoggingEnabled), equal(LoggingEnabled, 'False');",
+  "parameters": {},
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Buckets"
+  ],
+  "resource_type": "S3",
+  "severity": "low",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/bucket/ax2y5",
+  "recommendations": [
+    "AWS_Audit_S3_Access_Logging"
+  ]
+}

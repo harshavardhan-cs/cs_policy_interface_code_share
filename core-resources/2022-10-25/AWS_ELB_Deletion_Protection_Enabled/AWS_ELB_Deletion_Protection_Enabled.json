@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether Elastic Load Balancing has deletion protection enabled. The rule is NON_COMPLIANT if deletion_protection.enabled is false.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ELB Deletion Protection Enabled",
+  "name": "AWS_ELB_Deletion_Protection_Enabled",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/EyL4J",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"ELB_DELETION_PROTECTION_ENABLED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceIdentifier\": \"ELB_DELETION_PROTECTION_ENABLED\",\n    \"SourceEvents\": \"AWS::ElasticLoadBalancingV2::LoadBalancer\"\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_ELB_Deletion_Protection_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_ELB_Deletion_Protection_Enabled.json"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether your AWS CloudFormationstacks are sending event notifications to an SNS topic.",
+  "classification": "Operation",
+  "sub_classification": "Logging",
+  "service_resource": [
+    "Stack"
+  ],
+  "resource_type": "Cloudformation",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CLOUDFORMATION Stack Notification Check",
+  "name": "AWS_CLOUDFORMATION_Stack_Notification_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/gWcWT",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CLOUDFORMATION_STACK_NOTIFICATION_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {},\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::CloudFormation::Stack\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"CLOUDFORMATION_STACK_NOTIFICATION_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_CLOUDFORMATION_Stack_Notification_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_CLOUDFORMATION_Stack_Notification_Check.json"
+  }
+}

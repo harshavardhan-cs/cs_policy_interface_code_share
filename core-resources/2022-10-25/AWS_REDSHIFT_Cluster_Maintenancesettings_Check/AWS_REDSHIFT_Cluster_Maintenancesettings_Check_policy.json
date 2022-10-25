@@ -1,0 +1,35 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "REDSHIFT_CLUSTER_MAINTENANCESETTINGS_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "allowVersionUpgrade": {
+        "type": "string",
+        "default": "true",
+        "label": "Allowed Version Upgrade",
+        "description": "value for allowed version upgrade",
+        "constraints": [
+          {
+            "allowed_values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      "automatedSnapshotRetentionPeriod": {
+        "type": "number",
+        "default": 1,
+        "label": "Automated Snapshot Retention Period",
+        "description": "value for automated snapshot retention period"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::Redshift::Cluster",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "REDSHIFT_CLUSTER_MAINTENANCESETTINGS_CHECK",
+    "RuleSets": []
+  }
+}

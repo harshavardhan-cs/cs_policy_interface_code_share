@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the AWS Config be enabled in all regions. The AWS configuration item history captured by AWS Config enables security analysis, resource change tracking, and compliance auditing.",
+  "classification": "Operation",
+  "sub_classification": "Monitoring",
+  "service_resource": [
+    "Accounts"
+  ],
+  "resource_type": "AWS_Organizations",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Config Enable Global Access",
+  "name": "AWS_Config_Enabled_Region",
+  "uri": "policy/aws_config/global/aws/compliance/others/gsfdk",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CONFIG_ENABLE_GLOBAL_REGION_ACCESS\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CS-exec-type\": \"custom\",\n    \"OptionalParameters\": \"{}\",\n    \"InputParameters\": \"{}\",\n    \"RuleSets\": []\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "custom",
+  "type": [
+    "cloud"
+  ],
+  "recommendations": [
+    "AWS_Config_Enabled_Region"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Config_Enabled_Region.json"
+  }
+}

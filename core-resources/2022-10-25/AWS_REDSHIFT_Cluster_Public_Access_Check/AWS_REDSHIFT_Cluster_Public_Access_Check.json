@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether Amazon Redshift clusters are not publicly accessible. The rule is NON_COMPLIANT if the publiclyAccessible field is true in the cluster configuration item.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Redshift_Clusters"
+  ],
+  "resource_type": "Redshift",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS REDSHIFT Cluster Public Access Check",
+  "name": "AWS_REDSHIFT_Cluster_Public_Access_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/DLBnS",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"REDSHIFT_CLUSTER_PUBLIC_ACCESS_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceIdentifier\": \"REDSHIFT_CLUSTER_PUBLIC_ACCESS_CHECK\",\n    \"SourceEvents\": \"AWS::Redshift::Cluster\"\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_REDSHIFT_Cluster_Public_Access_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_REDSHIFT_Cluster_Public_Access_Check.json"
+  }
+}

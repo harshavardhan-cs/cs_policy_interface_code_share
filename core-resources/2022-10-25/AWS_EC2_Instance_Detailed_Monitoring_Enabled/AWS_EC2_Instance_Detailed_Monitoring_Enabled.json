@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "This policy audits whether detailed monitoring is enabled for your Amazon EC2 instances.",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "service_resource": [
+    "Instances"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS EC2 Instance Detailed Monitoring Enabled",
+  "name": "AWS_EC2_Instance_Detailed_Monitoring_Enabled",
+  "uri": "policy/aws_config/global/aws/compliance/others/7ScC5",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"EC2_INSTANCE_DETAILED_MONITORING_ENABLED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::EC2::Instance\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"EC2_INSTANCE_DETAILED_MONITORING_ENABLED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_EC2_Instance_Detailed_Monitoring_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_EC2_Instance_Detailed_Monitoring_Enabled.json"
+  }
+}

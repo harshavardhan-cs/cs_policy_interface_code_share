@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether the AWS Lambda function is configured with function-level concurrent execution limit. The rule is NON_COMPLIANT if the Lambda function is not configured with function-level concurrent execution limit.\n",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "Functions"
+  ],
+  "resource_type": "Lambda",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS LAMBDA Concurrency Check",
+  "name": "AWS_LAMBDA_Concurrency_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/FXoLY",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"LAMBDA_CONCURRENCY_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{\\\"ConcurrencyLimitLow\\\":\\\"\\\", \\\"ConcurrencyLimitHigh\\\":\\\"\\\"}\",\n    \"SourceIdentifier\": \"LAMBDA_CONCURRENCY_CHECK\",\n    \"SourceEvents\": \"AWS::Lambda::Function\"\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_LAMBDA_Concurrency_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_LAMBDA_Concurrency_Check.json"
+  }
+}

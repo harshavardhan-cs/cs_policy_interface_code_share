@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "EIP_ATTACHED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::EC2::EIP",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "EIP_ATTACHED",
+    "RuleSets": []
+  }
+}

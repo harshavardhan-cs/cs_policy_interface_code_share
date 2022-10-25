@@ -1,0 +1,12 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CLOUDTRAIL_ENABLED",
+    "SourceIdentifier": "CLOUD_TRAIL_ENABLED",
+    "SourceRuntime": "python3.9",
+    "InputParameters": "{}",
+    "OptionalParameters": "{\"s3BucketName\":\"\",\"snsTopicArn\":\"\",\"cloudWatchLogsLogGroupArn\":\"\"}",
+    "SourcePeriodic": "TwentyFour_Hours"
+  }
+}
+

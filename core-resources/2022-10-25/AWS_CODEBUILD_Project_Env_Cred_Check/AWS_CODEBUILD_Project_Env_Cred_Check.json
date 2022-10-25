@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Checks whether the GitHub or Bitbucket source repository URL contains either personal access tokens or user name and password. The rule is COMPLIANT with the usage of OAuth to grant authorization for accessing GitHub or Bitbucket repositories.",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "AWS::CodePipeline::Pipeline"
+  ],
+  "resource_type": "AWS_Config",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CODEBUILD Project Env Cred Check",
+  "name": "AWS_CODEBUILD_Project_Env_Cred_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/phbub",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CODEBUILD_PROJECT_ENVVAR_AWSCRED_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::CodeBuild::Project\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"CODEBUILD_PROJECT_ENVVAR_AWSCRED_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_CODEBUILD_Project_Env_Cred_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_CODEBUILD_Project_Env_Cred_Check.json"
+  }
+}

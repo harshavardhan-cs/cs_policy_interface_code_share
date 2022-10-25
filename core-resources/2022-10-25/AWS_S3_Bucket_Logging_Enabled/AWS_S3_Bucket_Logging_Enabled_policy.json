@@ -1,0 +1,11 @@
+{
+  "Version": "1.0", 
+  "Parameters": {
+    "RuleName": "S3_BUCKET_LOGGING_ENABLED",
+    "SourceEvents": "AWS::S3::Bucket",
+    "OptionalParameters": "{\"targetBucket\":\"\",\"targetPrefix\":\"\"}", 
+    "InputParameters": "{}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "S3_BUCKET_LOGGING_ENABLED"
+  }
+}

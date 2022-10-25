@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "ELB_ACM_CERTIFICATE_REQUIRED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::ElasticLoadBalancing::LoadBalancer",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "ELB_ACM_CERTIFICATE_REQUIRED",
+    "RuleSets": []
+  }
+}

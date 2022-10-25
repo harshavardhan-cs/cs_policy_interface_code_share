@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "S3_BUCKET_SSL_REQUESTS_ONLY",
+    "InputParameters": "{}",
+     "SourcePeriodic": "TwentyFour_Hours",
+    "SourceEvents": "AWS::S3::Bucket",
+    "SourceIdentifier": "S3_BUCKET_SSL_REQUESTS_ONLY"
+  }
+}

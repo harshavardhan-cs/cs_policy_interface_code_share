@@ -1,0 +1,10 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "VPC_DEFAULT_SECURITY_GROUP_CLOSED",
+    "InputParameters": "{}",
+    "SourceEvents": "AWS::EC2::SecurityGroup",
+    "SourceIdentifier": "VPC_DEFAULT_SECURITY_GROUP_CLOSED"
+
+  }
+}

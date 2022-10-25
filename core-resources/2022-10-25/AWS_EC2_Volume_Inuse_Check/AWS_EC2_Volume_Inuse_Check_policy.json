@@ -1,0 +1,29 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "EC2_VOLUME_INUSE_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "deleteOnTermination": {
+        "type": "string",
+        "label": "Delete On Termination",
+        "default": "true",
+        "description": "Delete on termination",
+        "constraints": [
+          {
+            "allowed_values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::EC2::Volume",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "EC2_VOLUME_INUSE_CHECK",
+    "RuleSets": []
+  }
+}

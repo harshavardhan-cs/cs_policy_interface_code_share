@@ -1,0 +1,21 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "EC2_MANAGEDINSTANCE_CHECK_LOG_AGENT_STATUS",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "applicationNames": {
+        "type": "string",
+        "default": "AmazonCloudWatchAgent",
+        "label": "Name of the application",
+        "edit": false
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::SSM::ManagedInstanceInventory",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "EC2_MANAGEDINSTANCE_APPLICATIONS_REQUIRED",
+    "RuleSets": []
+  }
+}

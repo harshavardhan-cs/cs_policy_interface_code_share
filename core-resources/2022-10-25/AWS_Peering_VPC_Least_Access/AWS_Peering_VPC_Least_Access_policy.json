@@ -1,0 +1,24 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CHECK_PEERING_VPC_LEAST_ACCESS",
+    "SourceRuntime": "python3.9",
+    "CS-exec-type": "custom",
+    "OptionalParameters": "{}",
+    "InputParameters": {
+      "address_space": {
+        "type": "string",
+        "label": "CIDR Address Space",
+        "description": "Address Space",
+        "default": "0.0.0.0/32",
+        "constraints": [
+          {
+            "allowed_pattern": "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(/(3[0-2]|2[0-9]|1[0-9]|[0-9]))$"
+          }
+        ]
+      }
+    },
+    "validator": "cidr_validation",
+    "RuleSets": []
+  }
+}

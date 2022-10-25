@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the FMS Webacl is configured correctly.\n",
+  "classification": "Security",
+  "sub_classification": "Application",
+  "service_resource": [
+    "IAM_Users"
+  ],
+  "resource_type": "IAM",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS FMS Webacl Rulegroup Association Check",
+  "name": "AWS_FMS_Webacl_Rulegroup_Association_Check",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/v0GDz",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"FMS_WEBACL_RULEGROUP_ASSOCIATION_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"ruleGroups\": {\n        \"type\": \"comma_delimited_list\",\n        \"label\": \"Rule Groups\",\n        \"description\": \"Name of the Rule groups\"\n      }\n    },\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceEvents\": \"AWS::WAF::WebACL,AWS::WAFRegional::WebACL\",\n    \"SourceIdentifier\": \"FMS_WEBACL_RULEGROUP_ASSOCIATION_CHECK\"\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_FMS_Webacl_Rulegroup_Association_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_FMS_Webacl_Rulegroup_Association_Check.json"
+  }
+}

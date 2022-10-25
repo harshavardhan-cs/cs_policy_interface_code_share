@@ -1,0 +1,20 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "APPROVED_AMIS_BY_ID",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "amiIds": {
+        "type": "comma_delimited_list",
+        "label": "AMI Ids",
+        "description": "Specifc AMI IDs(comma separated list of up to 10)"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::EC2::Instance",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "APPROVED_AMIS_BY_ID",
+    "RuleSets": []
+  }
+}

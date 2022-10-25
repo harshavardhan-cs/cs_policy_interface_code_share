@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Check whether the VM is added to AWS inspector service",
+  "classification": "Security",
+  "sub_classification": "Host",
+  "resource_type": [
+    "EC2"
+  ],
+  "service_resource": [
+    "Instances"
+  ],
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Audit VM In Inspector",
+  "name": "AWS_Audit_VM_In_Inspector",
+  "uri": "policy/aws_config/global/aws/compliance/others/kjo4s",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CHECK_VM_ATTACHED_IN_INSPECTOR\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CS-exec-type\": \"custom\",\n    \"OptionalParameters\": \"{}\",\n    \"InputParameters\": \"{}\",\n    \"RuleSets\": []\n  }\n}",
+  "is_system_policy": false,
+  "config_type": "custom",
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Audit_VM_In_Inspector"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Audit_VM_In_Inspector.json"
+  }
+}

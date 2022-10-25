@@ -1,0 +1,50 @@
+{
+  "name": "AWS_S3_Enforced_Tag",
+  "display_name": "AWS Enforced Tag S3",
+  "description": "Policy to retrieve AWS S3 buckets without the input tag. Tags are used for logical grouping of resources. \nUse case(s):\nCan be used to quickly identify S3 buckets without the input tag specified.",
+  "category": "service",
+  "status": "active",
+  "content": "enforce_tags(ResourceId, #Tag_Name#) :- aws_s3_bucket:s3_bucket(ResourceId=ResourceId), not has_tags(ResourceId);",
+  "parameters": {
+    "Tag_Name": {
+      "type": "string",
+      "description": "Names of the tag which we have to be considered as not violation",
+      "default": "Owner",
+      "label": "Tag_Name",
+      "constraints": [
+          {
+            "allowed_values": [
+              "owner",
+              "Environment"
+            ]
+          }
+        ]
+      }
+    },
+  "classification": "Operation",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "Buckets"
+  ],
+  "resource_type": "S3",
+  "severity": "high",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "dependent_rules": {
+    "1": "has_tags(x) :- aws_s3_bucket:bucket_tags(x, y, z), equal(y, #Tag_Name#);"
+  },
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/consumption/bucket/lwkoo",
+  "recommendations": [
+    "AWS_Manage_Enforce_Tag_Missing_S3_Buckets"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "Version": "1.0", 
+  "Parameters": {
+    "RuleName": "S3_BUCKET_PUBLIC_READ_PROHIBITED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "SourceEvents": "AWS::S3::Bucket",
+    "OptionalParameters": "{}", 
+    "InputParameters": "{}",
+    "SourceIdentifier": "S3_BUCKET_PUBLIC_READ_PROHIBITED",
+    "RuleSets": []
+  }
+}

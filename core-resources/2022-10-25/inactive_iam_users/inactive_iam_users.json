@@ -1,0 +1,50 @@
+{
+  "name": "AWS_Audit_Idle_IAM_Users",
+  "display_name": "AWS Audit Idle IAM Users",
+  "description": "Policy to list inactive IAM users for the  specific duration",
+  "category": "service",
+  "status": "active",
+  "content": "inactive_users(username, user_arn, user_id, created, policy_execution_date, last_login_date, last_login_by) :- aws_iam_user:users(username=username, arn=user_arn, user_id=user_id, created_date=created_date, last_login=last_login, last_login_by=last_login_by), extract_date(created_date, created), extract_date(last_login, last_login_date), now(today), extract_date(today, policy_execution_date), datetime_minus(policy_execution_date, '00:#Number_of_Days#:00:00:00', older_date), datetime_lteq(last_login, older_date);",
+  "parameters": {
+    "Number_of_Days": {
+      "type": "number",
+      "description": "IAM Users which are idle than specified Number of Days will be considered as violations.",
+      "label": "Number_Of_Days_Idle",
+      "default": 30,
+      "constraints": [
+        {
+          "range": {
+            "min": 1
+          }
+        }
+      ]
+    }
+  },
+  "classification": "Access",
+  "sub_classification": "Standards",
+  "service_resource": [
+    "IAM_Users"
+  ],
+  "resource_type": "IAM",
+  "severity": "medium",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+    "onboarding_policy": true
+  },
+  "resources": [],
+  "is_temp": false,
+  "dependent_rules": {
+    "inactive_users": "inactive_users(username, user_arn, user_id, created, policy_execution_date, last_login_date, last_login_by) :- aws_iam_user:users(username=username, arn=user_arn, user_id=user_id, created_date=created_date, last_login=last_login_date, last_login_by=last_login_by), extract_date(created_date, created), now(today), extract_date(today, policy_execution_date), equal(last_login_date, '');"
+  },
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/consumption/iam_user/u37rf",
+  "recommendations": [
+    "AWS_Archive_Idle_IAM_Users"
+  ]
+}

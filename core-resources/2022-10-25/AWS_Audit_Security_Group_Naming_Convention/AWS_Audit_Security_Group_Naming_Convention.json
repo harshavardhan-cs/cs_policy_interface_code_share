@@ -1,0 +1,32 @@
+{
+  "name": "AWS_Audit_Security_Group_Naming_Convention",
+  "display_name": "AWS Audit Security Group Naming Convention",
+  "description": "This policy checks for any security group with default name as (launch-wizard), in order to enforce using secure and custom security groups that exercise the principle of least privilege.",
+  "category": "service",
+  "status": "active",
+  "content": "sg(SG_id, SG_name) :- aws_ec2_sg:securitygroup(sg_name=SG_name, sg_id=SG_id), startswith(SG_name, 'launch-wizard');",
+  "parameters": {},
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Security_Groups"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {
+  },
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/security_group/5caut",
+  "recommendations": [
+    "AWS_Audit_Security_Group_Naming_Convention"
+  ]
+}

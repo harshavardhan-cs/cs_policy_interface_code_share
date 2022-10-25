@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether security groups that are in use disallow unrestricted incoming SSH traffic.",
+  "classification": "Security",
+  "sub_classification": "Network",
+  "service_resource": [
+    "Security_Groups"
+  ],
+  "resource_type": "EC2",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS RESTRICTED SSH",
+  "name": "AWS_Restricted_SSH",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/reql5",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"RESTRICTED_SSH\",\n    \"SourceEvents\":\"AWS::EC2::SecurityGroup\",\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourcePeriodic\": \"One_Hour\",\n     \"SourceIdentifier\": \"INCOMING_SSH_DISABLED\"\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Restricted_SSH"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Restricted_SSH.json"
+  }
+}

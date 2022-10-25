@@ -1,0 +1,26 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CLOUDWATCH_ALARM_RESOURCE_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "resourceType": {
+        "type": "string",
+        "default": "AWS::EC2::Instance",
+        "label": "Resource Type",
+        "description": "Type of the resource"
+      },
+      "metricName": {
+        "type": "string",
+        "label": "Metric Name",
+        "default": "CPU",
+        "description": "Type of the metric"
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "CLOUDWATCH_ALARM_RESOURCE_CHECK",
+    "RuleSets": []
+  }
+}

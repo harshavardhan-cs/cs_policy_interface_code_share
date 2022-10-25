@@ -1,0 +1,32 @@
+{
+  "status": "active",
+  "description": "This policy audits whether the Application Load Balancers and the Classic Load Balancers have logging enabled.",
+  "classification": "Operation",
+  "sub_classification": "Logging",
+  "service_resource": [
+    "Load_Balancers"
+  ],
+  "resource_type": "EC2",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS ELB Logging Enabled",
+  "name": "AWS_ELB_Logging_Enabled",
+  "uri": "policy/aws_config/global/aws/compliance/others/M6cPY",
+  "content": "{\n  \"Version\": \"1.0\", \n  \"Parameters\": {\n    \"RuleName\": \"ELB_LOGGING_ENABLED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"SourceEvents\": \"AWS::ElasticLoadBalancingV2::LoadBalancer,AWS::ElasticLoadBalancing::LoadBalancer\",\n    \"OptionalParameters\": \"{\\\"s3BucketName\\\":\\\"\\\"}\", \n    \"InputParameters\": \"{}\",\n    \"SourceIdentifier\": \"ELB_LOGGING_ENABLED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "type": [
+    "cloud"
+  ],
+  "recommendations": [
+    "AWS_ELB_Logging_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_ELB_Logging_Enabled.json"
+  }
+}

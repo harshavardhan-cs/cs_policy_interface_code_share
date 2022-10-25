@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CHECK_ALERT_CONFIGURATION_FOR_MANAGEMENT_AUTHENTICATION_FAILURES",
+    "SourceRuntime": "python3.9",
+    "CS-exec-type": "custom",
+    "OptionalParameters": "{}",
+    "InputParameters": {},
+    "RuleSets": []
+  }
+}

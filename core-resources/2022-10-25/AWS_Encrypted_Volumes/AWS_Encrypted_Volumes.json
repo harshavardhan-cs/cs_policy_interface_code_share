@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "Use the encrypted-volumes AWS Config managed rule to check whether Amazon EBS volumes that are in an attached state are encrypted.",
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Volumes"
+  ],
+  "resource_type": "EBS",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS Encrypted Volumes",
+  "name": "AWS_Encrypted_Volumes",
+  "uri": "policy/aws_config/global/aws/compliance/others/wgb1L",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"ENCRYPTED_VOLUMES\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::EC2::Volume\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"ENCRYPTED_VOLUMES\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_Encrypted_Volumes"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_Encrypted_Volumes.json"
+  }
+}

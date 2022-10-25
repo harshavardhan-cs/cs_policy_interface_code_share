@@ -1,0 +1,36 @@
+{
+  "name": "AWS_Audit_Unused_VPC_Internet_Gateways",
+  "display_name": "AWS Audit Unused VPC Internet Gateways",
+  "description": "This policy checks for any unused VPC Internet Gateways (IGWs) and VPC Egress-Only Internet Gateways (EIGWs) in order to adhere to best practices and to avoid approaching the service limit (by default,every account is limited to 5 IGWs and 5 EIGWs per AWS region)",
+  "category": "service",
+  "status": "active",
+  "content": "internet_gateways(internet_gateway_id) :-aws_internet_gateways:internet_gateways(internet_gateway_id=internet_gateway_id), not has_vpc(internet_gateway_id);",
+  "parameters": {},
+  "classification": "Operation",
+  "sub_classification": "Performance",
+  "service_resource": [
+    "Internet_Gateways"
+  ],
+  "resource_type": "VPC",
+  "severity": "low",
+  "type": [
+    "Cloud"
+  ],
+  "services": [
+    "AWS"
+  ],
+  "scope": "global",
+  "metadata": {},
+  "resources": [],
+  "is_temp": false,
+  "is_system_policy": false,
+  "uri": "policy/congress/global/aws/compliance/ig/yl4t3",
+  "dependent_rules": {
+    "has_vpc": "has_vpc(x):- aws_internet_gateways:internet_gateways_attachments(internet_gateway_id=x,VpcId=y,State=z);"
+  },
+  "recommendations": [
+    "AWS_Audit_Unused_VPC_Internet_Gateways"
+  ]
+}
+
+

@@ -1,0 +1,23 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "FMS_SHIELD_RESOURCE_POLICY_CHECK",
+    "InputParameters": {
+      "webACLId": {
+        "type": "string",
+        "label": "webACLId",
+        "description": "Id of the webACL"
+      },
+      "resourceTypes": {
+        "type": "comma_delimited_list",
+        "label": "Resource Types",
+        "description": "Resource scope which this config rule will applied to"
+      }
+    },
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "SourceEvents": "AWS::CloudFront::Distribution,AWS::ElasticLoadBalancingV2::LoadBalancer,AWS::WAFRegional::WebACL,AWS::EC2::EIP,AWS::ElasticLoadBalancing::LoadBalancer,AWS::ShieldRegional::Protection,AWS::Shield::Protection",
+    "SourceIdentifier": "FMS_SHIELD_RESOURCE_POLICY_CHECK"
+  }
+}

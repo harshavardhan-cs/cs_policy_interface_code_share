@@ -1,0 +1,33 @@
+{
+  "status": "active",
+  "description": "This policy audits whether Auto Scaling or On-Demand is enabled on your DynamoDB tables.",
+  "classification": "Security",
+  "sub_classification": "Data",
+  "service_resource": [
+    "Table"
+  ],
+  "resource_type": "DynamoDB",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS DYNAMODB Autoscaling Enabled",
+  "name": "AWS_DYNAMODB_Autoscaling_Enabled",
+  "uri": "policy/aws_config/global/aws/compliance/others/xtk4p",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"DYNAMODB_AUTOSCALING_ENABLED\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": \"{}\",\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::DynamoDB::Table\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"DYNAMODB_AUTOSCALING_ENABLED\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_DYNAMODB_Autoscaling_Enabled"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_DYNAMODB_Autoscaling_Enabled.json"
+  }
+}

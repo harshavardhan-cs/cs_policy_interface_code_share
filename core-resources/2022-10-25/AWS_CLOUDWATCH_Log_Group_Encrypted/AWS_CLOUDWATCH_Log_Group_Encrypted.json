@@ -1,0 +1,35 @@
+{
+  "status": "active",
+  "description": "Checks whether a log group in Amazon CloudWatch Logs is encrypted. The rule is NON_COMPLIANT if CloudWatch Logs has a log group without encryption enabled.",
+  "classification": "Operation",
+  "sub_classification": "Logging",
+  "service_resource": [
+    "Alarm"
+  ],
+  "resource_type": "Cloudwatch",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CLOUDWATCH Log Group Encrypted",
+  "name": "AWS_CLOUDWATCH_Log_Group_Encrypted",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/wDxuB",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"SourcePeriodic\": \"One_Hour\",\n    \"SourceIdentifier\": \"CLOUDWATCH_LOG_GROUP_ENCRYPTED\",\n    \"RuleName\": \"CLOUDWATCH_LOG_GROUP_ENCRYPTED\",\n    \"OptionalParameters\": \"{}\",\n    \"InputParameters\": {\n      \"KmsKeyId\": {\n        \"type\": \"string\",\n        \"label\": \"KMS KeyID\",\n        \"description\": \"ID of the Kms key\"\n      }\n    }\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_CLOUDWATCH_Log_Group_Encrypted"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_CLOUDWATCH_Log_Group_Encrypted.json"
+  }
+}

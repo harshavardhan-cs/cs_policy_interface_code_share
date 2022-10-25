@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "AUTOSCALING_GROUP_ELB_HEALTHCHECK_REQUIRED",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::AutoScaling::AutoScalingGroup",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "AUTOSCALING_GROUP_ELB_HEALTHCHECK_REQUIRED",
+    "RuleSets": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "EBS_OPTIMIZED_INSTANCE",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": "{}",
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::EC2::Instance",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "EBS_OPTIMIZED_INSTANCE",
+    "RuleSets": []
+  }
+}

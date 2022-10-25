@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "Verifies DDOS Response Team can access the AWS Account",
+  "classification": "Security",
+  "sub_classification": "End Point protection",
+  "service_resource": [
+    "Shield"
+  ],
+  "resource_type": "Shield",
+  "severity": "medium",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS SHIELD DRT Access",
+  "name": "AWS_SHIELD_DRT_Access",
+  "parameters": {},
+  "uri": "policy/aws_config/global/aws/compliance/others/zbE95",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"SourcePeriodic\": \"One_Hour\",\n    \"RuleName\": \"SHIELD_DRT_ACCESS\",\n    \"SourceIdentifier\": \"SHIELD_DRT_ACCESS\",\n    \"OptionalParameters\": \"{}\",\n    \"InputParameters\": \"{}\"\n  }\n}",
+  "is_system_policy": false,
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_SHIELD_DRT_Access"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_SHIELD_DRT_Access.json"
+  }
+}

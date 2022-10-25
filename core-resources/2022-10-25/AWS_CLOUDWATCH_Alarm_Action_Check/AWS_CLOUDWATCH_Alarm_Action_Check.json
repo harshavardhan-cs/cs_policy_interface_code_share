@@ -1,0 +1,34 @@
+{
+  "status": "active",
+  "description": "This policy audits whether alarms have at least one alarm action enabled.",
+  "classification": "Operation",
+  "sub_classification": "Monitoring",
+  "service_resource": [
+    "Alarm"
+  ],
+  "resource_type": "Cloudwatch",
+  "severity": "high",
+  "is_temp": false,
+  "services": [
+    "AWS"
+  ],
+  "category": "service",
+  "display_name": "AWS CLOUDWATCH Alarm Action Check",
+  "name": "AWS_CLOUDWATCH_Alarm_Action_Check",
+  "uri": "policy/aws_config/global/aws/compliance/others/t2VUV",
+  "content": "{\n  \"Version\": \"1.0\",\n  \"Parameters\": {\n    \"RuleName\": \"CLOUDWATCH_ALARM_ACTION_CHECK\",\n    \"SourceRuntime\": \"python3.9\",\n    \"CodeKey\": null,\n    \"InputParameters\": {\n      \"alarmActionRequired\": {\n        \"type\": \"string\",\n        \"label\": \"alarmActionRequired\",\n        \"default\": \"true\",\n        \"description\": \"Alarms have at least one action\",\n        \"constraints\": [\n          {\n            \"allowed_values\": [\n              \"true\",\n              \"false\"\n            ]\n          }\n        ]\n      },\n      \"insufficientDataActionRequired\": {\n        \"type\": \"string\",\n        \"label\": \"insufficientDataActionRequired\",\n        \"default\": \"true\",\n        \"description\": \"Alarms have at least one action when the alarms transitions to the INSUFFICIENT_DATA to any other state\",\n        \"constraints\": [\n          {\n            \"allowed_values\": [\n              \"true\",\n              \"false\"\n            ]\n          }\n        ]\n      },\n      \"okActionRequired\": {\n        \"type\": \"string\",\n        \"default\": \"false\",\n        \"label\": \"okActionRequired\",\n        \"description\": \"Alarms have at least one action when the alarms transitions from OK state to any other state\",\n        \"constraints\": [\n          {\n            \"allowed_values\": [\n              \"true\",\n              \"false\"\n            ]\n          }\n        ]\n      }\n    },\n    \"OptionalParameters\": \"{}\",\n    \"SourceEvents\": \"AWS::CloudWatch::Alarm\",\n    \"SourcePeriodic\": \"TwentyFour_Hours\",\n    \"SourceIdentifier\": \"CLOUDWATCH_ALARM_ACTION_CHECK\",\n    \"RuleSets\": []\n  }\n}\n",
+  "is_system_policy": false,
+  "config_type": "managed",
+  "resources": [],
+  "type": [
+    "Cloud"
+  ],
+  "recommendations": [
+    "AWS_CLOUDWATCH_Alarm_Action_Check"
+  ],
+  "scope": "global",
+  "engine_type": "aws_config",
+  "metadata": {
+    "file": "AWS_CLOUDWATCH_Alarm_Action_Check.json"
+  }
+}

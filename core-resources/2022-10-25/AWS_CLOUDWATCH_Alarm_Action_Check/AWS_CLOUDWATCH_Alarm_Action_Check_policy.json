@@ -1,0 +1,57 @@
+{
+  "Version": "1.0",
+  "Parameters": {
+    "RuleName": "CLOUDWATCH_ALARM_ACTION_CHECK",
+    "SourceRuntime": "python3.9",
+    "CodeKey": null,
+    "InputParameters": {
+      "alarmActionRequired": {
+        "type": "string",
+        "label": "alarmActionRequired",
+        "default": "true",
+        "description": "Alarms have at least one action",
+        "constraints": [
+          {
+            "allowed_values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      "insufficientDataActionRequired": {
+        "type": "string",
+        "label": "insufficientDataActionRequired",
+        "default": "true",
+        "description": "Alarms have at least one action when the alarms transitions to the INSUFFICIENT_DATA to any other state",
+        "constraints": [
+          {
+            "allowed_values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      },
+      "okActionRequired": {
+        "type": "string",
+        "default": "false",
+        "label": "okActionRequired",
+        "description": "Alarms have at least one action when the alarms transitions from OK state to any other state",
+        "constraints": [
+          {
+            "allowed_values": [
+              "true",
+              "false"
+            ]
+          }
+        ]
+      }
+    },
+    "OptionalParameters": "{}",
+    "SourceEvents": "AWS::CloudWatch::Alarm",
+    "SourcePeriodic": "TwentyFour_Hours",
+    "SourceIdentifier": "CLOUDWATCH_ALARM_ACTION_CHECK",
+    "RuleSets": []
+  }
+}
